@@ -1,0 +1,132 @@
+// title
+header {
+  padding-bottom: 350px;
+  position: relative;
+  margin: auto;
+  width: 400px;
+
+  @media all and (min-width: $firstMedia) {
+    width: 480px;
+  }
+}
+
+#lastName {
+  left: 10%;
+  top: 10%
+}
+
+.diamond {
+  background-color: $mainColor;
+  border-right: 4px solid $borderColor;
+  height: 160px;
+  width: 160px;
+  margin: 60px;
+  position: relative;
+  transform: rotate(45deg);
+
+  @media all and (min-width: $firstMedia) {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+
+.diamond2 {
+  background: $mainColorDark;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+
+  @media all and (min-width: $firstMedia) {
+    top: 150px;
+    left: 150px;
+  }
+}
+
+.devTitle {
+  font: 1.5em $devTitleFont;
+  position: absolute;
+  bottom: 1em;
+  left: .8em
+}
+
+// nav and link buttons
+img {
+  width: 45px;
+}
+
+nav {
+  position: relative;
+}
+
+.navButton {
+  background: #333;
+  border: 2px solid;
+  border-radius: 100%;
+  border-top-color: #333;
+  border-left-color: #333;
+  border-right-color: $mainColor;
+  border-bottom-color: $mainColor;
+  color: $mainColor;
+  display: block;
+  font: 1em $sectionTitleFont;
+  height: 70px;
+  line-height: 66px;
+  margin: 5%;
+  outline: none;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 70px;
+
+  @media all and (min-width: $firstMedia) {
+    height: 90px;
+    line-height: 86px;
+    width: 90px;
+  }
+}
+
+.blogButton {
+  @extend .navButton;
+  bottom: $contactB + 180;
+  left: $contactL - 180;
+
+  @media all and (min-width: $firstMedia) {
+    @media all and (min-width: $firstMedia) {
+    bottom: $contactB + 170;
+    left: $contactL - 210;
+  }
+  }
+}
+
+.skillsButton {
+  @extend .navButton;
+  bottom: $contactB + 120;
+  left: $contactL - 120;
+
+  @media all and (min-width: $firstMedia) {
+    bottom: $contactB + 100;
+    left: $contactL - 140;
+  }
+}
+
+.projectsButton {
+  @extend .navButton;
+  bottom: $contactB + 60;
+  left: $contactL - 60;
+
+  @media all and (min-width: $firstMedia) {
+    bottom: $contactB + 30;
+    left: $contactL - 70;
+  }
+}
+
+.contactButton {
+  @extend .navButton;
+  bottom: $contactB;
+  left: $contactL;
+
+  @media all and (min-width: $firstMedia) {
+    bottom: $contactB - 40px;
+  }
+}

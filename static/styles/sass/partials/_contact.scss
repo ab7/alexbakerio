@@ -1,0 +1,55 @@
+// contact
+.email {
+  color: $fontColor;
+  display: block;
+  font-size: 2em;
+  text-decoration: none;
+  transform: rotate(45deg);
+
+}
+
+.socialWrapper {
+  position: relative;
+}
+
+.socialLink {
+  filter: grayscale(100%);
+  position: absolute;
+}
+
+.githubLink {
+  @extend .socialLink;
+  top: $githubT;
+  left: $githubL;
+}
+
+.googlePlusLink {
+  @extend .socialLink;
+  top: $githubT + 3;
+  left: $githubL + 3;
+}
+
+.twitterLink {
+  @extend .socialLink;
+  top: $githubT + 6;
+  left: $githubL + 6;
+}
+
+.linkedinLink {
+  @extend .socialLink;
+  top: $githubT + 9;
+  left: $githubL + 9;
+}
+
+// footer
+footer {
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerContent {
+  font-size: .6em;
+  padding: 10px 25px;
+}

@@ -1,0 +1,66 @@
+// skills
+.skillStackTitle {
+  position: absolute;
+  top: -10em;
+  left: -8em;
+  width: 300px;
+}
+
+.block {
+  height: $blockSize;
+  position: absolute;
+  transform: rotate(45deg);
+  width: $blockSize;
+
+  img {
+    left: 1em;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: .5em;
+  }
+}
+
+.htmlBlock {
+  @extend .block;
+
+  background-color: #e94a31;
+  top: $htmlPositionT;
+  left: $htmlPositionL;
+}
+
+.cssBlock {
+  @extend .block;
+
+  background-color: #0170ba;
+  top: $htmlPositionT + $blockSize * .7;
+  left: $htmlPositionL + $blockSize * .7;
+}
+
+.jsBlock {
+  @extend .block;
+
+  background-color: #e8a043;
+  top: $htmlPositionT + ($blockSize * 1.4);
+  left: $htmlPositionL + ($blockSize * 1.4);
+}
+
+.gaeBlock {
+  @extend .block;
+
+  background-color: #407df1;
+  top: $htmlPositionT + ($blockSize * 2.1);
+  left: $htmlPositionL + ($blockSize * 2.1);
+
+  img {
+    left: 1em;
+    top: 1.2em;
+  }
+}
+
+.sassBlock {
+
+}
+
+.gruntBlock {
+
+}
