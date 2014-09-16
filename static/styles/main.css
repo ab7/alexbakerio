@@ -466,7 +466,7 @@ p {
 }
 
 .parallax {
-  height: 500px;
+  height: 640px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -474,10 +474,9 @@ p {
 }
 
 .parallax__group {
-  height: 500px;
+  height: 640px;
   height: 100vh;
   position: relative;
-  height: 100vh;
   min-height: 640px;
   transform-style: preserve-3d;
 }
@@ -702,80 +701,89 @@ nav {
   }
 }
 
-.frontendStack {
-  position: relative;
-}
-@media all and (min-width: 768px) {
-  .frontendStack {
-    position: absolute;
-    left: -10em;
-  }
-}
-
-.frontendTitle {
-  position: absolute;
-  top: -10em;
-  left: -8em;
-  width: 300px;
-}
-
-.block, .htmlBlock, .cssBlock, .jsBlock, .gaeBlock {
-  height: 5em;
-  position: absolute;
-  transform: rotate(45deg);
-  width: 5em;
-}
-.block img, .htmlBlock img, .cssBlock img, .jsBlock img, .gaeBlock img {
-  left: 1em;
-  position: absolute;
-  transform: rotate(-45deg);
-  top: .5em;
+.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .gaeBlock, .pythonBlock, .webapp2Block {
+  border: 3px solid #505050;
+  border-radius: 100%;
+  height: 5.5em;
+  width: 5.5em;
 }
 
 .htmlBlock {
-  background-color: #e94a31;
-  top: -6em;
-  left: -8em;
+  background: url("/static/img/html5-logo.png");
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cssBlock {
-  background-color: #0170ba;
-  top: -2.5em;
-  left: -4.5em;
+  background: url("/static/img/css3-logo.png");
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: .3em 0 0 2.1em;
 }
 
 .jsBlock {
-  background-color: #e8a043;
-  top: 1em;
-  left: -1em;
+  background: url("/static/img/javascript-logo.png");
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: -3.2em 0 0 9.4em;
 }
 
-.backendStack {
-  position: relative;
-}
-@media all and (min-width: 768px) {
-  .backendStack {
-    position: absolute;
-    top: -14em;
-    left: 10em;
-  }
+.sassBlock {
+  background: url("/static/img/sass-logo.png");
+  background-position: 5px 5.3em;
+  background-size: 60px 40px;
+  background-repeat: no-repeat;
+  border: 3px solid #c69;
+  border-bottom-left-radius: 0;
+  height: 8.5em;
+  margin: -1em 0 0 2em;
+  width: 8.5em;
 }
 
-.backendTitle {
-  position: absolute;
-  top: 7em;
-  left: -8em;
-  width: 300px;
+.gruntBlock {
+  background: url("/static/img/grunt-logo.png");
+  background-position: 8.8em 0;
+  background-size: 210px 140px;
+  background-repeat: no-repeat;
+  border: 3px dashed #453015;
+  border-top-right-radius: 0;
+  height: 19.5em;
+  padding: 32px;
+  width: 19.5em;
 }
 
 .gaeBlock {
-  background-color: #407df1;
-  top: 11em;
-  left: -8em;
+  background: url("/static/img/appengine-logo.png");
+  background-position: 22px 26px;
+  background-size: 100px 85px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  height: 19.5em;
+  padding: 32px;
+  width: 19.5em;
 }
-.gaeBlock img {
-  left: 1em;
-  top: 1.2em;
+
+.pythonBlock {
+  background: url("/static/img/python-logo.png");
+  background-size: 55px 55px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 7.5em;
+  width: 7.5em;
+  margin: 3em 0 0 9.5em;
+}
+
+.webapp2Block {
+  background: url("/static/img/webapp2-logo.png");
+  background-size: 75px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 7.5em;
+  width: 7.5em;
+  margin: -1.2em 0 0 2.2em;
 }
 
 .projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4 {

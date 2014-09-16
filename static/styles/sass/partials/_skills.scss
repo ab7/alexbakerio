@@ -1,94 +1,94 @@
 // frontend development stack
-.frontendStack {
-  position: relative;
-
-  @media all and (min-width: $secondMedia) {
-    position: absolute;
-    left: -10em;
-  }
-}
-
-.frontendTitle {
-  position: absolute;
-  top: -10em;
-  left: -8em;
-  width: 300px;
-}
-
 .block {
+  border: 3px solid $fontColor;
+  border-radius: 100%;
   height: $blockSize;
-  position: absolute;
-  transform: rotate(45deg);
   width: $blockSize;
-
-  img {
-    left: 1em;
-    position: absolute;
-    transform: rotate(-45deg);
-    top: .5em;
-  }
 }
 
 .htmlBlock {
   @extend .block;
-
-  background-color: #e94a31;
-  top: $htmlPositionT;
-  left: $htmlPositionL;
+  background: url('/static/img/html5-logo.png');
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cssBlock {
   @extend .block;
-
-  background-color: #0170ba;
-  top: $htmlPositionT + $blockSize * .7;
-  left: $htmlPositionL + $blockSize * .7;
+  background: url('/static/img/css3-logo.png');
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: .3em 0 0 2.1em;
 }
 
 .jsBlock {
   @extend .block;
-
-  background-color: #e8a043;
-  top: $htmlPositionT + ($blockSize * 1.4);
-  left: $htmlPositionL + ($blockSize * 1.4);
-}
-
-
-// backend development stack
-.backendStack {
-  position: relative;
-
-  @media all and (min-width: $secondMedia) {
-    position: absolute;
-    top: -14em;
-    left: 10em;
-  }
-}
-
-.backendTitle {
-  position: absolute;
-  top: 7em;
-  left: -8em;
-  width: 300px;
-}
-
-.gaeBlock {
-  @extend .block;
-
-  background-color: #407df1;
-  top: $htmlPositionT + 17;
-  left: $htmlPositionL;
-
-  img {
-    left: 1em;
-    top: 1.2em;
-  }
+  background: url('/static/img/javascript-logo.png');
+  background-size: 45px 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: -3.2em 0 0 9.4em;
 }
 
 .sassBlock {
-
+  @extend .block;
+  background: url('/static/img/sass-logo.png');
+  background-position: 5px 5.3em;
+  background-size: 60px 40px;
+  background-repeat: no-repeat;
+  border: 3px solid #c69;
+  border-bottom-left-radius: 0;
+  height: $blockSize + 3em;
+  margin: -1em 0 0 2em;
+  width: $blockSize + 3em;
 }
 
 .gruntBlock {
+  @extend .block;
+  background: url('/static/img/grunt-logo.png');
+  background-position: 8.8em 0;
+  background-size: 210px 140px;
+  background-repeat: no-repeat;
+  border: 3px dashed #453015;
+  border-top-right-radius: 0;
+  height: $blockSize + 14em;
+  padding: 32px;
+  width: $blockSize + 14em;
+}
 
+// backend development stack
+.gaeBlock {
+  @extend .block;
+  background: url('/static/img/appengine-logo.png');
+  background-position: 22px 26px;
+  background-size: 100px 85px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  height: $blockSize + 14em;
+  padding: 32px;
+  width: $blockSize + 14em;
+}
+
+.pythonBlock {
+  @extend .block;
+  background: url('/static/img/python-logo.png');
+  background-size: 55px 55px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $blockSize + 2em;
+  width: $blockSize + 2em;
+  margin: 3em 0 0 9.5em;
+}
+
+.webapp2Block {
+  @extend .block;
+  background: url('/static/img/webapp2-logo.png');
+  background-size: 75px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $blockSize + 2em;
+  width: $blockSize + 2em;
+  margin: -1.2em 0 0 2.2em;
 }

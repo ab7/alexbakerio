@@ -1,6 +1,6 @@
 // base parallex
 .parallax {
-  height: 500px; // fallback for older browsers
+  height: 640px; // fallback for older browsers
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -8,10 +8,9 @@
 }
 
 .parallax__group {
-  height: 500px; // fallback for older browsers
+  height: 640px; // fallback for older browsers
   height: 100vh;
   position: relative;
-  height: 100vh;
   min-height: 640px;
   transform-style: preserve-3d;
 
