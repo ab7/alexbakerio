@@ -1,40 +1,48 @@
 // projects
+#projectsWrapper {
+  background-color: #e3e3e3;
+  padding: 1em 0 2em;
+}
+
+// project nodes
+.projectNodes {
+  @media all and (min-width: $thirdMedia) {
+    margin: auto;
+    width: 920px;
+  }
+}
+
 .projectNode {
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 2px solid $mainColor;
   border-radius: 100%;
   height: $nodeSize;
-  position: absolute;
+  margin: 2em auto;
   width: $nodeSize;
 
-  @media all and (min-width: $secondMedia) {
-    font-size: 90%
+  @media all and (min-width: $thirdMedia) {
+    display: inline-block;
+    margin-left: 4em;
   }
 }
 
 .projectNode--1 {
   @extend .projectNode;
   background-image: url('/static/img/sax-lessons.png');
-  top: $nodePositionT;
-  left: $nodePositionL;
 }
 
 .projectNode--2 {
   @extend .projectNode;
   background-image: url('/static/img/tweet-location.png');
-  top: $nodePositionT + 5em;
-  left: $nodePositionL + 10em;
 }
 
 .projectNode--3 {
   @extend .projectNode;
   background-image: url('/static/img/music-quiz.png');
-  top: $nodePositionT + 11em;
-  left: $nodePositionL;
 }
 
 .projectNode--4 {
   @extend .projectNode;
   background-image: url('/static/img/hot-or-cold.png');
-  top: $nodePositionT + 16em;
-  left: $nodePositionL + 10em;
 }

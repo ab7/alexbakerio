@@ -1,8 +1,24 @@
+// above the fold
+#atfWrapper {
+  background: url('/static/img/drops-of-poison.jpg');
+  background-size: cover;
+  height: 600px; // old browser fallback
+  height: 100vh;
+  position: relative;
+  min-height: 640px;
+
+  @media all and (min-width: $secondMedia) {
+    min-height: 840px;
+  }
+}
+
 // title
 header {
+  left: 50%;
   padding-bottom: 350px;
-  position: relative;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 400px;
 
   @media all and (min-width: $firstMedia) {
@@ -22,7 +38,7 @@ header {
 
 .diamond {
   background-color: $mainColor;
-  border-right: 4px solid $borderColor;
+  border-right: 4px solid #333;
   height: 160px;
   width: 160px;
   margin: 60px;
@@ -39,7 +55,6 @@ header {
     width: 240px;
   }
 }
-
 
 .diamond2 {
   background: $mainColorDark;
@@ -59,13 +74,16 @@ header {
 }
 
 .devTitle {
+  background-color: #333;
+  border-radius: 40px;
   font: 1.5em $devTitleFont;
+  padding: 2px 30px;
   position: absolute;
   bottom: 1em;
-  left: .8em;
+  left: .5em;
 
   @media all and (min-width: $secondMedia) {
-    bottom: -1em;
+    bottom: -2em;
   }
 }
 

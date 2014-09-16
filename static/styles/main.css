@@ -448,10 +448,12 @@ h2 {
 
 h3 {
   color: #ff4b4b;
+  text-align: center;
 }
 
 p {
   color: #505050;
+  text-align: center;
 }
 
 @media all and (min-width: 500px) {
@@ -465,91 +467,26 @@ p {
   }
 }
 
-.parallax {
-  height: 640px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
-}
-
-.parallax__group {
-  height: 640px;
+#atfWrapper {
+  background: url("/static/img/drops-of-poison.jpg");
+  background-size: cover;
+  height: 600px;
   height: 100vh;
   position: relative;
   min-height: 640px;
-  transform-style: preserve-3d;
 }
-@media all and (min-width: 500px) {
-  .parallax__group {
-    min-height: 740px;
+@media all and (min-width: 768px) {
+  #atfWrapper {
+    min-height: 840px;
   }
 }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
-}
-
-.parallax__layer--title {
-  transform: translateZ(90px) scale(0.7);
-  z-index: 1;
-}
-
-.circle, .smallCircle, .bigCircle {
-  border-radius: 100%;
-  position: absolute;
-}
-
-.smallCircle {
-  background-color: red;
-  height: 2em;
-  left: 50%;
-  top: 50%;
-  transform: translateZ(-300px) scale(2);
-  width: 2em;
-  z-index: 7;
-}
-
-.bigCircle {
-  background-color: blue;
-  height: 5em;
-  left: 30%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  width: 5em;
-}
-
-.contentWrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#atfWrapper {
-  background-color: #333;
-}
-
-#projectsWrapper {
-  background-color: #e3e3e3;
-}
-
 header {
+  left: 50%;
   padding-bottom: 350px;
-  position: relative;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 400px;
 }
 @media all and (min-width: 500px) {
@@ -571,7 +508,7 @@ header {
 
 .diamond {
   background-color: #ff4b4b;
-  border-right: 4px solid #9f9f9f;
+  border-right: 4px solid #333;
   height: 160px;
   width: 160px;
   margin: 60px;
@@ -611,14 +548,17 @@ header {
 }
 
 .devTitle {
+  background-color: #333;
+  border-radius: 40px;
   font: 1.5em "Rock Salt";
+  padding: 2px 30px;
   position: absolute;
   bottom: 1em;
-  left: .8em;
+  left: .5em;
 }
 @media all and (min-width: 768px) {
   .devTitle {
-    bottom: -1em;
+    bottom: -2em;
   }
 }
 
@@ -701,7 +641,24 @@ nav {
   }
 }
 
-.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .gaeBlock, .pythonBlock, .webapp2Block {
+@media all and (min-width: 1080px) {
+  .stackWrapper {
+    margin: auto;
+    width: 890px;
+  }
+}
+
+.frontendStack {
+  margin: auto;
+  width: 19.5em;
+}
+@media all and (min-width: 1080px) {
+  .frontendStack {
+    display: inline-block;
+  }
+}
+
+.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .pythonBlock, .webapp2Block, .gaeBlock {
   border: 3px solid #505050;
   border-radius: 100%;
   height: 5.5em;
@@ -751,19 +708,31 @@ nav {
   border: 3px dashed #453015;
   border-top-right-radius: 0;
   height: 19.5em;
+  margin-bottom: 2em;
   padding: 32px;
   width: 19.5em;
 }
+@media all and (min-width: 500px) {
+  .gruntBlock {
+    background-position: 10em 0;
+    padding: 38px;
+  }
+}
+@media all and (min-width: 768px) {
+  .gruntBlock {
+    background-position: 11em 0;
+    padding: 46px;
+  }
+}
 
-.gaeBlock {
-  background: url("/static/img/appengine-logo.png");
-  background-position: 22px 26px;
-  background-size: 100px 85px;
-  background-repeat: no-repeat;
-  border-top-left-radius: 0;
-  height: 19.5em;
-  padding: 32px;
+.backendStack {
+  margin: auto;
   width: 19.5em;
+}
+@media all and (min-width: 1080px) {
+  .backendStack {
+    display: inline-block;
+  }
 }
 
 .pythonBlock {
@@ -778,7 +747,7 @@ nav {
 
 .webapp2Block {
   background: url("/static/img/webapp2-logo.png");
-  background-size: 75px 25px;
+  background-size: 95px 25px;
   background-position: center;
   background-repeat: no-repeat;
   height: 7.5em;
@@ -786,85 +755,100 @@ nav {
   margin: -1.2em 0 0 2.2em;
 }
 
+.gaeBlock {
+  background: url("/static/img/appengine-logo.png");
+  background-position: 22px 26px;
+  background-size: 100px 85px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  height: 19.5em;
+  margin-bottom: 3em;
+  padding: 32px;
+  width: 19.5em;
+}
+
+#projectsWrapper {
+  background-color: #e3e3e3;
+  padding: 1em 0 2em;
+}
+
+@media all and (min-width: 1080px) {
+  .projectNodes {
+    margin: auto;
+    width: 920px;
+  }
+}
+
 .projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4 {
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 2px solid #ff4b4b;
   border-radius: 100%;
-  height: 10em;
-  position: absolute;
-  width: 10em;
+  height: 15em;
+  margin: 2em auto;
+  width: 15em;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 1080px) {
   .projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4 {
-    font-size: 90%;
+    display: inline-block;
+    margin-left: 4em;
   }
 }
 
 .projectNode--1 {
   background-image: url("/static/img/sax-lessons.png");
-  top: -10em;
-  left: -10em;
 }
 
 .projectNode--2 {
   background-image: url("/static/img/tweet-location.png");
-  top: -5em;
-  left: 0em;
 }
 
 .projectNode--3 {
   background-image: url("/static/img/music-quiz.png");
-  top: 1em;
-  left: -10em;
 }
 
 .projectNode--4 {
   background-image: url("/static/img/hot-or-cold.png");
-  top: 6em;
-  left: 0em;
 }
 
 .email {
   border: 2px solid #505050;
   color: #505050;
   display: block;
-  font-size: 2em;
+  font-size: 1.5em;
+  margin: 2em auto 1em;
+  max-width: 450px;
   padding: 15px 8px;
+  text-align: center;
   text-decoration: none;
+  width: 75%;
 }
 
 .socialWrapper {
-  position: relative;
+  margin: auto;
+  padding-left: 1.5em;
+  width: 315px;
+}
+@media all and (min-width: 500px) {
+  .socialWrapper {
+    width: 345px;
+  }
+}
+@media all and (min-width: 768px) {
+  .socialWrapper {
+    width: 375px;
+  }
 }
 
-.socialLink, .githubLink, .googlePlusLink, .twitterLink, .linkedinLink {
+.socialLink {
+  display: inline-block;
   filter: grayscale(100%);
-  position: absolute;
-}
-
-.githubLink {
-  top: 2em;
-  left: 2em;
-}
-
-.googlePlusLink {
-  top: 2em;
-  left: 8em;
-}
-
-.twitterLink {
-  top: 2em;
-  left: 14em;
-}
-
-.linkedinLink {
-  top: 2em;
-  left: 19em;
+  margin-right: 1.5em;
 }
 
 footer {
   background-color: #cbcbcb;
-  position: absolute;
-  bottom: 0;
+  margin-top: 3em;
   width: 100%;
 }
 

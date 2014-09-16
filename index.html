@@ -11,93 +11,79 @@
     <script src="static/js/main.built.min.js"></script>
   </head>
   <body>
-    <div class="parallax">
-      <div id="atfWrapper" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="contentWrapper ">
-            <header class="clearfix">
-              <div id="logoWrapper">
-                <div class="diamond">
-                  <h1>Alex</h1>
-                </div>
-                <div class="diamond diamond2">
-                  <h1 id="lastName">Baker</h1>
-                </div>
-                <nav>
-                  <a class="blogButton" href="/blog">Blog</a>
-                  <a class="skillsButton" href="#skillsWrapper">Skills</a>
-                  <a class="projectsButton" href="#projectsWrapper">Projects</a>
-                  <a class="contactButton" href="#contactWrapper">Contact</a>
-                </nav>
-              </div>
-              <h2 class="devTitle">
-                Full Stack Developer
-              </h2>
-            </header>
+    <div id="atfWrapper">
+      <header>
+        <div id="logoWrapper">
+          <div class="diamond">
+            <h1>Alex</h1>
           </div>
+          <div class="diamond diamond2">
+            <h1 id="lastName">Baker</h1>
+          </div>
+          <nav>
+            <a class="blogButton" href="/blog">Blog</a>
+            <a class="skillsButton" href="#skillsWrapper">Skills</a>
+            <a class="projectsButton" href="#projectsWrapper">Projects</a>
+            <a class="contactButton" href="#contactWrapper">Contact</a>
+          </nav>
         </div>
-      </div>
-      <div id="skillsWrapper" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <h2>Skill Set</h2>
-        </div>
-        <div class="contentWrapper">
-          <div class="frontendStack">
-            <p class="frontendTitle">Frontend Development Stack</p>
-            <div class="gruntBlock">
-              <div class="htmlBlock"></div>
-              <div class="sassBlock">
-                <div class="cssBlock"></div>
-              </div>
-              <div class="jsBlock"></div>
+        <h2 class="devTitle">
+          Full Stack Developer
+        </h2>
+      </header>
+    </div>
+    <div id="skillsWrapper">
+      <h2>Skill Set</h2>
+      <div class="stackWrapper">
+        <div class="frontendStack">
+          <p class="frontendTitle">Frontend Development Stack</p>
+          <div class="gruntBlock">
+            <div class="htmlBlock"></div>
+            <div class="sassBlock">
+              <div class="cssBlock"></div>
             </div>
+            <div class="jsBlock"></div>
           </div>
-          <div class="backendStack">
-            <p class="backendTitle">Backend Development Stack</p>
-            <div class="gaeBlock">
-              <div class="pythonBlock"></div>
-              <div class="webapp2Block"></div>
-            </div>
+        </div>
+        <div class="backendStack">
+          <p class="backendTitle">Backend Development Stack</p>
+          <div class="gaeBlock">
+            <div class="pythonBlock"></div>
+            <div class="webapp2Block"></div>
           </div>
         </div>
       </div>
-      <div id="projectsWrapper" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <h2>Projects</h2>
-        </div>
-        <div class="contentWrapper">
-          <div class="projectNode--1"></div>
-          <div class="projectNode--2"></div>
-          <div class="projectNode--3"></div>
-          <div class="projectNode--4"></div>
-        </div>
+    </div>
+    <div id="projectsWrapper">
+      <h2>Projects</h2>
+      <div class="projectNodes">
+        <div class="projectNode--1"></div>
+        <div class="projectNode--2"></div>
+        <div class="projectNode--3"></div>
+        <div class="projectNode--4"></div>
       </div>
-      <div id="contactWrapper" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <h2>Contact</h2>
-        </div>
-        <div class="contentWrapper">
-          <a class="email" href="mailto:alex@alexbakertech.com">alex@alexbakertech.com</a>
-          <div class="socialWrapper">
-            <a class="githubLink" href="//github.com/ab7" target="_blank">
-              <img src="static/img/github-logo.png" alt="github logo">
-            </a>
-            <a class="googlePlusLink" href="//plus.google.com/u/0/116483157797299917604/posts" target="_blank">
-              <img src="static/img/google-plus-logo.png" alt="google plus logo">
-            </a>
-            <a class="twitterLink" href="//twitter.com/alexbakertech" target="_blank">
-              <img src="static/img/twitter-logo.png" alt="twitter logo">
-            </a>
-            <a class="linkedinLink" href="//www.linkedin.com/in/alexbakertech" target="_blank">
-              <img src="static/img/linkedin-logo.png" alt="linkedin logo">
-            </a>
-          </div>
-        </div>
-        <footer>
-          <p class="footerContent floatL">Copyright © 2014 Alex Baker</p>
-          <p class="footerContent floatR">Check out the source for this site <a href="//github.com/ab7/alexbakertech" target="_blank">here</a></p>
-        </footer>
+    </div>
+    <div id="contactWrapper">
+      <h2>Contact</h2>
+      <a class="email" href="mailto:alex@alexbakertech.com">alex@alexbakertech.com</a>
+      <div class="socialWrapper">
+        <a class="socialLink" href="//github.com/ab7" target="_blank">
+          <img src="static/img/github-logo.png" alt="github logo">
+        </a>
+        <a class="socialLink" href="//plus.google.com/u/0/116483157797299917604/posts" target="_blank">
+          <img src="static/img/google-plus-logo.png" alt="google plus logo">
+        </a>
+        <a class="socialLink" href="//twitter.com/alexbakertech" target="_blank">
+          <img src="static/img/twitter-logo.png" alt="twitter logo">
+        </a>
+        <a class="socialLink" href="//www.linkedin.com/in/alexbakertech" target="_blank">
+          <img src="static/img/linkedin-logo.png" alt="linkedin logo">
+        </a>
       </div>
+      <footer class="clearfix">
+        <p class="footerContent floatL">Copyright © 2014 Alex Baker</p>
+        <p class="footerContent floatR">Check out the source for this site <a href="//github.com/ab7/alexbakertech" target="_blank">here</a></p>
+      </footer>
     </div>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-52532798-1');ga('send','pageview');

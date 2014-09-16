@@ -1,4 +1,21 @@
+// skills
+.stackWrapper {
+  @media all and (min-width: $thirdMedia) {
+    margin: auto;
+    width: 890px;
+  }
+}
+
 // frontend development stack
+.frontendStack {
+  margin: auto;
+  width: $blockSize + 14em;
+
+  @media all and (min-width: $thirdMedia) {
+    display: inline-block;
+  }
+}
+
 .block {
   border: 3px solid $fontColor;
   border-radius: 100%;
@@ -54,21 +71,29 @@
   border: 3px dashed #453015;
   border-top-right-radius: 0;
   height: $blockSize + 14em;
+  margin-bottom: 2em;
   padding: 32px;
   width: $blockSize + 14em;
+
+  @media all and (min-width: $firstMedia) {
+    background-position: 10em 0;
+    padding: 38px;
+  }
+
+  @media all and (min-width: $secondMedia) {
+    background-position: 11em 0;
+    padding: 46px;
+  }
 }
 
 // backend development stack
-.gaeBlock {
-  @extend .block;
-  background: url('/static/img/appengine-logo.png');
-  background-position: 22px 26px;
-  background-size: 100px 85px;
-  background-repeat: no-repeat;
-  border-top-left-radius: 0;
-  height: $blockSize + 14em;
-  padding: 32px;
+.backendStack {
+  margin: auto;
   width: $blockSize + 14em;
+
+  @media all and (min-width: $thirdMedia) {
+    display: inline-block;
+  }
 }
 
 .pythonBlock {
@@ -85,10 +110,23 @@
 .webapp2Block {
   @extend .block;
   background: url('/static/img/webapp2-logo.png');
-  background-size: 75px 25px;
+  background-size: 95px 25px;
   background-position: center;
   background-repeat: no-repeat;
   height: $blockSize + 2em;
   width: $blockSize + 2em;
   margin: -1.2em 0 0 2.2em;
+}
+
+.gaeBlock {
+  @extend .block;
+  background: url('/static/img/appengine-logo.png');
+  background-position: 22px 26px;
+  background-size: 100px 85px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 0;
+  height: $blockSize + 14em;
+  margin-bottom: 3em;
+  padding: 32px;
+  width: $blockSize + 14em;
 }
