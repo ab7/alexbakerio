@@ -8,6 +8,11 @@ header {
   @media all and (min-width: $firstMedia) {
     width: 480px;
   }
+
+  @media all and (min-width: $secondMedia) {
+    padding-bottom: 300px;
+    width: 535px;
+  }
 }
 
 #lastName {
@@ -28,6 +33,11 @@ header {
     height: 200px;
     width: 200px;
   }
+
+  @media all and (min-width: $secondMedia) {
+    height: 240px;
+    width: 240px;
+  }
 }
 
 
@@ -41,13 +51,22 @@ header {
     top: 150px;
     left: 150px;
   }
+
+  @media all and (min-width: $secondMedia) {
+    top: 180px;
+    left: 180px;
+  }
 }
 
 .devTitle {
   font: 1.5em $devTitleFont;
   position: absolute;
   bottom: 1em;
-  left: .8em
+  left: .8em;
+
+  @media all and (min-width: $secondMedia) {
+    bottom: -1em;
+  }
 }
 
 // nav and link buttons

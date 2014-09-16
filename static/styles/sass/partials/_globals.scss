@@ -13,6 +13,7 @@ h2 {
   color: $mainColor;
   font: 3em $sectionTitleFont;
   padding-left: 25px;
+  text-align: center;
 }
 
 h3 {
@@ -26,5 +27,8 @@ p {
 body {
   @media all and (min-width: $firstMedia) {
     font-size: 120%;
+  }
+  @media all and (min-width: $secondMedia) {
+    font-size: 140%;
   }
 }

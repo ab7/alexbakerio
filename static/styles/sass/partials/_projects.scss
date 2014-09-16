@@ -5,6 +5,10 @@
   height: $nodeSize;
   position: absolute;
   width: $nodeSize;
+
+  @media all and (min-width: $secondMedia) {
+    font-size: 90%
+  }
 }
 
 .projectNode--1 {

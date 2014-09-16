@@ -1,5 +1,14 @@
-// skills
-.skillStackTitle {
+// frontend development stack
+.frontendStack {
+  position: relative;
+
+  @media all and (min-width: $secondMedia) {
+    position: absolute;
+    left: -10em;
+  }
+}
+
+.frontendTitle {
   position: absolute;
   top: -10em;
   left: -8em;
@@ -44,12 +53,31 @@
   left: $htmlPositionL + ($blockSize * 1.4);
 }
 
+
+// backend development stack
+.backendStack {
+  position: relative;
+
+  @media all and (min-width: $secondMedia) {
+    position: absolute;
+    top: -14em;
+    left: 10em;
+  }
+}
+
+.backendTitle {
+  position: absolute;
+  top: 7em;
+  left: -8em;
+  width: 300px;
+}
+
 .gaeBlock {
   @extend .block;
 
   background-color: #407df1;
-  top: $htmlPositionT + ($blockSize * 2.1);
-  left: $htmlPositionL + ($blockSize * 2.1);
+  top: $htmlPositionT + 17;
+  left: $htmlPositionL;
 
   img {
     left: 1em;

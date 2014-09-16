@@ -1,11 +1,11 @@
 // contact
 .email {
+  border: 2px solid $fontColor;
   color: $fontColor;
   display: block;
   font-size: 2em;
+  padding: 15px 8px;
   text-decoration: none;
-  transform: rotate(45deg);
-
 }
 
 .socialWrapper {
@@ -25,25 +25,25 @@
 
 .googlePlusLink {
   @extend .socialLink;
-  top: $githubT + 3;
-  left: $githubL + 3;
+  top: $githubT;
+  left: $githubL + 6;
 }
 
 .twitterLink {
   @extend .socialLink;
-  top: $githubT + 6;
-  left: $githubL + 6;
+  top: $githubT;
+  left: $githubL + 12;
 }
 
 .linkedinLink {
   @extend .socialLink;
-  top: $githubT + 9;
-  left: $githubL + 9;
+  top: $githubT;
+  left: $githubL + 17;
 }
 
 // footer
 footer {
-  background-color: grey;
+  background-color: #cbcbcb;
   position: absolute;
   bottom: 0;
   width: 100%;

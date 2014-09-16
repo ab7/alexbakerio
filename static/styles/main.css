@@ -443,6 +443,7 @@ h2 {
   color: #ff4b4b;
   font: 3em "Lobster";
   padding-left: 25px;
+  text-align: center;
 }
 
 h3 {
@@ -456,6 +457,11 @@ p {
 @media all and (min-width: 500px) {
   body {
     font-size: 120%;
+  }
+}
+@media all and (min-width: 768px) {
+  body {
+    font-size: 140%;
   }
 }
 
@@ -472,8 +478,13 @@ p {
   height: 100vh;
   position: relative;
   height: 100vh;
-  min-height: 525px;
+  min-height: 640px;
   transform-style: preserve-3d;
+}
+@media all and (min-width: 500px) {
+  .parallax__group {
+    min-height: 740px;
+  }
 }
 
 .parallax__layer {
@@ -547,6 +558,12 @@ header {
     width: 480px;
   }
 }
+@media all and (min-width: 768px) {
+  header {
+    padding-bottom: 300px;
+    width: 535px;
+  }
+}
 
 #lastName {
   left: 10%;
@@ -568,6 +585,12 @@ header {
     width: 200px;
   }
 }
+@media all and (min-width: 768px) {
+  .diamond {
+    height: 240px;
+    width: 240px;
+  }
+}
 
 .diamond2 {
   background: #be3535;
@@ -581,12 +604,23 @@ header {
     left: 150px;
   }
 }
+@media all and (min-width: 768px) {
+  .diamond2 {
+    top: 180px;
+    left: 180px;
+  }
+}
 
 .devTitle {
   font: 1.5em "Rock Salt";
   position: absolute;
   bottom: 1em;
-  left: 0.8em;
+  left: .8em;
+}
+@media all and (min-width: 768px) {
+  .devTitle {
+    bottom: -1em;
+  }
 }
 
 img {
@@ -668,7 +702,17 @@ nav {
   }
 }
 
-.skillStackTitle {
+.frontendStack {
+  position: relative;
+}
+@media all and (min-width: 768px) {
+  .frontendStack {
+    position: absolute;
+    left: -10em;
+  }
+}
+
+.frontendTitle {
   position: absolute;
   top: -10em;
   left: -8em;
@@ -706,10 +750,28 @@ nav {
   left: -1em;
 }
 
+.backendStack {
+  position: relative;
+}
+@media all and (min-width: 768px) {
+  .backendStack {
+    position: absolute;
+    top: -14em;
+    left: 10em;
+  }
+}
+
+.backendTitle {
+  position: absolute;
+  top: 7em;
+  left: -8em;
+  width: 300px;
+}
+
 .gaeBlock {
   background-color: #407df1;
-  top: 4.5em;
-  left: 2.5em;
+  top: 11em;
+  left: -8em;
 }
 .gaeBlock img {
   left: 1em;
@@ -722,6 +784,11 @@ nav {
   height: 10em;
   position: absolute;
   width: 10em;
+}
+@media all and (min-width: 768px) {
+  .projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4 {
+    font-size: 90%;
+  }
 }
 
 .projectNode--1 {
@@ -749,11 +816,12 @@ nav {
 }
 
 .email {
+  border: 2px solid #505050;
   color: #505050;
   display: block;
   font-size: 2em;
+  padding: 15px 8px;
   text-decoration: none;
-  transform: rotate(45deg);
 }
 
 .socialWrapper {
@@ -766,27 +834,27 @@ nav {
 }
 
 .githubLink {
-  top: -2em;
+  top: 2em;
   left: 2em;
 }
 
 .googlePlusLink {
-  top: 1em;
-  left: 5em;
-}
-
-.twitterLink {
-  top: 4em;
+  top: 2em;
   left: 8em;
 }
 
+.twitterLink {
+  top: 2em;
+  left: 14em;
+}
+
 .linkedinLink {
-  top: 7em;
-  left: 11em;
+  top: 2em;
+  left: 19em;
 }
 
 footer {
-  background-color: grey;
+  background-color: #cbcbcb;
   position: absolute;
   bottom: 0;
   width: 100%;
