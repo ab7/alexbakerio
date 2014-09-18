@@ -5,165 +5,158 @@
   height: 600px; // old browser fallback
   height: 100vh;
   position: relative;
-  min-height: 640px;
+  min-height: 480px;
 
-  @media all and (min-width: $secondMedia) {
-    min-height: 840px;
+  @media all and (min-width: $firstMedia) {
+    min-height: 570px;
+  }
+
+  @media all and (min-width: $firstMedia) {
+    min-height: 700px;
   }
 }
 
 // title
 header {
+  height: 400px;
   left: 50%;
-  padding-bottom: 350px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: $diamondSize * 1.75;
 
   @media all and (min-width: $firstMedia) {
-    width: 480px;
+    height: 600px;
+    width: $diamondSize * 3;
   }
 
   @media all and (min-width: $secondMedia) {
-    padding-bottom: 300px;
-    width: 535px;
+    height: 700px;
+    width: $diamondSize * 3.5;
   }
 }
 
 #lastName {
   left: 10%;
-  top: 10%
+  top: 10%;
 }
 
 .diamond {
   background-color: $mainColor;
-  border-right: 4px solid #333;
-  height: 160px;
-  width: 160px;
-  margin: 60px;
-  position: relative;
+  border-right: 10px solid #333;
+  border-radius: 100% 100% 0 100%;
+  height: $diamondSize;
+  width: $diamondSize;
   transform: rotate(45deg);
 
   @media all and (min-width: $firstMedia) {
-    height: 200px;
-    width: 200px;
+    font-size: 135%;
+    height: $diamondSize + 120px;
+    width: $diamondSize + 120px;
   }
 
   @media all and (min-width: $secondMedia) {
-    height: 240px;
-    width: 240px;
+    font-size: 155%;
+    height: $diamondSize + 170px;
+    width: $diamondSize + 170px;
   }
 }
 
 .diamond2 {
   background: $mainColorDark;
+  border-radius: 0 100% 100% 100%;
   position: absolute;
-  top: 120px;
-  left: 120px;
+  top: 105px;
+  left: 105px;
 
   @media all and (min-width: $firstMedia) {
-    top: 150px;
-    left: 150px;
+    top: 200px;
+    left: 180px;
   }
 
   @media all and (min-width: $secondMedia) {
-    top: 180px;
-    left: 180px;
+    top: 250px;
+    left: 200px;
   }
 }
 
 .devTitle {
   background-color: #333;
-  border-radius: 40px;
-  font: 1.5em $devTitleFont;
-  padding: 2px 30px;
+  font: .8em $devTitleFont;
+  padding: 10px 30px;
   position: absolute;
-  bottom: 1em;
-  left: .5em;
-
-  @media all and (min-width: $secondMedia) {
-    bottom: -2em;
-  }
+  bottom: -1em;
+  width: 100%;
 }
 
 // nav and link buttons
-img {
-  width: 45px;
-}
-
 nav {
   position: relative;
 }
 
 .navButton {
   background: #333;
-  border: 2px solid;
+  border: 3px solid $mainColor;
   border-radius: 100%;
-  border-top-color: #333;
-  border-left-color: #333;
-  border-right-color: $mainColor;
-  border-bottom-color: $mainColor;
   color: $mainColor;
-  display: block;
-  font: 1em $sectionTitleFont;
-  height: 70px;
-  line-height: 66px;
-  margin: 5%;
+  display: inline-block;
+  font: .8em $titleFont;
+  height: $navButtonSize;
+  line-height: $navButtonSize - 5px;
+  margin: 9em 1.1em 0 0;
   outline: none;
-  position: absolute;
   text-align: center;
   text-decoration: none;
-  width: 70px;
+  width: $navButtonSize;
 
   @media all and (min-width: $firstMedia) {
     height: 90px;
     line-height: 86px;
+    margin: 13em 3.3em 0 0;
     width: 90px;
+  }
+
+  @media all and (min-width: $secondMedia) {
+    display: block;
+    margin: .7em 0;
   }
 }
 
 .blogButton {
   @extend .navButton;
-  bottom: $contactB + 180;
-  left: $contactL - 180;
+  background: #fff;
+  border: 5px solid $mainColorDark;
+  border-bottom-right-radius: 0;
+  font: 1.4em $titleFont;
+  line-height: $navButtonSize - 7px;
+  position: absolute;
+  top: -15.6em;
+  left: 8.1em;
 
   @media all and (min-width: $firstMedia) {
-    @media all and (min-width: $firstMedia) {
-    bottom: $contactB + 170;
-    left: $contactL - 210;
+    line-height: $navButtonSize + 8px;
+    top: -22.2em;
+    left: 11em;
   }
+
+  @media all and (min-width: $secondMedia) {
+    line-height: $navButtonSize + 8px;
+    top: -10em;
+    left: 13em;
   }
 }
 
 .skillsButton {
   @extend .navButton;
-  bottom: $contactB + 120;
-  left: $contactL - 120;
-
-  @media all and (min-width: $firstMedia) {
-    bottom: $contactB + 100;
-    left: $contactL - 140;
-  }
+  border-top-left-radius: 0;
 }
 
 .projectsButton {
   @extend .navButton;
-  bottom: $contactB + 60;
-  left: $contactL - 60;
-
-  @media all and (min-width: $firstMedia) {
-    bottom: $contactB + 30;
-    left: $contactL - 70;
-  }
+  border-bottom-right-radius: 0;
 }
 
 .contactButton {
   @extend .navButton;
-  bottom: $contactB;
-  left: $contactL;
-
-  @media all and (min-width: $firstMedia) {
-    bottom: $contactB - 40px;
-  }
+  border-top-right-radius: 0;
 }

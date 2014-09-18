@@ -430,7 +430,7 @@ th {
 
 h1 {
   color: #fff;
-  font: 3em "Righteous", sans-serif;
+  font: 3em "Lobster", sans-serif;
   text-shadow: 1px 2px 0px #9f9f9f;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -457,9 +457,12 @@ p {
   text-align: center;
 }
 
+body {
+  overflow-x: hidden;
+}
 @media all and (min-width: 500px) {
   body {
-    font-size: 120%;
+    font-size: 130%;
   }
 }
 @media all and (min-width: 768px) {
@@ -474,33 +477,39 @@ p {
   height: 600px;
   height: 100vh;
   position: relative;
-  min-height: 640px;
+  min-height: 480px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 500px) {
   #atfWrapper {
-    min-height: 840px;
+    min-height: 570px;
+  }
+}
+@media all and (min-width: 500px) {
+  #atfWrapper {
+    min-height: 700px;
   }
 }
 
 header {
+  height: 400px;
   left: 50%;
-  padding-bottom: 350px;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 262.5px;
 }
 @media all and (min-width: 500px) {
   header {
-    width: 480px;
+    height: 600px;
+    width: 450px;
   }
 }
 @media all and (min-width: 768px) {
   header {
-    padding-bottom: 300px;
-    width: 535px;
+    height: 700px;
+    width: 525px;
   }
 }
 
@@ -511,64 +520,56 @@ header {
 
 .diamond {
   background-color: #ff4b4b;
-  border-right: 4px solid #333;
-  height: 160px;
-  width: 160px;
-  margin: 60px;
-  position: relative;
+  border-right: 10px solid #333;
+  border-radius: 100% 100% 0 100%;
+  height: 150px;
+  width: 150px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 @media all and (min-width: 500px) {
   .diamond {
-    height: 200px;
-    width: 200px;
+    font-size: 135%;
+    height: 270px;
+    width: 270px;
   }
 }
 @media all and (min-width: 768px) {
   .diamond {
-    height: 240px;
-    width: 240px;
+    font-size: 155%;
+    height: 320px;
+    width: 320px;
   }
 }
 
 .diamond2 {
   background: #be3535;
+  border-radius: 0 100% 100% 100%;
   position: absolute;
-  top: 120px;
-  left: 120px;
+  top: 105px;
+  left: 105px;
 }
 @media all and (min-width: 500px) {
   .diamond2 {
-    top: 150px;
-    left: 150px;
+    top: 200px;
+    left: 180px;
   }
 }
 @media all and (min-width: 768px) {
   .diamond2 {
-    top: 180px;
-    left: 180px;
+    top: 250px;
+    left: 200px;
   }
 }
 
 .devTitle {
   background-color: #333;
-  border-radius: 40px;
-  font: 1.5em "Rock Salt";
-  padding: 2px 30px;
+  font: 0.8em "Rock Salt";
+  padding: 10px 30px;
   position: absolute;
-  bottom: 1em;
-  left: .5em;
-}
-@media all and (min-width: 768px) {
-  .devTitle {
-    bottom: -2em;
-  }
-}
-
-img {
-  width: 45px;
+  bottom: -1em;
+  width: 100%;
 }
 
 nav {
@@ -577,20 +578,15 @@ nav {
 
 .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
   background: #333;
-  border: 2px solid;
+  border: 3px solid #ff4b4b;
   border-radius: 100%;
-  border-top-color: #333;
-  border-left-color: #333;
-  border-right-color: #ff4b4b;
-  border-bottom-color: #ff4b4b;
   color: #ff4b4b;
-  display: block;
-  font: 1em "Lobster";
+  display: inline-block;
+  font: 0.8em "Righteous";
   height: 70px;
-  line-height: 66px;
-  margin: 5%;
+  line-height: 65px;
+  margin: 9em 1.1em 0 0;
   outline: none;
-  position: absolute;
   text-align: center;
   text-decoration: none;
   width: 70px;
@@ -599,51 +595,52 @@ nav {
   .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
     height: 90px;
     line-height: 86px;
+    margin: 13em 3.3em 0 0;
     width: 90px;
+  }
+}
+@media all and (min-width: 768px) {
+  .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
+    display: block;
+    margin: .7em 0;
   }
 }
 
 .blogButton {
-  bottom: -20px;
-  left: 6px;
+  background: #fff;
+  border: 5px solid #be3535;
+  border-bottom-right-radius: 0;
+  font: 1.4em "Righteous";
+  line-height: 63px;
+  position: absolute;
+  top: -15.6em;
+  left: 8.1em;
 }
-@media all and (min-width: 500px) and (min-width: 500px) {
+@media all and (min-width: 500px) {
   .blogButton {
-    bottom: -30px;
-    left: -24px;
+    line-height: 78px;
+    top: -22.2em;
+    left: 11em;
+  }
+}
+@media all and (min-width: 768px) {
+  .blogButton {
+    line-height: 78px;
+    top: -10em;
+    left: 13em;
   }
 }
 
 .skillsButton {
-  bottom: -80px;
-  left: 66px;
-}
-@media all and (min-width: 500px) {
-  .skillsButton {
-    bottom: -100px;
-    left: 46px;
-  }
+  border-top-left-radius: 0;
 }
 
 .projectsButton {
-  bottom: -140px;
-  left: 126px;
-}
-@media all and (min-width: 500px) {
-  .projectsButton {
-    bottom: -170px;
-    left: 116px;
-  }
+  border-bottom-right-radius: 0;
 }
 
 .contactButton {
-  bottom: -200px;
-  left: 186px;
-}
-@media all and (min-width: 500px) {
-  .contactButton {
-    bottom: -240px;
-  }
+  border-top-right-radius: 0;
 }
 
 @media all and (min-width: 1080px) {
@@ -820,7 +817,7 @@ nav {
   border: 2px solid #505050;
   color: #505050;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 2em auto 1em;
   max-width: 450px;
   padding: 15px 8px;
@@ -843,6 +840,9 @@ nav {
   .socialWrapper {
     width: 375px;
   }
+}
+.socialWrapper img {
+  width: 45px;
 }
 
 .socialLink {
