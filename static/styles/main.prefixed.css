@@ -393,6 +393,10 @@ th {
   padding: 0;
 }
 
+.nomarginRight {
+  margin-right: 0;
+}
+
 .hide {
   display: none;
 }
@@ -431,13 +435,8 @@ th {
 h1 {
   color: #fff;
   font: 3em "Lobster", sans-serif;
-  text-shadow: 1px 2px 0px #9f9f9f;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  text-shadow: 2px 2px 0px #333;
   position: absolute;
-  left: 20%;
-  top: 12%;
 }
 
 h2 {
@@ -472,7 +471,7 @@ body {
 }
 
 #atfWrapper {
-  background: url("/static/img/drops-of-poison.jpg");
+  background: #5a5a5a;
   background-size: cover;
   height: 600px;
   height: 100vh;
@@ -513,20 +512,39 @@ header {
   }
 }
 
-#lastName {
+.firstNameTitle {
+  left: 8%;
+  top: 4%;
+}
+@media all and (min-width: 768px) {
+  .firstNameTitle {
+    left: 10%;
+    top: 5%;
+  }
+}
+
+.lastNameTitle {
   left: 10%;
   top: 10%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media all and (min-width: 768px) {
+  .lastNameTitle {
+    left: 8%;
+    top: 8%;
+  }
 }
 
 .diamond {
-  background-color: #ff4b4b;
+  background-image: -webkit-linear-gradient(bottom left, #ff4b4b 0%, #b23939 100%);
+  background-image: linear-gradient(to top right, #ff4b4b 0%, #b23939 100%);
+  border-left: 10px solid #333;
   border-right: 10px solid #333;
-  border-radius: 100% 100% 0 100%;
+  border-radius: 100% 100% 100% 0;
   height: 150px;
   width: 150px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 @media all and (min-width: 500px) {
   .diamond {
@@ -544,10 +562,14 @@ header {
 }
 
 .diamond2 {
-  background: #be3535;
+  background-image: -webkit-linear-gradient(top left, #be3535 0%, #782121 100%);
+  background-image: linear-gradient(to bottom right, #be3535 0%, #782121 100%);
   border-radius: 0 100% 100% 100%;
   position: absolute;
   top: 105px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   left: 105px;
 }
 @media all and (min-width: 500px) {
@@ -558,7 +580,7 @@ header {
 }
 @media all and (min-width: 768px) {
   .diamond2 {
-    top: 250px;
+    top: 310px;
     left: 200px;
   }
 }
@@ -849,7 +871,7 @@ nav {
   display: inline-block;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  margin-right: 1.5em;
+  margin-right: 1.4em;
 }
 
 footer {

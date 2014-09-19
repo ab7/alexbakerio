@@ -2,11 +2,8 @@
 h1 {
   color: #fff;
   font: 3em $sectionTitleFont, sans-serif;
-  text-shadow: 1px 2px 0px $borderColor;
-  transform: rotate(-45deg);
+  text-shadow: 2px 2px 0px #333;
   position: absolute;
-  left: 20%;
-  top: 12%
 }
 
 h2 {

@@ -1,6 +1,6 @@
 // above the fold
 #atfWrapper {
-  background: url('/static/img/drops-of-poison.jpg');
+  background: #5a5a5a;//url('/static/img/drops-of-poison.jpg');
   background-size: cover;
   height: 600px; // old browser fallback
   height: 100vh;
@@ -36,18 +36,34 @@ header {
   }
 }
 
-#lastName {
+.firstNameTitle {
+  left: 8%;
+  top: 4%;
+
+  @media all and (min-width: $secondMedia) {
+    left: 10%;
+    top: 5%;
+  }
+}
+
+.lastNameTitle {
   left: 10%;
   top: 10%;
+  transform: rotate(-45deg);
+
+  @media all and (min-width: $secondMedia) {
+    left: 8%;
+    top: 8%;
+  }
 }
 
 .diamond {
-  background-color: $mainColor;
+  background-image: linear-gradient(to top right, #FF4B4B 0%, #b23939 100%);
+  border-left: 10px solid #333;
   border-right: 10px solid #333;
-  border-radius: 100% 100% 0 100%;
+  border-radius: 100% 100% 100% 0;
   height: $diamondSize;
   width: $diamondSize;
-  transform: rotate(45deg);
 
   @media all and (min-width: $firstMedia) {
     font-size: 135%;
@@ -63,10 +79,11 @@ header {
 }
 
 .diamond2 {
-  background: $mainColorDark;
+  background-image: linear-gradient(to bottom right, #BE3535 0%, #782121 100%);
   border-radius: 0 100% 100% 100%;
   position: absolute;
   top: 105px;
+  transform: rotate(45deg);
   left: 105px;
 
   @media all and (min-width: $firstMedia) {
@@ -75,7 +92,7 @@ header {
   }
 
   @media all and (min-width: $secondMedia) {
-    top: 250px;
+    top: 310px;
     left: 200px;
   }
 }

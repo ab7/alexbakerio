@@ -60,4 +60,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('nojs', ['sass', 'autoprefixer', 'cssmin', 'watch']);
 };
