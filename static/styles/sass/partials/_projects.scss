@@ -8,22 +8,23 @@
 .projectNodes {
   @media all and (min-width: $thirdMedia) {
     margin: auto;
-    width: 920px;
+    width: 90%;
   }
 }
 
 .projectNode {
+  display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid $mainColor;
-  border-radius: 100%;
-  height: $nodeSize;
+  height: 12em;
   margin: 2em auto;
-  width: $nodeSize;
+  text-decoration: none;
+  width: 80%;
 
-  @media all and (min-width: $thirdMedia) {
+  @media all and (min-width: $secondMedia) {
     display: inline-block;
-    margin-left: 4em;
+    margin: 1em 4%;
+    width: 40%
   }
 }
 
@@ -34,15 +35,22 @@
 
 .projectNode--2 {
   @extend .projectNode;
-  background-image: url('/static/img/tweet-location.png');
+  background-image: url('/static/img/twitter-visualization.png');
 }
 
 .projectNode--3 {
   @extend .projectNode;
-  background-image: url('/static/img/music-quiz.png');
+  background-image: url('/static/img/music-theory-quiz.png');
 }
 
 .projectNode--4 {
   @extend .projectNode;
   background-image: url('/static/img/hot-or-cold.png');
+}
+
+.projectNode--5 {
+  @extend .projectNode;
+  background-image: url('/static/img/mylist.png');
+  display: block;
+  margin: auto;
 }
