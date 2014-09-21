@@ -665,11 +665,29 @@ nav {
   border-top-right-radius: 0;
 }
 
+.stackWrapper {
+  text-align: center;
+}
 @media all and (min-width: 1080px) {
   .stackWrapper {
     margin: auto;
-    width: 890px;
   }
+}
+
+.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .pythonBlock, .webapp2Block, .jinjaBlock, .gaeBlock {
+  border: 3px solid #505050;
+  border-radius: 100%;
+  display: block;
+  height: 5.5em;
+  -webkit-transition: background 2s;
+  transition: background 2s;
+  width: 5.5em;
+}
+
+.skillInfo {
+  color: #fff;
+  display: none;
+  position: absolute;
 }
 
 .frontendStack {
@@ -682,11 +700,14 @@ nav {
   }
 }
 
-.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .pythonBlock, .webapp2Block, .gaeBlock {
-  border: 3px solid #505050;
-  border-radius: 100%;
-  height: 5.5em;
-  width: 5.5em;
+.frontendTitle {
+  color: #505050;
+  font: 3em "Righteous";
+  margin: .8em 0 0 1.3em;
+  opacity: .5;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .htmlBlock {
@@ -694,6 +715,7 @@ nav {
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
+  margin: -5.8em 0 0 0;
 }
 
 .cssBlock {
@@ -709,7 +731,7 @@ nav {
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -3.2em 0 0 9.4em;
+  margin: -3.5em 0 0 9.4em;
 }
 
 .sassBlock {
@@ -732,7 +754,7 @@ nav {
   border: 3px dashed #453015;
   border-top-right-radius: 0;
   height: 19.5em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   padding: 32px;
   width: 19.5em;
 }
@@ -759,14 +781,49 @@ nav {
   }
 }
 
+.backendTitle {
+  color: #505050;
+  font: 3em "Righteous";
+  margin: 1.5em 1em 0 0;
+  opacity: .5;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media all and (min-width: 500px) {
+  .backendTitle {
+    margin: 1.1em 1.5em .4em -.7em;
+  }
+}
+@media all and (min-width: 1080px) {
+  .backendTitle {
+    margin: 1em 1.5em 0 -.7em;
+  }
+}
+
 .pythonBlock {
   background: url("/static/img/python-logo.png");
   background-size: 55px 55px;
   background-position: center;
   background-repeat: no-repeat;
-  height: 7.5em;
-  width: 7.5em;
-  margin: 3em 0 0 9.5em;
+  height: 6.5em;
+  position: relative;
+  width: 6.5em;
+  margin: -5.2em 0 0 9.5em;
+}
+.pythonBlock:hover {
+  background: #505050;
+}
+.pythonBlock:hover .skillInfo {
+  display: block;
+  font-size: 1.5em;
+  left: .5em;
+  top: 1.5em;
+}
+@media all and (min-width: 1080px) {
+  .pythonBlock {
+    margin: -3.4em 0 0 9.5em;
+  }
 }
 
 .webapp2Block {
@@ -774,13 +831,43 @@ nav {
   background-size: 95px 25px;
   background-position: center;
   background-repeat: no-repeat;
-  height: 7.5em;
-  width: 7.5em;
-  margin: -1.2em 0 0 2.2em;
+  height: 6.5em;
+  position: relative;
+  width: 6.5em;
+  margin: .1em 0 0 2.7em;
+}
+.webapp2Block:hover {
+  background: #505050;
+}
+.webapp2Block:hover .skillInfo {
+  display: block;
+  font-size: 1.3em;
+  left: .2em;
+  top: 1.8em;
+}
+
+.jinjaBlock {
+  background: url("/static/img/jinja-logo.png");
+  background-size: 70px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 5.5em;
+  position: relative;
+  width: 5.5em;
+  margin: -6.5em 0 0 9.4em;
+}
+.jinjaBlock:hover {
+  background: #505050;
+}
+.jinjaBlock:hover .skillInfo {
+  display: block;
+  font-size: 1.3em;
+  left: .6em;
+  top: 1.4em;
 }
 
 .gaeBlock {
-  background: url("/static/img/appengine-logo.png");
+  background-image: url("/static/img/appengine-logo.png");
   background-position: 22px 26px;
   background-size: 100px 85px;
   background-repeat: no-repeat;
@@ -788,12 +875,34 @@ nav {
   height: 19.5em;
   margin-bottom: 3em;
   padding: 32px;
+  position: relative;
   width: 19.5em;
+}
+
+.gaeLink {
+  border-bottom-right-radius: 45%;
+  height: 8em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: background 2s;
+  transition: background 2s;
+  width: 8em;
+}
+.gaeLink:hover {
+  background: #505050;
+}
+.gaeLink:hover .skillInfo {
+  display: block;
+  font-size: 1.3em;
+  left: 0;
+  top: 1.8em;
 }
 
 #projectsWrapper {
   background-color: #e3e3e3;
   padding: 1em 0 2em;
+  text-align: center;
 }
 
 @media all and (min-width: 1080px) {

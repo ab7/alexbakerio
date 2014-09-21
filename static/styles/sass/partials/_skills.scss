@@ -1,9 +1,24 @@
 // skills
 .stackWrapper {
+  text-align: center;
   @media all and (min-width: $thirdMedia) {
     margin: auto;
-    width: 890px;
   }
+}
+
+.block {
+  border: 3px solid $fontColor;
+  border-radius: 100%;
+  display: block;
+  height: $blockSize;
+  transition: background 2s;
+  width: $blockSize;
+}
+
+.skillInfo {
+  color: #fff;
+  display: none;
+  position: absolute;
 }
 
 // frontend development stack
@@ -16,11 +31,12 @@
   }
 }
 
-.block {
-  border: 3px solid $fontColor;
-  border-radius: 100%;
-  height: $blockSize;
-  width: $blockSize;
+.frontendTitle {
+  color: $fontColor;
+  font: 3em $titleFont;
+  margin: .8em 0 0 1.3em;
+  opacity: .5;
+  transform: rotate(45deg);
 }
 
 .htmlBlock {
@@ -29,6 +45,7 @@
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
+  margin: -5.8em 0 0 0;
 }
 
 .cssBlock {
@@ -46,7 +63,7 @@
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -3.2em 0 0 9.4em;
+  margin: -3.5em 0 0 9.4em;
 }
 
 .sassBlock {
@@ -71,7 +88,7 @@
   border: 3px dashed #453015;
   border-top-right-radius: 0;
   height: $blockSize + 14em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   padding: 32px;
   width: $blockSize + 14em;
 
@@ -96,15 +113,46 @@
   }
 }
 
+.backendTitle {
+  color: $fontColor;
+  font: 3em $titleFont;
+  margin: 1.5em 1em 0 0;
+  opacity: .5;
+  transform: rotate(-45deg);
+
+  @media all and (min-width: $firstMedia) {
+    margin: 1.1em 1.5em .4em -.7em;
+  }
+
+  @media all and (min-width: $thirdMedia) {
+    margin: 1em 1.5em 0 -.7em;
+  }
+}
+
 .pythonBlock {
   @extend .block;
   background: url('/static/img/python-logo.png');
   background-size: 55px 55px;
   background-position: center;
   background-repeat: no-repeat;
-  height: $blockSize + 2em;
-  width: $blockSize + 2em;
-  margin: 3em 0 0 9.5em;
+  height: $blockSize + 1em;
+  position: relative;
+  width: $blockSize + 1em;
+  margin: -5.2em 0 0 9.5em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+    font-size: 1.5em;
+    left: .5em;
+    top: 1.5em;
+  }
+
+  @media all and (min-width: $thirdMedia) {
+    margin: -3.4em 0 0 9.5em;
+  }
 }
 
 .webapp2Block {
@@ -113,14 +161,47 @@
   background-size: 95px 25px;
   background-position: center;
   background-repeat: no-repeat;
-  height: $blockSize + 2em;
-  width: $blockSize + 2em;
-  margin: -1.2em 0 0 2.2em;
+  height: $blockSize + 1em;
+  position: relative;
+  width: $blockSize + 1em;
+  margin: .1em 0 0 2.7em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+    font-size: 1.3em;
+    left: .2em;
+    top: 1.8em;
+  }
+}
+
+.jinjaBlock {
+  @extend .block;
+  background: url('/static/img/jinja-logo.png');
+  background-size: 70px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $blockSize;
+  position: relative;
+  width: $blockSize;
+  margin: -6.5em 0 0 9.4em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+    font-size: 1.3em;
+    left: .6em;
+    top: 1.4em;
+  }
 }
 
 .gaeBlock {
   @extend .block;
-  background: url('/static/img/appengine-logo.png');
+  background-image: url('/static/img/appengine-logo.png');
   background-position: 22px 26px;
   background-size: 100px 85px;
   background-repeat: no-repeat;
@@ -128,5 +209,26 @@
   height: $blockSize + 14em;
   margin-bottom: 3em;
   padding: 32px;
+  position: relative;
   width: $blockSize + 14em;
+}
+
+.gaeLink {
+  border-bottom-right-radius: 45%;
+  height: 8em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: background 2s;
+  width: 8em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+    font-size: 1.3em;
+    left: 0;
+    top: 1.8em;
+  }
 }
