@@ -433,33 +433,18 @@ th {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'undercoverregular';
-  src: url("/static/fonts/undercover-webfont.eot");
-  src: url("/static/fonts/undercover-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/undercover-webfont.woff2") format("woff2"), url("/static/fonts/undercover-webfont.woff") format("woff"), url("/static/fonts/undercover-webfont.ttf") format("truetype"), url("/static/fonts/undercover-webfont.svg#undercoverregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 h1 {
   color: #fff;
   font: 3em "Lobster", sans-serif;
   text-shadow: 2px 2px 0px #333;
+  position: absolute;
 }
 
 h2 {
   color: #ff4b4b;
-  font: 2.1em 'undercoverregular';
+  font: 3em "Lobster";
+  padding-left: 25px;
   text-align: center;
-}
-@media all and (min-width: 500px) {
-  h2 {
-    font-size: 260%;
-  }
-}
-@media all and (min-width: 768px) {
-  h2 {
-    font-size: 360%;
-  }
 }
 
 h3 {
