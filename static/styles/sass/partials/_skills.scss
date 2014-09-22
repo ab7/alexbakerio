@@ -1,30 +1,32 @@
-// skills
+// main styles
 .stackWrapper {
   text-align: center;
-  @media all and (min-width: $thirdMedia) {
-    margin: auto;
-  }
 }
 
 .block {
   border: 3px solid $fontColor;
   border-radius: 100%;
   display: block;
+  font-size: 1em;
   height: $blockSize;
-  transition: background 2s;
+  text-decoration: none;
+  transition: background 1s ease-in-out;
   width: $blockSize;
 }
 
 .skillInfo {
   color: #fff;
   display: none;
-  position: absolute;
+  padding-top: 40%;
+  text-align: center;
 }
 
 // frontend development stack
 .frontendStack {
   margin: auto;
+  position: relative;
   width: $blockSize + 14em;
+  vertical-align: top;
 
   @media all and (min-width: $thirdMedia) {
     display: inline-block;
@@ -34,8 +36,10 @@
 .frontendTitle {
   color: $fontColor;
   font: 3em $titleFont;
-  margin: .8em 0 0 1.3em;
   opacity: .5;
+  position: absolute;
+  right: .4em;
+  top: 1.8em;
   transform: rotate(45deg);
 }
 
@@ -45,7 +49,16 @@
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -5.8em 0 0 0;
+  position: absolute;
+  top: $fePosT;
+  left: $fePosL;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+  }
 }
 
 .cssBlock {
@@ -54,7 +67,16 @@
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: .3em 0 0 2.1em;
+  position: absolute;
+  top: $fePosT + 4.6;
+  left: $fePosL + 4.6;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+  }
 }
 
 .jsBlock {
@@ -63,7 +85,16 @@
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -3.5em 0 0 9.4em;
+  position: absolute;
+  top: $fePosT + 9.4;
+  left: $fePosL + 9.4;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+  }
 }
 
 .sassBlock {
@@ -74,9 +105,22 @@
   background-repeat: no-repeat;
   border: 3px solid #c69;
   border-bottom-left-radius: 0;
-  height: $blockSize + 3em;
-  margin: -1em 0 0 2em;
-  width: $blockSize + 3em;
+  height: $blockSize + 2.5em;
+  left: $fePosL + 2.7;
+  position: absolute;
+  top: $fePosT + 4.2;
+  width: $blockSize + 2.5em;
+}
+
+.sassLink {
+  border-top-right-radius: 45%;
+  bottom: 0;
+  height: 3em;
+  left: 0;
+  position: absolute;
+  transition: background 2s;
+  text-decoration: none;
+  width: 3em;
 }
 
 .gruntBlock {
@@ -89,17 +133,32 @@
   border-top-right-radius: 0;
   height: $blockSize + 14em;
   margin-bottom: 3em;
-  padding: 32px;
   width: $blockSize + 14em;
 
   @media all and (min-width: $firstMedia) {
     background-position: 10em 0;
-    padding: 38px;
   }
 
   @media all and (min-width: $secondMedia) {
     background-position: 11em 0;
-    padding: 46px;
+  }
+}
+
+.gruntLink {
+  border-bottom-left-radius: 60%;
+  height: 8em;
+  position: absolute;
+  top: 0;
+  transition: background 2s;
+  text-decoration: none;
+  right: 0;
+  width: 8em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
   }
 }
 
@@ -107,6 +166,7 @@
 .backendStack {
   margin: auto;
   width: $blockSize + 14em;
+  vertical-align: top;
 
   @media all and (min-width: $thirdMedia) {
     display: inline-block;
@@ -116,17 +176,11 @@
 .backendTitle {
   color: $fontColor;
   font: 3em $titleFont;
-  margin: 1.5em 1em 0 0;
+  left: .6em;
   opacity: .5;
+  position: absolute;
+  top: 1.9em;
   transform: rotate(-45deg);
-
-  @media all and (min-width: $firstMedia) {
-    margin: 1.1em 1.5em .4em -.7em;
-  }
-
-  @media all and (min-width: $thirdMedia) {
-    margin: 1em 1.5em 0 -.7em;
-  }
 }
 
 .pythonBlock {
@@ -136,44 +190,36 @@
   background-position: center;
   background-repeat: no-repeat;
   height: $blockSize + 1em;
-  position: relative;
+  position: absolute;
+  right: $bePosR;
+  top: $bePosT;
   width: $blockSize + 1em;
-  margin: -5.2em 0 0 9.5em;
 
   &:hover {
     background: $fontColor;
   }
   &:hover .skillInfo {
     display: block;
-    font-size: 1.5em;
-    left: .5em;
-    top: 1.5em;
-  }
-
-  @media all and (min-width: $thirdMedia) {
-    margin: -3.4em 0 0 9.5em;
   }
 }
 
 .webapp2Block {
   @extend .block;
   background: url('/static/img/webapp2-logo.png');
-  background-size: 95px 25px;
+  background-size: 75px 18px;
   background-position: center;
   background-repeat: no-repeat;
   height: $blockSize + 1em;
-  position: relative;
   width: $blockSize + 1em;
-  margin: .1em 0 0 2.7em;
+  position: absolute;
+  right: $bePosR + 7.2;
+  top: $bePosT + 7;
 
   &:hover {
     background: $fontColor;
   }
   &:hover .skillInfo {
     display: block;
-    font-size: 1.3em;
-    left: .2em;
-    top: 1.8em;
   }
 }
 
@@ -184,18 +230,16 @@
   background-position: center;
   background-repeat: no-repeat;
   height: $blockSize;
-  position: relative;
+  position: absolute;
+  right: $bePosR + 1.7;
+  top: $bePosT + 6.5;
   width: $blockSize;
-  margin: -6.5em 0 0 9.4em;
 
   &:hover {
     background: $fontColor;
   }
   &:hover .skillInfo {
     display: block;
-    font-size: 1.3em;
-    left: .6em;
-    top: 1.4em;
   }
 }
 
@@ -208,16 +252,16 @@
   border-top-left-radius: 0;
   height: $blockSize + 14em;
   margin-bottom: 3em;
-  padding: 32px;
   position: relative;
   width: $blockSize + 14em;
 }
 
 .gaeLink {
-  border-bottom-right-radius: 45%;
+  border-bottom-right-radius: 60%;
   height: 8em;
   left: 0;
   position: absolute;
+  text-decoration: none;
   top: 0;
   transition: background 2s;
   width: 8em;
@@ -227,8 +271,64 @@
   }
   &:hover .skillInfo {
     display: block;
-    font-size: 1.3em;
-    left: 0;
-    top: 1.8em;
+  }
+}
+
+// other tech
+.otherTechWrapper {
+  text-align: center;
+}
+
+.nginxBlock {
+  @extend .block;
+  background: url('/static/img/nginx-logo.png');
+  background-size: 45px 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em 1em 3em 1em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+  }
+}
+
+.flaskBlock {
+  @extend .block;
+  background: url('/static/img/flask-logo.png');
+  background-size: 45px 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
+  }
+}
+
+.djangoBlock {
+  @extend .block;
+  background: url('/static/img/django-logo.png');
+  background-size: 75px 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+
+  &:hover {
+    background: $fontColor;
+  }
+  &:hover .skillInfo {
+    display: block;
   }
 }

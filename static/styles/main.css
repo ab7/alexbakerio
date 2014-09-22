@@ -661,30 +661,30 @@ nav {
 .stackWrapper {
   text-align: center;
 }
-@media all and (min-width: 1080px) {
-  .stackWrapper {
-    margin: auto;
-  }
-}
 
-.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .pythonBlock, .webapp2Block, .jinjaBlock, .gaeBlock {
+.block, .htmlBlock, .cssBlock, .jsBlock, .sassBlock, .gruntBlock, .pythonBlock, .webapp2Block, .jinjaBlock, .gaeBlock, .nginxBlock, .flaskBlock, .djangoBlock {
   border: 3px solid #505050;
   border-radius: 100%;
   display: block;
+  font-size: 1em;
   height: 5.5em;
-  transition: background 2s;
+  text-decoration: none;
+  transition: background 1s ease-in-out;
   width: 5.5em;
 }
 
 .skillInfo {
   color: #fff;
   display: none;
-  position: absolute;
+  padding-top: 40%;
+  text-align: center;
 }
 
 .frontendStack {
   margin: auto;
+  position: relative;
   width: 19.5em;
+  vertical-align: top;
 }
 @media all and (min-width: 1080px) {
   .frontendStack {
@@ -695,8 +695,10 @@ nav {
 .frontendTitle {
   color: #505050;
   font: 3em "Righteous";
-  margin: .8em 0 0 1.3em;
   opacity: .5;
+  position: absolute;
+  right: .4em;
+  top: 1.8em;
   transform: rotate(45deg);
 }
 
@@ -705,7 +707,15 @@ nav {
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -5.8em 0 0 0;
+  position: absolute;
+  top: 3em;
+  left: 1.7em;
+}
+.htmlBlock:hover {
+  background: #505050;
+}
+.htmlBlock:hover .skillInfo {
+  display: block;
 }
 
 .cssBlock {
@@ -713,7 +723,15 @@ nav {
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: .3em 0 0 2.1em;
+  position: absolute;
+  top: 7.6em;
+  left: 6.3em;
+}
+.cssBlock:hover {
+  background: #505050;
+}
+.cssBlock:hover .skillInfo {
+  display: block;
 }
 
 .jsBlock {
@@ -721,7 +739,15 @@ nav {
   background-size: 45px 60px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: -3.5em 0 0 9.4em;
+  position: absolute;
+  top: 12.4em;
+  left: 11.1em;
+}
+.jsBlock:hover {
+  background: #505050;
+}
+.jsBlock:hover .skillInfo {
+  display: block;
 }
 
 .sassBlock {
@@ -731,9 +757,22 @@ nav {
   background-repeat: no-repeat;
   border: 3px solid #c69;
   border-bottom-left-radius: 0;
-  height: 8.5em;
-  margin: -1em 0 0 2em;
-  width: 8.5em;
+  height: 8em;
+  left: 4.4em;
+  position: absolute;
+  top: 7.2em;
+  width: 8em;
+}
+
+.sassLink {
+  border-top-right-radius: 45%;
+  bottom: 0;
+  height: 3em;
+  left: 0;
+  position: absolute;
+  transition: background 2s;
+  text-decoration: none;
+  width: 3em;
 }
 
 .gruntBlock {
@@ -745,25 +784,40 @@ nav {
   border-top-right-radius: 0;
   height: 19.5em;
   margin-bottom: 3em;
-  padding: 32px;
   width: 19.5em;
 }
 @media all and (min-width: 500px) {
   .gruntBlock {
     background-position: 10em 0;
-    padding: 38px;
   }
 }
 @media all and (min-width: 768px) {
   .gruntBlock {
     background-position: 11em 0;
-    padding: 46px;
   }
+}
+
+.gruntLink {
+  border-bottom-left-radius: 60%;
+  height: 8em;
+  position: absolute;
+  top: 0;
+  transition: background 2s;
+  text-decoration: none;
+  right: 0;
+  width: 8em;
+}
+.gruntLink:hover {
+  background: #505050;
+}
+.gruntLink:hover .skillInfo {
+  display: block;
 }
 
 .backendStack {
   margin: auto;
   width: 19.5em;
+  vertical-align: top;
 }
 @media all and (min-width: 1080px) {
   .backendStack {
@@ -774,19 +828,11 @@ nav {
 .backendTitle {
   color: #505050;
   font: 3em "Righteous";
-  margin: 1.5em 1em 0 0;
+  left: .6em;
   opacity: .5;
+  position: absolute;
+  top: 1.9em;
   transform: rotate(-45deg);
-}
-@media all and (min-width: 500px) {
-  .backendTitle {
-    margin: 1.1em 1.5em .4em -.7em;
-  }
-}
-@media all and (min-width: 1080px) {
-  .backendTitle {
-    margin: 1em 1.5em 0 -.7em;
-  }
 }
 
 .pythonBlock {
@@ -795,43 +841,34 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   height: 6.5em;
-  position: relative;
+  position: absolute;
+  right: 0.5em;
+  top: 5.1em;
   width: 6.5em;
-  margin: -5.2em 0 0 9.5em;
 }
 .pythonBlock:hover {
   background: #505050;
 }
 .pythonBlock:hover .skillInfo {
   display: block;
-  font-size: 1.5em;
-  left: .5em;
-  top: 1.5em;
-}
-@media all and (min-width: 1080px) {
-  .pythonBlock {
-    margin: -3.4em 0 0 9.5em;
-  }
 }
 
 .webapp2Block {
   background: url("/static/img/webapp2-logo.png");
-  background-size: 95px 25px;
+  background-size: 75px 18px;
   background-position: center;
   background-repeat: no-repeat;
   height: 6.5em;
-  position: relative;
   width: 6.5em;
-  margin: .1em 0 0 2.7em;
+  position: absolute;
+  right: 7.7em;
+  top: 12.1em;
 }
 .webapp2Block:hover {
   background: #505050;
 }
 .webapp2Block:hover .skillInfo {
   display: block;
-  font-size: 1.3em;
-  left: .2em;
-  top: 1.8em;
 }
 
 .jinjaBlock {
@@ -840,18 +877,16 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   height: 5.5em;
-  position: relative;
+  position: absolute;
+  right: 2.2em;
+  top: 11.6em;
   width: 5.5em;
-  margin: -6.5em 0 0 9.4em;
 }
 .jinjaBlock:hover {
   background: #505050;
 }
 .jinjaBlock:hover .skillInfo {
   display: block;
-  font-size: 1.3em;
-  left: .6em;
-  top: 1.4em;
 }
 
 .gaeBlock {
@@ -862,16 +897,16 @@ nav {
   border-top-left-radius: 0;
   height: 19.5em;
   margin-bottom: 3em;
-  padding: 32px;
   position: relative;
   width: 19.5em;
 }
 
 .gaeLink {
-  border-bottom-right-radius: 45%;
+  border-bottom-right-radius: 60%;
   height: 8em;
   left: 0;
   position: absolute;
+  text-decoration: none;
   top: 0;
   transition: background 2s;
   width: 8em;
@@ -881,9 +916,58 @@ nav {
 }
 .gaeLink:hover .skillInfo {
   display: block;
-  font-size: 1.3em;
-  left: 0;
-  top: 1.8em;
+}
+
+.otherTechWrapper {
+  text-align: center;
+}
+
+.nginxBlock {
+  background: url("/static/img/nginx-logo.png");
+  background-size: 45px 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em 1em 3em 1em;
+}
+.nginxBlock:hover {
+  background: #505050;
+}
+.nginxBlock:hover .skillInfo {
+  display: block;
+}
+
+.flaskBlock {
+  background: url("/static/img/flask-logo.png");
+  background-size: 45px 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+}
+.flaskBlock:hover {
+  background: #505050;
+}
+.flaskBlock:hover .skillInfo {
+  display: block;
+}
+
+.djangoBlock {
+  background: url("/static/img/django-logo.png");
+  background-size: 75px 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+}
+.djangoBlock:hover {
+  background: #505050;
+}
+.djangoBlock:hover .skillInfo {
+  display: block;
 }
 
 #projectsWrapper {
