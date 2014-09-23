@@ -14,14 +14,32 @@
 // text styles
 h1 {
   color: #fff;
-  font: 3em $sectionTitleFont, sans-serif;
-  text-shadow: 2px 2px 0px #333;
-  position: absolute;
+  font: 3.2em 'undercoverregular';
+  margin: 0;
+  text-shadow: 3px 3px 0px $mainColor;
+  text-align: center;
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 400%;
+  }
+  @media all and (min-width: $secondMedia) {
+    font-size: 500%;
+  }
+  @media all and (min-width: $thirdMedia) {
+    font-size: 700%;
+  }
 }
 
 h2 {
   color: $mainColor;
+  font: 1em $devTitleFont;
+  text-align: center;
+}
+
+h3 {
+  color: $mainColor;
   font: 2.1em 'undercoverregular';
+
   text-align: center;
 
   @media all and (min-width: $firstMedia) {
@@ -30,11 +48,6 @@ h2 {
   @media all and (min-width: $secondMedia) {
     font-size: 360%;
   }
-}
-
-h3 {
-  color: $mainColor;
-  text-align: center;
 }
 
 p {

@@ -441,30 +441,47 @@ th {
 }
 h1 {
   color: #fff;
-  font: 3em "Lobster", sans-serif;
-  text-shadow: 2px 2px 0px #333;
-  position: absolute;
+  font: 3.2em 'undercoverregular';
+  margin: 0;
+  text-shadow: 3px 3px 0px #ff4b4b;
+  text-align: center;
+}
+@media all and (min-width: 500px) {
+  h1 {
+    font-size: 400%;
+  }
+}
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 500%;
+  }
+}
+@media all and (min-width: 1080px) {
+  h1 {
+    font-size: 700%;
+  }
 }
 
 h2 {
+  color: #ff4b4b;
+  font: 1em "Rock Salt";
+  text-align: center;
+}
+
+h3 {
   color: #ff4b4b;
   font: 2.1em 'undercoverregular';
   text-align: center;
 }
 @media all and (min-width: 500px) {
-  h2 {
+  h3 {
     font-size: 260%;
   }
 }
 @media all and (min-width: 768px) {
-  h2 {
+  h3 {
     font-size: 360%;
   }
-}
-
-h3 {
-  color: #ff4b4b;
-  text-align: center;
 }
 
 p {
@@ -488,130 +505,32 @@ body {
 
 #atfWrapper {
   background: #5a5a5a;
-  background-size: cover;
   height: 600px;
   height: 100vh;
   position: relative;
   min-height: 480px;
 }
-@media all and (min-width: 500px) {
+@media all and (min-width: 1080px) {
   #atfWrapper {
-    min-height: 570px;
-  }
-}
-@media all and (min-width: 500px) {
-  #atfWrapper {
-    min-height: 700px;
+    min-height: 620px;
   }
 }
 
 header {
-  height: 400px;
   left: 50%;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 262.5px;
-}
-@media all and (min-width: 500px) {
-  header {
-    height: 600px;
-    width: 450px;
-  }
-}
-@media all and (min-width: 768px) {
-  header {
-    height: 700px;
-    width: 525px;
-  }
-}
-
-.firstNameTitle {
-  left: 8%;
-  top: 4%;
-}
-@media all and (min-width: 768px) {
-  .firstNameTitle {
-    left: 10%;
-    top: 5%;
-  }
-}
-
-.lastNameTitle {
-  left: 10%;
-  top: 10%;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-@media all and (min-width: 768px) {
-  .lastNameTitle {
-    left: 8%;
-    top: 8%;
-  }
-}
-
-.diamond {
-  background-image: -webkit-linear-gradient(bottom left, #ff4b4b 0%, #b23939 100%);
-  background-image: linear-gradient(to top right, #ff4b4b 0%, #b23939 100%);
-  border-left: 10px solid #333;
-  border-right: 10px solid #333;
-  border-radius: 100% 100% 100% 0;
-  height: 150px;
-  width: 150px;
-}
-@media all and (min-width: 500px) {
-  .diamond {
-    font-size: 135%;
-    height: 270px;
-    width: 270px;
-  }
-}
-@media all and (min-width: 768px) {
-  .diamond {
-    font-size: 155%;
-    height: 320px;
-    width: 320px;
-  }
-}
-
-.diamond2 {
-  background-image: -webkit-linear-gradient(top left, #be3535 0%, #782121 100%);
-  background-image: linear-gradient(to bottom right, #be3535 0%, #782121 100%);
-  border-radius: 0 100% 100% 100%;
-  position: absolute;
-  top: 105px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  left: 105px;
-}
-@media all and (min-width: 500px) {
-  .diamond2 {
-    top: 200px;
-    left: 180px;
-  }
-}
-@media all and (min-width: 768px) {
-  .diamond2 {
-    top: 310px;
-    left: 200px;
-  }
-}
-
-.devTitle {
-  background-color: #333;
-  font: 0.8em "Rock Salt";
-  padding: 10px 30px;
-  position: absolute;
-  bottom: -1em;
-  width: 100%;
 }
 
 nav {
-  position: relative;
+  background-color: #333;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
@@ -621,26 +540,29 @@ nav {
   color: #ff4b4b;
   display: inline-block;
   font: 0.8em "Righteous";
-  height: 70px;
-  line-height: 65px;
-  margin: 9em 1.1em 0 0;
+  height: 5em;
+  margin: .5em 0;
   outline: none;
+  padding-top: 1.6em;
   text-align: center;
   text-decoration: none;
-  width: 70px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  vertical-align: center;
+  width: 5em;
+}
+.navButton:hover, .blogButton:hover, .skillsButton:hover, .projectsButton:hover, .contactButton:hover {
+  border-color: #fff;
+  color: #fff;
 }
 @media all and (min-width: 500px) {
   .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
-    height: 90px;
-    line-height: 86px;
-    margin: 13em 3.3em 0 0;
-    width: 90px;
+    margin: .6em 1em;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 1080px) {
   .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
-    display: block;
-    margin: .7em 0;
+    margin: .6em 2em;
   }
 }
 
@@ -648,25 +570,9 @@ nav {
   background: #fff;
   border: 5px solid #be3535;
   border-bottom-right-radius: 0;
-  font: 1.4em "Righteous";
-  line-height: 63px;
-  position: absolute;
-  top: -15.6em;
-  left: 8.1em;
 }
-@media all and (min-width: 500px) {
-  .blogButton {
-    line-height: 78px;
-    top: -22.2em;
-    left: 11em;
-  }
-}
-@media all and (min-width: 768px) {
-  .blogButton {
-    line-height: 78px;
-    top: -10em;
-    left: 13em;
-  }
+.blogButton:hover {
+  background-color: #ff4b4b;
 }
 
 .skillsButton {
@@ -689,7 +595,7 @@ nav {
   border: 3px solid #505050;
   border-radius: 100%;
   display: block;
-  font-size: 1em;
+  font: 1em "Righteous";
   height: 5.5em;
   text-decoration: none;
   -webkit-transition: background 1s ease-in-out;

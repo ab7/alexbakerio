@@ -1,114 +1,31 @@
 // above the fold
 #atfWrapper {
-  background: #5a5a5a;//url('/static/img/drops-of-poison.jpg');
-  background-size: cover;
+  background: #5a5a5a;
   height: 600px; // old browser fallback
   height: 100vh;
   position: relative;
   min-height: 480px;
 
-  @media all and (min-width: $firstMedia) {
-    min-height: 570px;
-  }
-
-  @media all and (min-width: $firstMedia) {
-    min-height: 700px;
+  @media all and (min-width: $thirdMedia) {
+    min-height: 620px;
   }
 }
 
 // title
 header {
-  height: 400px;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: $diamondSize * 1.75;
-
-  @media all and (min-width: $firstMedia) {
-    height: 600px;
-    width: $diamondSize * 3;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    height: 700px;
-    width: $diamondSize * 3.5;
-  }
-}
-
-.firstNameTitle {
-  left: 8%;
-  top: 4%;
-
-  @media all and (min-width: $secondMedia) {
-    left: 10%;
-    top: 5%;
-  }
-}
-
-.lastNameTitle {
-  left: 10%;
-  top: 10%;
-  transform: rotate(-45deg);
-
-  @media all and (min-width: $secondMedia) {
-    left: 8%;
-    top: 8%;
-  }
-}
-
-.diamond {
-  background-image: linear-gradient(to top right, #FF4B4B 0%, #b23939 100%);
-  border-left: 10px solid #333;
-  border-right: 10px solid #333;
-  border-radius: 100% 100% 100% 0;
-  height: $diamondSize;
-  width: $diamondSize;
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 135%;
-    height: $diamondSize + 120px;
-    width: $diamondSize + 120px;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    font-size: 155%;
-    height: $diamondSize + 170px;
-    width: $diamondSize + 170px;
-  }
-}
-
-.diamond2 {
-  background-image: linear-gradient(to bottom right, #BE3535 0%, #782121 100%);
-  border-radius: 0 100% 100% 100%;
-  position: absolute;
-  top: 105px;
-  transform: rotate(45deg);
-  left: 105px;
-
-  @media all and (min-width: $firstMedia) {
-    top: 200px;
-    left: 180px;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    top: 310px;
-    left: 200px;
-  }
-}
-
-.devTitle {
-  background-color: #333;
-  font: .8em $devTitleFont;
-  padding: 10px 30px;
-  position: absolute;
-  bottom: -1em;
-  width: 100%;
 }
 
 // nav and link buttons
 nav {
-  position: relative;
+  background-color: #333;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .navButton {
@@ -119,23 +36,25 @@ nav {
   display: inline-block;
   font: .8em $titleFont;
   height: $navButtonSize;
-  line-height: $navButtonSize - 5px;
-  margin: 9em 1.1em 0 0;
+  margin: .5em 0;
   outline: none;
+  padding-top: 1.6em;
   text-align: center;
   text-decoration: none;
+  transition: 1s;
+  vertical-align: center;
   width: $navButtonSize;
 
-  @media all and (min-width: $firstMedia) {
-    height: 90px;
-    line-height: 86px;
-    margin: 13em 3.3em 0 0;
-    width: 90px;
+  &:hover {
+    border-color: #fff;
+    color: #fff;
   }
 
-  @media all and (min-width: $secondMedia) {
-    display: block;
-    margin: .7em 0;
+  @media all and (min-width: $firstMedia) {
+    margin: .6em 1em;
+  }
+  @media all and (min-width: $thirdMedia) {
+    margin: .6em 2em;
   }
 }
 
@@ -144,22 +63,9 @@ nav {
   background: #fff;
   border: 5px solid $mainColorDark;
   border-bottom-right-radius: 0;
-  font: 1.4em $titleFont;
-  line-height: $navButtonSize - 7px;
-  position: absolute;
-  top: -15.6em;
-  left: 8.1em;
 
-  @media all and (min-width: $firstMedia) {
-    line-height: $navButtonSize + 8px;
-    top: -22.2em;
-    left: 11em;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    line-height: $navButtonSize + 8px;
-    top: -10em;
-    left: 13em;
+  &:hover {
+    background-color: $mainColor;
   }
 }
 
