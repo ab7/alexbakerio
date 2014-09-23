@@ -26,6 +26,13 @@ nav {
   position: absolute;
   text-align: center;
   width: 100%;
+  z-index: 1;
+}
+
+.stickyNav {
+  bottom: auto;
+  position: fixed;
+  top: 0;
 }
 
 .navButton {
@@ -55,6 +62,27 @@ nav {
   }
   @media all and (min-width: $thirdMedia) {
     margin: .6em 2em;
+  }
+}
+
+.topLink {
+  color: $mainColor;
+  display: none;
+  font: 1.7em 'undercoverregular';
+  height: 100%;
+  padding-top: .45em;
+  text-align: center;
+  text-decoration: none;
+  transition: 1s;
+  vertical-align: top;
+
+  span {
+    display: block;
+  }
+
+  &:hover {
+    border-color: #fff;
+    color: #fff;
   }
 }
 

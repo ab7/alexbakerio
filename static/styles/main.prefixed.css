@@ -471,6 +471,8 @@ h2 {
 h3 {
   color: #ff4b4b;
   font: 2.1em 'undercoverregular';
+  margin: 0;
+  padding-top: 2.5em;
   text-align: center;
 }
 @media all and (min-width: 500px) {
@@ -531,6 +533,13 @@ nav {
   position: absolute;
   text-align: center;
   width: 100%;
+  z-index: 1;
+}
+
+.stickyNav {
+  bottom: auto;
+  position: fixed;
+  top: 0;
 }
 
 .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
@@ -564,6 +573,26 @@ nav {
   .navButton, .blogButton, .skillsButton, .projectsButton, .contactButton {
     margin: .6em 2em;
   }
+}
+
+.topLink {
+  color: #ff4b4b;
+  display: none;
+  font: 1.7em 'undercoverregular';
+  height: 100%;
+  padding-top: .45em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+  vertical-align: top;
+}
+.topLink span {
+  display: block;
+}
+.topLink:hover {
+  border-color: #fff;
+  color: #fff;
 }
 
 .blogButton {
@@ -909,7 +938,6 @@ nav {
 
 #projectsWrapper {
   background-color: #e3e3e3;
-  padding: 1em 0 2em;
   text-align: center;
 }
 
