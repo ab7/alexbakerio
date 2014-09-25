@@ -1,6 +1,9 @@
 // above the fold
 #atfWrapper {
-  background: #5a5a5a;
+  background: url('/static/img/space-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 600px; // old browser fallback
   height: 100vh;
   position: relative;
@@ -21,7 +24,7 @@ header {
 
 // nav and link buttons
 nav {
-  background-color: #333;
+  background-image: linear-gradient(to top, #000 0%, #4a4a4a 100%);
   bottom: 0;
   position: absolute;
   text-align: center;

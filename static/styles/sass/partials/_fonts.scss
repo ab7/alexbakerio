@@ -15,7 +15,6 @@
 h1 {
   color: #fff;
   font: 3.2em 'undercoverregular';
-  margin: 0;
   text-shadow: 3px 3px 0px $mainColor;
   text-align: center;
 
@@ -25,15 +24,19 @@ h1 {
   @media all and (min-width: $secondMedia) {
     font-size: 500%;
   }
-  @media all and (min-width: $thirdMedia) {
-    font-size: 700%;
-  }
 }
 
 h2 {
   color: $mainColor;
   font: 1em $devTitleFont;
+  margin-top: 3em;
+  padding-top: 1em;
   text-align: center;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
 h3 {
@@ -45,6 +48,7 @@ h3 {
 
   @media all and (min-width: $firstMedia) {
     font-size: 260%;
+    padding-top: 2em;
   }
   @media all and (min-width: $secondMedia) {
     font-size: 360%;

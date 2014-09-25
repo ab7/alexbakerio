@@ -24,7 +24,21 @@ $(function () {
 
     if ((skillsTop - $navBar.height()) >= windowTop) {
       $navBar.removeClass('stickyNav');
-      $topLink.css({'display': 'none'});
+      $topLink.hide();
+    }
+  });
+
+  // smooth scroll to anchor
+  $('a[href*=#]:not([href=#])').click(function () {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
     }
   });
 });

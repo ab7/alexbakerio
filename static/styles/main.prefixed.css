@@ -442,7 +442,6 @@ th {
 h1 {
   color: #fff;
   font: 3.2em 'undercoverregular';
-  margin: 0;
   text-shadow: 3px 3px 0px #ff4b4b;
   text-align: center;
 }
@@ -456,16 +455,14 @@ h1 {
     font-size: 500%;
   }
 }
-@media all and (min-width: 1080px) {
-  h1 {
-    font-size: 700%;
-  }
-}
 
 h2 {
   color: #ff4b4b;
   font: 1em "Rock Salt";
+  margin-top: 3em;
+  padding-top: 1em;
   text-align: center;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 h3 {
@@ -478,6 +475,7 @@ h3 {
 @media all and (min-width: 500px) {
   h3 {
     font-size: 260%;
+    padding-top: 2em;
   }
 }
 @media all and (min-width: 768px) {
@@ -506,7 +504,10 @@ body {
 }
 
 #atfWrapper {
-  background: #5a5a5a;
+  background: url("/static/img/space-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 600px;
   height: 100vh;
   position: relative;
@@ -528,7 +529,8 @@ header {
 }
 
 nav {
-  background-color: #333;
+  background-image: -webkit-linear-gradient(bottom, black 0%, #4a4a4a 100%);
+  background-image: linear-gradient(to top, black 0%, #4a4a4a 100%);
   bottom: 0;
   position: absolute;
   text-align: center;
@@ -939,6 +941,7 @@ nav {
 #projectsWrapper {
   background-color: #e3e3e3;
   text-align: center;
+  padding-bottom: 2.5em;
 }
 
 @media all and (min-width: 1080px) {
@@ -1028,7 +1031,7 @@ nav {
 
 footer {
   background-color: #cbcbcb;
-  margin-top: 3em;
+  margin-top: 5.5em;
   width: 100%;
 }
 
