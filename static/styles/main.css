@@ -932,50 +932,133 @@ nav {
   padding-bottom: 2.5em;
 }
 
-@media all and (min-width: 1080px) {
+.projectNodes {
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+.projectNodes li {
+  display: inline-block;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  width: 440px;
+}
+.projectNodes figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.projectNodes figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  transition: transform 0.4s;
+}
+.projectNodes figure:hover img {
+  transform: translateY(-50px);
+}
+.projectNodes figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  color: #ed4e6e;
+  height: 80px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.projectNodes figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 0.4s, opacity 0.1s;
+}
+.projectNodes figcaption h4 {
+  color: #ff4b4b;
+  font: 1.5em "Righteous";
+  margin: 0;
+  padding: 0;
+}
+.projectNodes figcaption a {
+  color: #fff;
+  background: #ed4e6e;
+  border: 2px solid #ed4e6e;
+  border-radius: 2px;
+  padding: 5px 10px;
+  text-align: center;
+  transition: .5s;
+  position: absolute;
+  bottom: 20px;
+  width: 7em;
+}
+.projectNodes figcaption a:hover {
+  border-color: #fff;
+}
+.projectNodes figcaption a:nth-child(1) {
+  left: 20px;
+}
+.projectNodes figcaption a:nth-child(2) {
+  right: 20px;
+}
+@media screen and (max-width: 31.5em) {
   .projectNodes {
-    margin: auto;
-    width: 90%;
+    padding: 10px 10px 100px 10px;
+  }
+  .projectNodes li {
+    width: 100%;
+    min-width: 300px;
   }
 }
 
-.projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4, .projectNode--5 {
+.projectImg {
+  max-width: 100%;
   display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 12em;
-  margin: 2em auto;
-  text-decoration: none;
-  width: 80%;
+  position: relative;
+  transition: transform 0.4s;
+  width: 100%;
 }
-@media all and (min-width: 768px) {
-  .projectNode, .projectNode--1, .projectNode--2, .projectNode--3, .projectNode--4, .projectNode--5 {
-    display: inline-block;
-    margin: 1em 4%;
-    width: 40%;
-  }
+.projectImg:hover {
+  transform: translateY(-50px);
 }
 
-.projectNode--1 {
-  background-image: url("/static/img/sax-lessons.png");
+.projectInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  color: #ed4e6e;
+  height: 100px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
 }
-
-.projectNode--2 {
-  background-image: url("/static/img/twitter-visualization.png");
+.projectInfo:hover {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 0.4s, opacity 0.1s;
 }
-
-.projectNode--3 {
-  background-image: url("/static/img/music-theory-quiz.png");
-}
-
-.projectNode--4 {
-  background-image: url("/static/img/hot-or-cold.png");
-}
-
-.projectNode--5 {
-  background-image: url("/static/img/mylist.png");
-  display: block;
-  margin: auto;
+.projectInfo a {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #ed4e6e;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .email {

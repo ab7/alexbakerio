@@ -7,51 +7,187 @@
 
 // project nodes
 .projectNodes {
-  @media all and (min-width: $thirdMedia) {
-    margin: auto;
-    width: 90%;
-  }
-}
+  padding: 20px 20px 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
 
-.projectNode {
-  display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 12em;
-  margin: 2em auto;
-  text-decoration: none;
-  width: 80%;
-
-  @media all and (min-width: $secondMedia) {
+  li {
     display: inline-block;
-    margin: 1em 4%;
-    width: 40%
+
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    width: 440px;
+  }
+
+  figure {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    transition: transform 0.4s;
+  }
+
+  figure:hover img {
+    transform: translateY(-50px);
+  }
+
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: #2c3f52;
+    color: #ed4e6e;
+    height: 80px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+  }
+
+  figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.4s, opacity 0.1s;
+  }
+
+  figcaption h4 {
+    color: $mainColor;
+    font: 1.5em $titleFont;
+    margin: 0;
+    padding: 0;
+  }
+
+  figcaption a {
+    color: #fff;
+    background: #ed4e6e;
+    border: 2px solid #ed4e6e;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
+    transition: .5s;
+    position: absolute;
+    bottom: 20px;
+    width: 7em;
+
+    &:hover {
+      border-color: #fff;
+    }
+  }
+
+  figcaption a:nth-child(1) {
+    left: 20px;
+  }
+
+  figcaption a:nth-child(2) {
+    right: 20px;
+  }
+
+  @media screen and (max-width: 31.5em) {
+    padding: 10px 10px 100px 10px;
+
+    li {
+      width: 100%;
+      min-width: 300px;
+    }
   }
 }
 
-.projectNode--1 {
-  @extend .projectNode;
-  background-image: url('/static/img/sax-lessons.png');
-}
 
-.projectNode--2 {
-  @extend .projectNode;
-  background-image: url('/static/img/twitter-visualization.png');
-}
+//.projectNode {
+//  display: inline-block;
+//  width: 380px;
+//  margin: 0;
+//  padding: 20px;
+//  text-align: left;
+//  overflow: hidden;
+//  position: relative;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //text-decoration: none;
 
-.projectNode--3 {
-  @extend .projectNode;
-  background-image: url('/static/img/music-theory-quiz.png');
-}
+//  @media all and (min-width: $secondMedia) {
+//    display: inline-block;
+//    margin: 1em 4%;
+//    width: 40%
+//  }
+// }
 
-.projectNode--4 {
-  @extend .projectNode;
-  background-image: url('/static/img/hot-or-cold.png');
-}
-
-.projectNode--5 {
-  @extend .projectNode;
-  background-image: url('/static/img/mylist.png');
+.projectImg {
+  max-width: 100%;
   display: block;
-  margin: auto;
+  position: relative;
+  transition: transform 0.4s;
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-50px);
+  }
 }
+
+.projectInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  color: #ed4e6e;
+  height: 100px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.4s, opacity 0.1s;
+  }
+
+  a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #ed4e6e;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+//.projectNode--2 {
+//  @extend .projectNode;
+//  background-image: url('/static/img/twitter-visualization.png');
+//}
+//
+//.projectNode--3 {
+//  @extend .projectNode;
+//  background-image: url('/static/img/music-theory-quiz.png');
+//}
+//
+//.projectNode--4 {
+//  @extend .projectNode;
+//  background-image: url('/static/img/hot-or-cold.png');
+//}
+//
+//.projectNode--5 {
+//  @extend .projectNode;
+//  background-image: url('/static/img/mylist.png');
+//  display: block;
+//  margin: auto;
+//}
