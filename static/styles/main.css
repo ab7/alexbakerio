@@ -1117,3 +1117,88 @@ footer {
   font-size: .6em;
   padding: 10px 25px;
 }
+
+.blogTitle {
+  color: red;
+  text-decoration: none;
+}
+
+.page {
+  background: white;
+  border: 5px solid #ccc;
+  margin: 2em auto;
+  padding: 0.8em;
+  width: 35em;
+}
+
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.entries li {
+  margin: 0.8em 1.2em;
+}
+
+.login {
+  border-radius: 5px;
+  margin: 3em auto;
+  overflow: hidden;
+  width: 300px;
+}
+.login input {
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+.login label {
+  color: #395870;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.button {
+  background: linear-gradient(#49708f, #293f50);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.error {
+  background: #f0d6d6;
+  padding: 0.5em;
+}
+
+.addEntry {
+  border-radius: 5px;
+  margin: 3em auto;
+  overflow: hidden;
+  width: 60%;
+}
+.addEntry input, .addEntry textarea {
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+.addEntry textarea {
+  height: 400px;
+}
+.addEntry label {
+  color: #395870;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logout {
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <form action="{{url_for('login')}}" method=post>
+    <fieldset class=login>
+      <label>
+        Username
+        <input type=text name=username>
+      </label>
+      <label>
+        Password
+        <input type=password name=password>
+      </label>
+      <input class=button type=submit value=Login
+    </fieldset>
+  </form>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{error}}
+  {% endif %}
+{% endblock %}

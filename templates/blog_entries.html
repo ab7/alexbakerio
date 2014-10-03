@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <a class=blogTitle href="/"><h1>Alex Baker</h1></a>
+  {% if session.logged_in %}
+    <a class=logout href="{{url_for('logout')}}">Logout</a>
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <fieldset class=addEntry>
+        <label>
+          Title:
+          <input type=text size=30 name=title>
+        </label>
+        <label>
+          Text:
+          <textarea name=text></textarea>
+        </label>
+        <input class=button type=submit value=Share>
+      </fieldset>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2>{{entry.title}}</h2>{{ entry.text|safe }}
+  {% else %}
+    <li>
+      <em>Work in progress</em>
+      <a class=logout href=/>return</a>
+  {% endfor %}
+  </ul>
+{% endblock %}

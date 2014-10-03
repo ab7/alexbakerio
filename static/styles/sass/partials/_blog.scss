@@ -1,0 +1,24 @@
+// blog styles
+.blogTitle {
+  color: red;
+  text-decoration: none;
+}
+
+.page  {
+  background: white;
+  border: 5px solid #ccc;
+  margin: 2em auto;
+  padding: 0.8em;
+  width: 35em;
+}
+
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.entries li {
+  margin: 0.8em 1.2em;
+}
