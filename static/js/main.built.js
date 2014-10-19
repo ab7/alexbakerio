@@ -17,7 +17,7 @@ $(function () {
 
     if (windowTop >= navTop) {
       $navBar.addClass('stickyNav');
-      if ($window.width() >= 700) {
+      if ($window.width() >= 440) {
         $topLink.css({'display': 'inline-block'});
       }
     }

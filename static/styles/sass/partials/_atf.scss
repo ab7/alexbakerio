@@ -1,32 +1,56 @@
 // above the fold
 #atfWrapper {
-  background: url('/static/img/space-background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 600px; // old browser fallback
-  height: 100vh;
   position: relative;
-  min-height: 480px;
+  text-align: center;
+  width: 100%;
+}
 
-  @media all and (min-width: $thirdMedia) {
-    min-height: 620px;
+header {
+  background-color:#c3c3c3;
+  background-image:
+  radial-gradient(circle at 100% 150%, #c3c3c3 24%, #fff 25%, #fff 28%, #c3c3c3 29%, #c3c3c3 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0 150%, #c3c3c3 24%, #fff 25%, #fff 28%, #c3c3c3 29%, #c3c3c3 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50% 100%, #fff 10%, #c3c3c3 11%, #c3c3c3 23%, #fff 24%, #fff 30%, #c3c3c3 31%, #c3c3c3 43%, #fff 44%, #fff 50%, #c3c3c3 51%, #c3c3c3 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, #fff 5%, #c3c3c3 6%, #c3c3c3 15%, #fff 16%, #fff 20%, #c3c3c3 21%, #c3c3c3 30%, #fff 31%, #fff 35%, #c3c3c3 36%, #c3c3c3 45%, #fff 46%, #fff 49%, transparent 50%, transparent),
+  radial-gradient(circle at 0 50%, #fff 5%, #c3c3c3 6%, #c3c3c3 15%, #fff 16%, #fff 20%, #c3c3c3 21%, #c3c3c3 30%, #fff 31%, #fff 35%, #c3c3c3 36%, #c3c3c3 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
+  background-size:100px 50px;
+  height: 45%;
+  padding-bottom: 15%;
+
+  @media all and (min-width: $firstMedia) {
+    padding-bottom: 3.5em;
+  }
+  @media all and (min-width: $secondMedia) {
+    padding-bottom: 1.5em;
   }
 }
 
-// title
-header {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.headshot {
+  border-radius: 100% 0 100% 100%;
+  box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
+  margin-top: 2em;
+  max-width: 180px;
+  width: 33%;
 }
 
 // nav and link buttons
+.name {
+  color: $mainColor;
+  display: inline-block;
+  font: 3em 'primetimeregular';
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 300%;
+  }
+  @media all and (min-width: $secondMedia) {
+    font-size: 550%;
+  }
+}
+
 nav {
-  background-image: linear-gradient(to top, #000 0%, #4a4a4a 100%);
+  background-image: linear-gradient(to top, #c3c3c3 0%, #fff 100%);
   bottom: 0;
-  box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
   position: absolute;
   text-align: center;
   width: 100%;
@@ -40,44 +64,38 @@ nav {
 }
 
 .navButton {
-  background: #333;
-  border: 3px solid $mainColor;
-  border-radius: 100%;
+  background-image: linear-gradient(to bottom, #c3c3c3 0%, #fff 100%);
+  border-radius: 0 100% 100% 100%;
   color: $mainColor;
   display: inline-block;
   font: .8em $titleFont;
   height: $navButtonSize;
-  margin: .5em 0;
+  margin: .6em 1%;
   outline: none;
-  padding-top: 1.6em;
+  padding-top: 1.7em;
   text-align: center;
   text-decoration: none;
-  transition: 1s;
-  vertical-align: center;
+  transition: .5s;
   width: $navButtonSize;
 
   &:hover {
-    border-color: #fff;
-    color: #fff;
+    color: #696969;
+    box-shadow: 0px 1px 2px 0px rgba(137, 137, 137, 0.75);
   }
 
   @media all and (min-width: $firstMedia) {
-    margin: .6em 1em;
-  }
-  @media all and (min-width: $thirdMedia) {
-    margin: .6em 2em;
+    margin: .6em 2%;
   }
 }
 
 .topLink {
   color: $mainColor;
   display: none;
-  font: 1.7em 'undercoverregular';
-  height: 100%;
-  padding-top: .45em;
-  text-align: center;
+  font: 1.7em 'primetimeregular';
+  margin-right: 2%;
+  padding-top: .1em;
   text-decoration: none;
-  transition: 1s;
+  transition: .5s;
   vertical-align: top;
 
   span {
@@ -85,33 +103,6 @@ nav {
   }
 
   &:hover {
-    border-color: #fff;
-    color: #fff;
+    color: #696969;
   }
-}
-
-.blogButton {
-  @extend .navButton;
-  background: #fff;
-  border: 5px solid $mainColorDark;
-  border-bottom-right-radius: 0;
-
-  &:hover {
-    background-color: $mainColor;
-  }
-}
-
-.skillsButton {
-  @extend .navButton;
-  border-top-left-radius: 0;
-}
-
-.projectsButton {
-  @extend .navButton;
-  border-bottom-right-radius: 0;
-}
-
-.contactButton {
-  @extend .navButton;
-  border-top-right-radius: 0;
 }

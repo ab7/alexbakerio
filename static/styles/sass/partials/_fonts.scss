@@ -11,21 +11,19 @@
   font-style: normal;
 }
 
-// text styles
-h1 {
-  color: #fff;
-  font: 3.2em 'undercoverregular';
-  text-shadow: 3px 3px 0px $mainColor;
-  text-align: center;
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 400%;
-  }
-  @media all and (min-width: $secondMedia) {
-    font-size: 500%;
-  }
+@font-face {
+  font-family: 'primetimeregular';
+  src: url('/static/fonts/primetime-webfont.eot');
+  src: url('/static/fonts/primetime-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/primetime-webfont.woff2') format('woff2'),
+       url('/static/fonts/primetime-webfont.woff') format('woff'),
+       url('/static/fonts/primetime-webfont.ttf') format('truetype'),
+       url('/static/fonts/primetime-webfont.svg#primetimeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
+// text styles
 h2 {
   color: $mainColor;
   font: 1em $devTitleFont;
@@ -60,13 +58,13 @@ p {
   text-align: center;
 }
 
-body {
-  overflow-x: hidden;
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 130%;
-  }
-  @media all and (min-width: $secondMedia) {
-    font-size: 140%;
-  }
-}
+//body {
+//  overflow-x: hidden;
+//
+//  @media all and (min-width: $firstMedia) {
+//    font-size: 130%;
+//  }
+//  @media all and (min-width: $secondMedia) {
+//    font-size: 140%;
+//  }
+//}
