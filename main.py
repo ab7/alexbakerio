@@ -1,4 +1,5 @@
 import os
+import logging
 
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template
 from sqlite3 import dbapi2 as sqlite3
@@ -57,23 +58,26 @@ def front():
     return render_template('front.html')
 
 @app.route('/blog')
-def blog_entries():
+def blog():
     db = get_db()
     cur = db.execute('select title, text from entries order by id desc')
     entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
-    return render_template('blog_entries.html', entries=entries)
+    return render_template('blog.html', entries=entries)
 
-@app.route('/blog/add', methods=['POST'])
+@app.route('/blog/add', methods=['GET', 'POST'])
 def add_entry():
-    if not session.get('logged_in'):
-        abort(401)
-    db = get_db()
-    db.execute(
-        'insert into entries (title, text) values (?, ?)',
-        [request.form['title'], request.form['text']]
-    )
-    db.commit()
-    return redirect(url_for('blog_entries'))
+    if session.get('logged_in'):
+        if request.method == 'POST':
+            db = get_db()
+            db.execute(
+                'insert into entries (title, text) values (?, ?)',
+                [request.form['title'], request.form['text']]
+            )
+            db.commit()
+            return redirect(url_for('blog'))
+        return render_template('add_entry.html')
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/blog/login', methods=['GET', 'POST'])
 def login():
@@ -85,10 +89,10 @@ def login():
             error = "Invalid password"
         else:
             session['logged_in'] = True
-            return redirect(url_for('blog_entries'))
+            return redirect(url_for('add_entry'))
     return render_template('login.html', error=error)
 
 @app.route('/blog/logout')
 def logout():
     session.pop('logged_in', None)
-    return redirect(url_for('blog_entries'))
+    return redirect(url_for('blog'))

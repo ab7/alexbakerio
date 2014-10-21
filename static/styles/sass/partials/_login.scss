@@ -9,10 +9,11 @@
     border-radius: 5px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
     margin: 0;
+    width: 100%;
   }
 
   label {
-    color: #395870;
+    color: $mainColor;
     display: block;
     font-weight: bold;
     margin-bottom: 20px;
@@ -20,7 +21,7 @@
 }
 
 .button {
-  background: linear-gradient(#49708f, #293f50);
+  background: $mainColor;
   border: 0;
   color: #fff;
   cursor: pointer;

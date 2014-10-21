@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <a class=logout href="{{url_for('logout')}}">Logout</a>
+  <form class=addEntry action="{{ url_for('add_entry') }}" method=post>
+    <fieldset class=addEntry>
+      <label>
+        Title:
+        <input type=text size=30 name=title>
+      </label>
+      <label>
+        Text:
+        <textarea name=text></textarea>
+      </label>
+      <input class=button type=submit value=Share>
+    </fieldset>
+  </form>
+{% endblock %}

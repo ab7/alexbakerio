@@ -1,7 +1,21 @@
 // blog styles
+.blogHeader {
+  border-bottom: 5px solid $mainColor;
+  height: 20%;
+  text-align: center;
+}
+
 .blogTitle {
-  color: red;
+  color: $mainColor;
+  display: block;
+  font: 1.3em 'primetimeregular';
+  padding-top: 1em;
   text-decoration: none;
+}
+
+.blogSubtitle {
+  color: $fontColor;
+  margin: 0;
 }
 
 .page  {

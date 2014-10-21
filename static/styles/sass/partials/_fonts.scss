@@ -24,19 +24,6 @@
 }
 
 // text styles
-h2 {
-  color: $mainColor;
-  font: 1em $devTitleFont;
-//  margin-top: 3em;
-//  padding-top: 1em;
-  text-align: center;
-  text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
-}
-
 h3 {
   color: $mainColor;
   font: 2.1em 'undercoverregular';
@@ -45,7 +32,6 @@ h3 {
 
   @media all and (min-width: $firstMedia) {
     font-size: 260%;
-    //padding-top: 2em;
   }
   @media all and (min-width: $secondMedia) {
     font-size: 360%;
@@ -57,13 +43,3 @@ p {
   text-align: center;
 }
 
-//body {
-//  overflow-x: hidden;
-//
-//  @media all and (min-width: $firstMedia) {
-//    font-size: 130%;
-//  }
-//  @media all and (min-width: $secondMedia) {
-//    font-size: 140%;
-//  }
-//}
