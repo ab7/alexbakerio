@@ -1,13 +1,13 @@
 // projects
 #projectsWrapper {
   background-color: #e3e3e3;
+  padding: 5em 0 2em 0;
   text-align: center;
-  padding-bottom: 2.5em;
 }
 
 // project nodes
 .projectNodes {
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 0 20px;
   max-width: 1300px;
   margin: 0 auto;
   list-style: none;
@@ -71,8 +71,8 @@
 
   figcaption a {
     color: #fff;
-    background: #ed4e6e;
-    border: 2px solid #ed4e6e;
+    background: $mainColor;
+    border: 2px solid $mainColor;
     border-radius: 2px;
     padding: 5px 10px;
     text-align: center;
@@ -103,26 +103,6 @@
     }
   }
 }
-
-
-//.projectNode {
-//  display: inline-block;
-//  width: 380px;
-//  margin: 0;
-//  padding: 20px;
-//  text-align: left;
-//  overflow: hidden;
-//  position: relative;
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  //text-decoration: none;
-
-//  @media all and (min-width: $secondMedia) {
-//    display: inline-block;
-//    margin: 1em 4%;
-//    width: 40%
-//  }
-// }
 
 .projectImg {
   max-width: 100%;
@@ -169,25 +149,3 @@
     right: 20px;
   }
 }
-
-//.projectNode--2 {
-//  @extend .projectNode;
-//  background-image: url('/static/img/twitter-visualization.png');
-//}
-//
-//.projectNode--3 {
-//  @extend .projectNode;
-//  background-image: url('/static/img/music-theory-quiz.png');
-//}
-//
-//.projectNode--4 {
-//  @extend .projectNode;
-//  background-image: url('/static/img/hot-or-cold.png');
-//}
-//
-//.projectNode--5 {
-//  @extend .projectNode;
-//  background-image: url('/static/img/mylist.png');
-//  display: block;
-//  margin: auto;
-//}

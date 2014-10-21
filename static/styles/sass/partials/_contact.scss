@@ -1,4 +1,8 @@
 // contact
+#contactWrapper {
+  padding: 5em 0 0 0;
+}
+
 .email {
   border: 2px solid #4d4d4d;
   color: #4d4d4d;
@@ -48,11 +52,24 @@
 // footer
 footer {
   background-color: #cbcbcb;
-  margin-top: 5.5em;
+  margin-top: 5em;
   width: 100%;
 }
 
 .footerContent {
   font-size: .6em;
   padding: 10px 25px;
+
+  a {
+    color: $fontColor;
+    transition: .5s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 100%;
+  }
 }

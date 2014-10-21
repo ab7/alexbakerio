@@ -2,27 +2,29 @@
 
 $(function () {
   'use strict';
-  var $window, $navBar, $skillsWrapper, windowTop, navTop, skillsTop, $topLink;
+  var $window, $navBar, $introduction, windowTop, navTop, introTop, $topLink, $linkSpan;
 
   // sticky nav on scroll
   $window = $(window);
   $navBar = $('nav');
-  $skillsWrapper = $('#skillsWrapper');
+  $introduction = $('.introduction');
   $topLink = $('.topLink');
+  $linkSpan = $topLink.children('span');
 
   $window.scroll(function () {
     windowTop = $window.scrollTop();
     navTop = $navBar.offset().top;
-    skillsTop = $skillsWrapper.offset().top;
+    introTop = $introduction.offset().top;
 
     if (windowTop >= navTop) {
       $navBar.addClass('stickyNav');
       if ($window.width() >= 440) {
-        $topLink.css({'display': 'inline-block'});
+        $topLink.fadeIn();
+        $linkSpan.fadeIn();
       }
     }
 
-    if ((skillsTop - $navBar.height()) >= windowTop) {
+    if ((introTop - $navBar.height()) >= windowTop) {
       $navBar.removeClass('stickyNav');
       $topLink.hide();
     }
@@ -35,7 +37,7 @@ $(function () {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 76
         }, 1000);
         return false;
       }

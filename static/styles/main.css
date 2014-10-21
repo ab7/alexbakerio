@@ -450,8 +450,6 @@ th {
 h2 {
   color: #ff4b4b;
   font: 1em "Rock Salt";
-  margin-top: 3em;
-  padding-top: 1em;
   text-align: center;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
@@ -460,13 +458,11 @@ h3 {
   color: #ff4b4b;
   font: 2.1em 'undercoverregular';
   margin: 0;
-  padding-top: 2.5em;
   text-align: center;
 }
 @media all and (min-width: 500px) {
   h3 {
     font-size: 260%;
-    padding-top: 2em;
   }
 }
 @media all and (min-width: 768px) {
@@ -481,7 +477,6 @@ p {
 }
 
 #atfWrapper {
-  position: relative;
   text-align: center;
   width: 100%;
 }
@@ -492,6 +487,7 @@ header {
   background-size: 100px 50px;
   height: 45%;
   padding-bottom: 15%;
+  position: relative;
 }
 @media all and (min-width: 500px) {
   header {
@@ -509,7 +505,7 @@ header {
   box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
   margin-top: 2em;
   max-width: 180px;
-  width: 33%;
+  width: 50%;
 }
 
 .name {
@@ -537,6 +533,11 @@ nav {
   width: 100%;
   z-index: 1;
 }
+@media all and (max-height: 250px) {
+  nav {
+    display: none;
+  }
+}
 
 .stickyNav {
   bottom: auto;
@@ -545,7 +546,7 @@ nav {
 }
 
 .navButton {
-  background-image: linear-gradient(to bottom, #c3c3c3 0%, white 100%);
+  border: 3px solid #ff4b4b;
   border-radius: 0 100% 100% 100%;
   color: #ff4b4b;
   display: inline-block;
@@ -553,15 +554,14 @@ nav {
   height: 5em;
   margin: .6em 1%;
   outline: none;
-  padding-top: 1.7em;
+  padding-top: 1.6em;
   text-align: center;
   text-decoration: none;
   transition: .5s;
   width: 5em;
 }
 .navButton:hover {
-  color: #696969;
-  box-shadow: 0px 1px 2px 0px rgba(137, 137, 137, 0.75);
+  border-color: #fff;
 }
 @media all and (min-width: 500px) {
   .navButton {
@@ -569,21 +569,78 @@ nav {
   }
 }
 
+@media all and (min-width: 440px) {
+  .namePH {
+    display: inline-block;
+    margin-right: 2%;
+    width: 7em;
+    vertical-align: middle;
+  }
+}
+@media all and (min-width: 560px) {
+  .namePH {
+    width: 11em;
+  }
+}
+
 .topLink {
   color: #ff4b4b;
   display: none;
-  font: 1.7em 'primetimeregular';
-  margin-right: 2%;
-  padding-top: .1em;
+  font: 2em 'primetimeregular';
+  line-height: 80%;
   text-decoration: none;
-  transition: .5s;
-  vertical-align: top;
 }
 .topLink span {
-  display: block;
+  display: none;
 }
-.topLink:hover {
-  color: #696969;
+@media all and (min-width: 560px) {
+  .topLink span {
+    margin-left: 2em;
+  }
+}
+
+.introduction {
+  background-image: linear-gradient(to bottom, #c4c4c4 0%, white 100%);
+  margin: 0 auto;
+  padding: 3em 0 4em;
+}
+
+.hello {
+  background-color: #ff4b4b;
+  border-radius: 100% 100% 0 100%;
+  color: #fff;
+  display: inline-block;
+  font: 1.5em "Righteous";
+  height: 5em;
+  line-height: 5em;
+  margin: 0 1em 1em 0;
+  vertical-align: bottom;
+  width: 5em;
+}
+
+.welcome {
+  color: #ff4b4b;
+  font-size: 1.4em;
+}
+
+.intro {
+  color: #505050;
+  display: inline-block;
+  max-width: 510px;
+  text-align: left;
+  vertical-align: bottom;
+  width: 90%;
+}
+.intro a {
+  color: #505050;
+  transition: .5s;
+}
+.intro a:hover {
+  color: #ff4b4b;
+}
+
+#skillsWrapper {
+  padding: 2em 0;
 }
 
 .stackWrapper {
@@ -857,7 +914,7 @@ nav {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: top;
-  margin: 1em 1em 3em 1em;
+  margin: 1em;
 }
 .nginxBlock:hover {
   background: #505050;
@@ -900,12 +957,12 @@ nav {
 
 #projectsWrapper {
   background-color: #e3e3e3;
+  padding: 5em 0 2em 0;
   text-align: center;
-  padding-bottom: 2.5em;
 }
 
 .projectNodes {
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 0 20px;
   max-width: 1300px;
   margin: 0 auto;
   list-style: none;
@@ -961,8 +1018,8 @@ nav {
 }
 .projectNodes figcaption a {
   color: #fff;
-  background: #ed4e6e;
-  border: 2px solid #ed4e6e;
+  background: #ff4b4b;
+  border: 2px solid #ff4b4b;
   border-radius: 2px;
   padding: 5px 10px;
   text-align: center;
@@ -1033,6 +1090,10 @@ nav {
   right: 20px;
 }
 
+#contactWrapper {
+  padding: 5em 0 0 0;
+}
+
 .email {
   border: 2px solid #4d4d4d;
   color: #4d4d4d;
@@ -1080,13 +1141,25 @@ nav {
 
 footer {
   background-color: #cbcbcb;
-  margin-top: 5.5em;
+  margin-top: 5em;
   width: 100%;
 }
 
 .footerContent {
   font-size: .6em;
   padding: 10px 25px;
+}
+.footerContent a {
+  color: #505050;
+  transition: .5s;
+}
+.footerContent a:hover {
+  color: #ff4b4b;
+}
+@media all and (min-width: 500px) {
+  .footerContent {
+    font-size: 100%;
+  }
 }
 
 .blogTitle {
