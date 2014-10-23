@@ -24,7 +24,7 @@
 }
 
 // text styles
-h3 {
+.sectionTitle {
   color: $mainColor;
   font: 2.1em 'undercoverregular';
   margin: 0;
@@ -38,7 +38,7 @@ h3 {
   }
 }
 
-p {
+h4 {
   color: $fontColor;
   text-align: center;
 }

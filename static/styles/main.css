@@ -447,24 +447,24 @@ th {
   font-weight: normal;
   font-style: normal;
 }
-h3 {
+.sectionTitle {
   color: #ff4b4b;
   font: 2.1em 'undercoverregular';
   margin: 0;
   text-align: center;
 }
 @media all and (min-width: 500px) {
-  h3 {
+  .sectionTitle {
     font-size: 260%;
   }
 }
 @media all and (min-width: 768px) {
-  h3 {
+  .sectionTitle {
     font-size: 360%;
   }
 }
 
-p {
+h4 {
   color: #505050;
   text-align: center;
 }
@@ -517,7 +517,7 @@ header {
   }
 }
 
-nav {
+.frontNav {
   background-image: linear-gradient(to top, #c3c3c3 0%, white 100%);
   bottom: 0;
   box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
@@ -527,7 +527,7 @@ nav {
   z-index: 1;
 }
 @media all and (max-height: 250px) {
-  nav {
+  .frontNav {
     display: none;
   }
 }
@@ -1155,9 +1155,36 @@ footer {
   }
 }
 
+.admin {
+  text-align: center;
+}
+
+.adminNav {
+  color: #505050;
+  font: 1.5em "Roboto";
+  margin: -2em auto 3em;
+  padding: .5em 1em;
+}
+.adminNav a {
+  color: #505050;
+}
+
+.adminEntry {
+  font: 1.5em "Roboto";
+  margin: .3em auto;
+  width: 90%;
+}
+.adminEntry span {
+  display: inline-block;
+  text-align: left;
+  width: 400px;
+}
+.adminEntry a {
+  color: #505050;
+}
+
 .blogHeader {
   border-bottom: 5px solid #ff4b4b;
-  height: 20%;
   text-align: center;
 }
 
@@ -1174,23 +1201,32 @@ footer {
   margin: 0;
 }
 
-.page {
-  background: white;
-  border: 5px solid #ccc;
-  margin: 2em auto;
-  padding: 0.8em;
-  width: 35em;
+.entry {
+  margin: 3em auto;
+  width: 800px;
+  white-space: pre-line;
 }
-
-.entries {
-  list-style: none;
+.entry img {
+  display: block;
+  margin: 0 auto;
+}
+.entry h3 {
+  color: #ff4b4b;
+  font: 3em "Roboto";
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
-.entries li {
-  margin: 0.8em 1.2em;
+.entryDate {
+  color: #505050;
+  font: 1.4em "Open Sans";
+  margin: -2em 0;
+  opacity: .5;
+}
+
+.entryContent {
+  color: #505050;
+  font: 1.2em "Open Sans";
 }
 
 .login {
@@ -1201,7 +1237,6 @@ footer {
 }
 .login input {
   border-radius: 5px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
   margin: 0;
   width: 100%;
 }
@@ -1231,11 +1266,10 @@ footer {
   border-radius: 5px;
   margin: 3em auto;
   overflow: hidden;
-  width: 60%;
+  width: 85%;
 }
 .addEntry input, .addEntry textarea {
   border-radius: 5px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
   display: block;
   margin: 0;
   width: 100%;
@@ -1250,7 +1284,8 @@ footer {
   margin-bottom: 20px;
 }
 
-.logout {
+.adminReturn {
+  color: #505050;
   display: block;
   text-align: center;
 }

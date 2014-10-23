@@ -1,157 +1,157 @@
 {% extends 'base.html' %}
 
 {% block main %}
-  <div id=atfWrapper>
+  <div id="atfWrapper">
     <header>
-      <img class=headshot src=static/img/alex_baker.png alt=Alex Baker>
-      <h1 class=name>Alex Baker</h1>
-      <nav>
-        <div class=namePH>
-          <a class=topLink href=#atfWrapper>
+      <img class="headshot" src="static/img/alex_baker.png" alt="Alex Baker">
+      <h1 class="name">Alex Baker</h1>
+      <nav class="frontNav">
+        <div class="namePH">
+          <a class="topLink" href="#atfWrapper">
             Alex<span> Baker</span>
           </a>
         </div>
-        <a class=navButton href=#skillsWrapper>Skills</a>
-        <a class=navButton href=#projectsWrapper>Projects</a>
-        <a class=navButton href=#contactWrapper>Contact</a>
-        <a class=navButton href=/blog>Blog</a>
+        <a class="navButton" href="#skillsWrapper">Skills</a>
+        <a class="navButton" href="#projectsWrapper">Projects</a>
+        <a class="navButton" href="#contactWrapper">Contact</a>
+        <a class="navButton" href="/blog">Blog</a>
       </nav>
     </header>
-    <div class=introduction>
-      <div class=introBK></div>
-      <div class=hello>
+    <div class="introduction">
+      <div class="introBK"></div>
+      <div class="hello">
         Hello!
       </div>
-      <div class=intro>
-        <div class=welcome>Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href=//www.alexbakersax.com target=_blank>musician</a>. You can check out my <a href=#projectsWrapper>projects</a> and <a href=#skillsWrapper>skills</a> below. Check out the <a href=/blog>blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href=#contactWrapper>contact</a> me if you want to talk!
+      <div class="intro">
+        <div class="welcome">Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href="//www.alexbakersax.com" target="_blank">musician</a>. You can check out my <a href="#projectsWrapper">projects</a> and <a href="#skillsWrapper">skills</a> below. Check out the <a href="/blog">blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href="#contactWrapper">contact</a> me if you want to talk!
       </div>
     </div>
   </div>
-  <div id=skillsWrapper>
-    <h3>Skill Set</h3>
-    <p>Current Production Stack</p>
-    <div class=stackWrapper>
-      <div class=frontendStack>
-        <div class=gruntBlock>
-          <a class=gruntLink href=//gruntjs.com/ target=_blank>
-            <span class=skillInfo>GruntJS</span>
+  <div id="skillsWrapper">
+    <h3 class="sectionTitle">Skill Set</h3>
+    <h4>Current Production Stack</h4>
+    <div class="stackWrapper">
+      <div class="frontendStack">
+        <div class="gruntBlock">
+          <a class="gruntLink" href="//gruntjs.com/" target="_blank">
+            <span class="skillInfo">GruntJS</span>
           </a>
-          <div class=frontendTitle>Frontend</div>
-          <a class=htmlBlock href=//www.w3.org/TR/html5/ target=_blank>
-            <span class=skillInfo>HTML5</span>
+          <div class="frontendTitle">Frontend</div>
+          <a class="htmlBlock" href="//www.w3.org/TR/html5/" target="_blank">
+            <span class="skillInfo">HTML5</span>
           </a>
-          <div class=sassBlock>
-            <a class=sassLink href=//sass-lang.com target=_blank></a>
+          <div class="sassBlock">
+            <a class="sassLink" href="//sass-lang.com" target="_blank"></a>
           </div>
-          <a class=cssBlock href=//www.w3schools.com/css/css3_intro.asp target=_blank>
-            <span class=skillInfo>CSS3</span>
+          <a class="cssBlock" href="//www.w3schools.com/css/css3_intro.asp" target="_blank">
+            <span class="skillInfo">CSS3</span>
           </a>
-          <a class=jsBlock href=//developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript target=_blank>
-            <span class=skillInfo>Javascript</span>
+          <a class="jsBlock" href="//developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript" target="_blank">
+            <span class="skillInfo">Javascript</span>
           </a>
         </div>
       </div>
-      <div class=backendStack>
-        <div class=gaeBlock>
-          <a class=gaeLink href=//developers.google.com/appengine/ target=_blank>
-            <span class=skillInfo>Google App Engine</span>
+      <div class="backendStack">
+        <div class="gaeBlock">
+          <a class="gaeLink" href="//developers.google.com/appengine/" target="_blank">
+            <span class="skillInfo">Google App Engine</span>
           </a>
-          <div class=backendTitle>Backend</div>
-          <a href=//www.python.org target=_blank class=pythonBlock>
-            <span class=skillInfo>Python</span>
+          <div class="backendTitle">Backend</div>
+          <a class="pythonBlock" href=//www.python.org target="_blank">
+            <span class="skillInfo">Python</span>
           </a>
-          <a href=//webapp-improved.appspot.com/ target=_blank class=webapp2Block>
-            <div class=skillInfo>Webapp2</div>
+          <a class="webapp2Block" href="//webapp-improved.appspot.com/" target="_blank">
+            <div class="skillInfo">Webapp2</div>
           </a>
-          <a href=//jinja.pocoo.org/ target=_blank class=jinjaBlock>
-            <div class=skillInfo>Jinja2</div>
+          <a class="jinjaBlock" href="//jinja.pocoo.org/" target="_blank">
+            <div class="skillInfo">Jinja2</div>
           </a>
         </div>
       </div>
     </div>
-    <div class=otherTechWrapper>
-      <p>I also dabble in these technologies...</p>
-      <a class=flaskBlock href=//flask.pocoo.org/ target=_blank>
-        <span class=skillInfo>Flask</span>
+    <div class="otherTechWrapper">
+      <h4>I also dabble in these technologies...</h4>
+      <a class="flaskBlock" href="//flask.pocoo.org/" target="_blank">
+        <span class="skillInfo">Flask</span>
       </a>
-      <a class=djangoBlock href=//www.djangoproject.com/ target=_blank>
-        <span class=skillInfo>Django</span>
+      <a class="djangoBlock" href="//www.djangoproject.com/" target="_blank">
+        <span class="skillInfo">Django</span>
       </a>
-      <a class=nginxBlock href=//nginx.org/en/ target=_blank>
-        <span class=skillInfo>Nginx</span>
+      <a class="nginxBlock" href="//nginx.org/en/" target="_blank">
+        <span class="skillInfo">Nginx</span>
       </a>
     </div>
   </div>
-  <div id=projectsWrapper>
-    <h3>Projects</h3>
-    <ul class=projectNodes>
+  <div id="projectsWrapper">
+    <h3 class="sectionTitle">Projects</h3>
+    <ul class="projectNodes">
       <li>
         <figure>
-          <img src=static/img/sax-lessons.png alt=Saxophone Lessons>
+          <img src="static/img/sax-lessons.png" alt="Saxophone Lessons">
           <figcaption>
-            <a href=//www.alexbakersax.com target=_blank>Take a look</a>
-            <a href=//github.com/ab7/sax-lessons target=_blank>Source</a>
+            <a href="//www.alexbakersax.com" target="_blank">Take a look</a>
+            <a href="//github.com/ab7/sax-lessons" target="_blank">Source</a>
           </figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src=static/img/twitter-visualization.png alt=Twitter Visualation>
+          <img src="static/img/twitter-visualization.png" alt="Twitter Visualation">
           <figcaption>
-            <a href=//api-hack.appspot.com target=_blank>Take a look</a>
-            <a href=//github.com/ab7/tweet-location-visualization target=_blank>Source</a>
+            <a href="//api-hack.appspot.com" target="_blank">Take a look</a>
+            <a href="//github.com/ab7/tweet-location-visualization" target="_blank">Source</a>
           </figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src=static/img/music-theory-quiz.png alt=Music Thoery Quiz>
+          <img src="static/img/music-theory-quiz.png "alt="Music Theory Quiz">
           <figcaption>
-            <a href=//ab7.github.io/music-theory-quiz target=_blank>Take a look</a>
-            <a href=//github.com/ab7/music-theory-quiz target=_blank>Source</a>
+            <a href="//ab7.github.io/music-theory-quiz" target="_blank">Take a look</a>
+            <a href="//github.com/ab7/music-theory-quiz" target="_blank">Source</a>
           </figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src=static/img/hot-or-cold.png alt=Hot or cold number game>
+          <img src="static/img/hot-or-cold.png" alt="Hot or cold number game">
           <figcaption>
-            <a href=//ab7.github.io/hot-or-cold target=_blank>Take a look</a>
-            <a href=//github.com/ab7/hot-or-cold target=_blank>Source</a>
+            <a href="//ab7.github.io/hot-or-cold" target="_blank">Take a look</a>
+            <a href="//github.com/ab7/hot-or-cold" target="_blank">Source</a>
           </figcaption>
         </figure>
       </li>
       <li>
         <figure>
-          <img src=static/img/mylist.png alt=Mylist list making app>
+          <img src="static/img/mylist.png" alt="Mylist list making app">
           <figcaption>
-            <a href=//ab7.github.io/mylist target=_blank>Take a look</a>
-            <a href=//github.com/ab7/mylist target=_blank>Source</a>
+            <a href="//ab7.github.io/mylist" target="_blank">Take a look</a>
+            <a href="//github.com/ab7/mylist" target="_blank">Source</a>
           </figcaption>
         </figure>
       </li>
     </ul>
   </div>
-  <div id=contactWrapper>
-    <h3>Contact</h3>
-    <a class=email href=mailto:alex@alexbakertech.com>alex@alexbakertech.com</a>
-    <div class=socialWrapper>
-      <a href=//github.com/ab7 target=_blank>
-        <img class=socialLink src=static/img/github-logo.png alt=github logo>
+  <div id="contactWrapper">
+    <h3 class="sectionTitle">Contact</h3>
+    <a class="email" href="mailto:alex@alexbakertech.com">alex@alexbakertech.com</a>
+    <div class="socialWrapper">
+      <a href="//github.com/ab7" target="_blank">
+        <img class="socialLink" src=static/img/github-logo.png alt=github logo>
       </a>
-      <a href=//plus.google.com/u/0/116483157797299917604/posts target=_blank>
-        <img class=socialLink src=static/img/google-plus-logo.png alt=google plus logo>
+      <a href="//plus.google.com/u/0/116483157797299917604/posts" target="_blank">
+        <img class="socialLink" src="static/img/google-plus-logo.png" alt="google" plus logo>
       </a>
-      <a href=//twitter.com/alexbakertech target=_blank>
-        <img class=socialLink src=static/img/twitter-logo.png alt=twitter logo>
+      <a href="//twitter.com/alexbakertech" target="_blank">
+        <img class="socialLink" src="static/img/twitter-logo.png" alt="twitter" logo>
       </a>
-      <a  href=//www.linkedin.com/in/alexbakertech target=_blank>
-        <img class=socialLink src=static/img/linkedin-logo.png alt=linkedin logo>
+      <a  href="//www.linkedin.com/in/alexbakertech" target="_blank">
+        <img class="socialLink" src="static/img/linkedin-logo.png" alt="linkedin" logo>
       </a>
     </div>
     <footer class=clearfix>
       <p class="footerContent floatL">Copyright © 2014 Alex Baker</p>
-      <p class="footerContent floatR">Site source <a href=//github.com/ab7/alexbakertech target=_blank>here</a>.</p>
+      <p class="footerContent floatR">Site source <a href="//github.com/ab7/alexbakertech" target="_blank">here</a>.</p>
     </footer>
   </div>
 {% endblock %}

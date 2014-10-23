@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 
 {% block main %}
-  <a class=logout href="{{url_for('logout')}}">Logout</a>
-  <form class=addEntry action="{{ url_for('add_entry') }}" method=post>
-    <fieldset class=addEntry>
+  <a class="adminReturn" href="{{url_for('admin')}}">return</a>
+  {% if title %}
+    <form class="addEntry" action="{{entry_id}}" method="post">
+  {% else %}
+    <form class="addEntry" action="{{url_for('add_entry')}}" method="post">
+  {% endif %}
+    <fieldset class="addEntry">
       <label>
         Title:
-        <input type=text size=30 name=title>
+        <input type="text" name="title" value="{{title}}">
       </label>
       <label>
         Text:
-        <textarea name=text></textarea>
+        <textarea name="text">{{content}}</textarea>
       </label>
-      <input class=button type=submit value=Share>
+      <input class="button" type="submit" value="Share">
     </fieldset>
   </form>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <div class="admin">
+    <h1 class="name">Blog Entries</h1>
+    <nav class="adminNav">
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="{{url_for('add_entry')}}">Add Entry</a> |
+      <a href="{{url_for('logout')}}">Logout</a>
+    </nav>
+    {% for entry in entries %}
+      <div class="adminEntry">
+        {{entry.date}} | <span>{{entry.title[:35]}}</span> |
+        <a href="/admin/edit/{{entry.id}}">edit</a> |
+        <a href="/admin/delete/{{entry.id}}">delete</a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

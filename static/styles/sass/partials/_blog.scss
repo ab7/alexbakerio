@@ -1,7 +1,6 @@
-// blog styles
+// header styles
 .blogHeader {
   border-bottom: 5px solid $mainColor;
-  height: 20%;
   text-align: center;
 }
 
@@ -18,21 +17,33 @@
   margin: 0;
 }
 
-.page  {
-  background: white;
-  border: 5px solid #ccc;
-  margin: 2em auto;
-  padding: 0.8em;
-  width: 35em;
+// entry styles
+.entry {
+  margin: 3em auto;
+  width: 800px;
+  white-space: pre-line;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h3 {
+    color: $mainColor;
+    font: 3em $blogEntryFont;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.entries {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+.entryDate {
+  color: $fontColor;
+  font: 1.4em $blogContentFont;
+  margin: -2em 0;
+  opacity: .5;
 }
 
-.entries li {
-  margin: 0.8em 1.2em;
+.entryContent {
+  color: $fontColor;
+  font: 1.2em $blogContentFont;
 }

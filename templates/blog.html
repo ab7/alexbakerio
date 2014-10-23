@@ -1,18 +1,27 @@
 {% extends "base.html" %}
 
 {% block main %}
-  <header class=blogHeader>
-    <a class=blogTitle href='/'>Alex Baker</a>
-    <h1 class=name>Blog</h1>
-    <h4 class=blogSubtitle>Thoughts on the web, tutorials, code...</h4>
+  <header class="blogHeader">
+    <a class="blogTitle" href="/">Alex Baker</a>
+    <h1 class="name">Blog</h1>
+    <h2 class="blogSubtitle">Thoughts on the web, tutorials, code...</h2>
   </header>
-  <ul class=entries>
+  <div class="entries">
   {% for entry in entries %}
-    <li><h2>{{entry.title}}</h2>{{ entry.text|safe }}
+    <div class="entry">
+      <h3>{{entry.title}}</h3>
+      <div class="entryDate">
+        {{entry.date}}
+      </div>
+      <p class="entryContent">
+        {{entry.text | safe}}
+      </p>
+    </div>
   {% else %}
-    <li>
+    <div class="entry">
       <em>Work in progress</em>
-      <a class=logout href=/>return</a>
+      <a class="logout" href=/>return</a>
+    </div>
   {% endfor %}
-  </ul>
+  </div>
 {% endblock %}
