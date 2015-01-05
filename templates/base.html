@@ -7,9 +7,22 @@
     <meta name="description" content="Alex Baker - Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='//fonts.googleapis.com/css?family=Righteous%7CRoboto%7COpen+Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.prefixed.min.css')}}">
+    <!-- build:remove -->
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+    <!-- /build -->
+    <!-- build:template
+    <link rel="stylesheet" href="{{url_for('static', filename='main.min.css')}}">
+    /build -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{url_for('static', filename='js/main.built.min.js')}}"></script>
+    <!-- build:remove -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <!-- /build -->
+    <!-- build:template
+    <% if (environment === 'dist') { %>
+    <script src="{{url_for('static', filename='main.min.js')}}"></script>
+    <% } %>
+    /build -->
   </head>
   <body>
     {% block main %}{% endblock %}

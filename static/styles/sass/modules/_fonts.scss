@@ -1,0 +1,45 @@
+// custom fonts
+@font-face {
+  font-family: 'undercoverregular';
+  src: url('/static/fonts/undercover-webfont.eot');
+  src: url('/static/fonts/undercover-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/undercover-webfont.woff2') format('woff2'),
+       url('/static/fonts/undercover-webfont.woff') format('woff'),
+       url('/static/fonts/undercover-webfont.ttf') format('truetype'),
+       url('/static/fonts/undercover-webfont.svg#undercoverregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'primetimeregular';
+  src: url('/static/fonts/primetime-webfont.eot');
+  src: url('/static/fonts/primetime-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/static/fonts/primetime-webfont.woff2') format('woff2'),
+       url('/static/fonts/primetime-webfont.woff') format('woff'),
+       url('/static/fonts/primetime-webfont.ttf') format('truetype'),
+       url('/static/fonts/primetime-webfont.svg#primetimeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// text styles
+.sectionTitle {
+  color: $mainColor;
+  font: 2.1em 'undercoverregular';
+  margin: 0;
+  text-align: center;
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 260%;
+  }
+  @media all and (min-width: $secondMedia) {
+    font-size: 360%;
+  }
+}
+
+h4 {
+  color: $fontColor;
+  text-align: center;
+}
+

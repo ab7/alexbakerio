@@ -1,0 +1,31 @@
+// add blog entry
+.addEntry {
+  border-radius: 5px;
+  margin: 3em auto;
+  overflow: hidden;
+  width: 85%;
+
+  input, textarea {
+    border-radius: 5px;
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  textarea {
+    height: 400px;
+  }
+
+  label {
+    color: #395870;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
+.adminReturn {
+  color: $fontColor;
+  display: block;
+  text-align: center;
+}

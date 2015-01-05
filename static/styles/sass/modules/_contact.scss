@@ -1,0 +1,75 @@
+// contact
+#contactWrapper {
+  padding: 5em 0 0 0;
+}
+
+.email {
+  border: 2px solid #4d4d4d;
+  color: #4d4d4d;
+  display: block;
+  font-size: 1.2em;
+  margin: 2em auto 1em;
+  max-width: 450px;
+  opacity: .7;
+  padding: 15px 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 75%;
+}
+
+.email:hover {
+  opacity: 1;
+}
+
+.socialWrapper {
+  margin: auto;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 55px;
+  }
+}
+
+.socialLink {
+  border: 3px solid #fff;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0 .5em;
+  opacity: .7;
+  padding: 3px;
+  transition: 0.3s;
+}
+
+.socialLink:hover {
+  border-color: #4d4d4d;
+  opacity: 1;
+}
+
+// footer
+footer {
+  background-color: #cbcbcb;
+  margin-top: 5em;
+  width: 100%;
+}
+
+.footerContent {
+  font-size: .6em;
+  padding: 10px 25px;
+
+  a {
+    color: $fontColor;
+    transition: .5s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 100%;
+  }
+}

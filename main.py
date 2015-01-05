@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 # configuration
 app.config.update(dict(
-    DATABASE = os.path.join(app.root_path, 'main.db'),
-    DEBUG = False,
+    DATABASE = os.path.join(app.root_path, 'data/main.db'),
+    DEBUG = True,
     SECRET_KEY = secrets.secret_key,
     USERNAME = secrets.username,
     PASSWORD = secrets.password

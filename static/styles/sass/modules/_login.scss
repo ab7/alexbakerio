@@ -1,0 +1,37 @@
+// login form
+.login {
+  border-radius: 5px;
+  margin: 3em auto;
+  overflow: hidden;
+  width: 300px;
+
+  input {
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+  }
+
+  label {
+    color: $mainColor;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  background: $mainColor;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.error {
+  background: #f0d6d6;
+  padding: 0.5em;
+}
+
+

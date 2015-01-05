@@ -9,20 +9,84 @@ module.exports = function (grunt) {
         cascade: false
       },
       single_file: {
-        src: 'static/styles/main.css',
-        dest: 'static/styles/main.prefixed.css'
+        src: 'dist/static/main.min.css',
+        dest: 'dist/static/main.min.css'
       }
     },
     concat: {
-      dist: {
-        src: [ 'static/js/vendor/*.js', 'static/js/main.js'],
-        dest: 'static/js/main.built.js'
+      js: {
+        src: ['static/js/modules/*.js', 'static/js/main.js'],
+        dest: 'dist/static/main.min.js'
+      },
+      css: {
+        src: ['static/styles/normalize.css', 'static/styles/main.css'],
+        dest: 'dist/static/main.min.css'
+      }
+    },
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: 'static/img/*',
+            dest: 'dist/static/img',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: 'static/fonts/*',
+            dest: 'dist/static/fonts',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: 'lib/*.py',
+            dest: 'dist/lib',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: 'templates/*.html',
+            dest: 'dist/templates',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ['data/*.py', 'data/*.sql', 'data/*.db'],
+            dest: 'dist/data',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ['main.py', 'secrets.py'],
+            dest: 'dist',
+            filter: 'isFile'
+          }
+        ]
       }
     },
     cssmin : {
       css: {
-        src: 'static/styles/main.prefixed.css',
-        dest: 'static/styles/main.prefixed.min.css'
+        src: 'dist/static/main.min.css',
+        dest: 'dist/static/main.min.css'
+      }
+    },
+    processhtml: {
+      dist: {
+        files: {
+          'dist/templates/base.html': ['templates/base.html']
+        }
+      },
+      noJS: {
+        files: {
+          'dist/templates/base.html': ['templates/base.html']
+        }
       }
     },
     sass: {
@@ -36,29 +100,80 @@ module.exports = function (grunt) {
       }
     },
     uglify : {
-      js: {
+      my_target: {
         files: {
-          'static/js/main.built.min.js' : ['static/js/main.built.js']
+          'dist/static/main.min.js' : ['dist/static/main.min.js']
+        }
+      }
+    },
+    uncss: {
+      dist: {
+        options: {
+          csspath: '../dist/static/',
+          stylesheets: ['main.min.css']
+        },
+        files: {
+          'dist/static/main.min.css': ['templates/*.html']
         }
       }
     },
     watch: {
       css: {
         files: ['static/styles/sass/main.scss', 'static/styles/sass/**/*.scss'],
-        tasks: ['sass', 'autoprefixer', 'cssmin']
+        tasks: ['sass'],
+        options: {
+          livereload: true
+        }
       },
       js: {
-        files: ['static/js/main.js', 'static/js/vendor/*.js'],
-        tasks: ['concat', 'uglify']
+        files: ['static/js/main.js', 'static/js/modules/*.js'],
+        options: {
+          livereload: true
+        }
+      },
+      html: {
+        files: ['index.html'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'watch']);
-  grunt.registerTask('nojs', ['sass', 'autoprefixer', 'cssmin', 'watch']);
+
+  // custom tasks
+  grunt.registerTask('checkJS', function () {
+    var jsFile;
+    jsFile = grunt.file.read('dist/static/main.min.js');
+    if (jsFile === "") {
+      grunt.file.delete('dist/static/main.min.js');
+      grunt.task.run('processhtml:noJS');
+    } else {
+      grunt.task.run('processhtml:dist');
+    }
+  });
+
+  // main tasks
+  grunt.registerTask('dev', [
+    'sass',
+    'watch'
+  ]);
+  grunt.registerTask('pro', [
+    'sass',
+    'concat',
+    'uncss',
+    'autoprefixer',
+    'cssmin',
+    'uglify',
+    'copy',
+    'checkJS'
+  ]);
 };
