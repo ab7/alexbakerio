@@ -448,19 +448,15 @@ th {
   font-style: normal;
 }
 .sectionTitle {
+  border-bottom: 3px solid #ff4b4b;
   color: #ff4b4b;
-  font: 2.1em 'undercoverregular';
-  margin: 0;
-  text-align: center;
+  font: 4em 'Oswald';
+  margin: 0 3% .5em;
 }
 @media all and (min-width: 500px) {
   .sectionTitle {
-    font-size: 260%;
-  }
-}
-@media all and (min-width: 768px) {
-  .sectionTitle {
-    font-size: 360%;
+    font-size: 5em;
+    margin: 0 6% .5em;
   }
 }
 
@@ -949,14 +945,18 @@ header {
 }
 
 #projectsWrapper {
-  background-color: #e3e3e3;
-  padding: 5em 0 2em 0;
-  text-align: center;
+  background-color: #ebebeb;
+  padding: 5em 0 1em;
+}
+@media all and (min-width: 500px) {
+  #projectsWrapper {
+    padding: 5em 0;
+  }
 }
 
 .projectNodes {
   padding: 20px 20px 0 20px;
-  max-width: 1300px;
+  max-width: 1600px;
   margin: 0 auto;
   list-style: none;
   text-align: center;
@@ -1014,6 +1014,7 @@ header {
   background: #ff4b4b;
   border: 2px solid #ff4b4b;
   border-radius: 2px;
+  font-size: 90%;
   padding: 5px 10px;
   text-align: center;
   transition: .5s;
@@ -1024,11 +1025,16 @@ header {
 .projectNodes figcaption a:hover {
   border-color: #fff;
 }
+@media all and (min-width: 500px) {
+  .projectNodes figcaption a {
+    font-size: 100%;
+  }
+}
 .projectNodes figcaption a:nth-child(1) {
-  left: 20px;
+  right: 20px;
 }
 .projectNodes figcaption a:nth-child(2) {
-  right: 20px;
+  left: 20px;
 }
 @media screen and (max-width: 31.5em) {
   .projectNodes {
