@@ -28,22 +28,22 @@ $nodeSize: 10em;
 // media queriy break points
 $firstMedia: 500px;
 $secondMedia: 768px;
-$thirdMedia: 1080px;
-
-// general
-$maxWidth: 1470px;
+$maxWidth: 1290px;
 
 // global styles
 .section-title {
   border-bottom: 3px solid $mainColor;
   color: $mainColor;
   font: 4em 'Oswald';
-  margin: 0 3% .5em;
+  margin: 0 8% .5em;
   max-width: $maxWidth;
 
   @media all and (min-width: $firstMedia) {
     font-size: 5em;
-    margin: 0 6% .5em;
+  }
+
+  @media all and (min-width: $maxWidth) {
+    margin: 0 auto .5em;
   }
 }
 

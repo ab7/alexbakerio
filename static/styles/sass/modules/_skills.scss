@@ -32,7 +32,7 @@
   width: $blockSize + 14em;
   vertical-align: top;
 
-  @media all and (min-width: $thirdMedia) {
+  @media all and (min-width: $maxWidth) {
     display: inline-block;
   }
 }
@@ -172,7 +172,7 @@
   width: $blockSize + 14em;
   vertical-align: top;
 
-  @media all and (min-width: $thirdMedia) {
+  @media all and (min-width: $maxWidth) {
     display: inline-block;
   }
 }
