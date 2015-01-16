@@ -1,5 +1,5 @@
 // contact
-#contactWrapper {
+#contact {
   padding: 5em 0 0 0;
 }
 
@@ -15,14 +15,18 @@
   text-align: center;
   text-decoration: none;
   transition: 0.3s;
-  width: 75%;
+  width: 85%;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media all and (min-width: $secondMedia) {
+    font-size: 2em;
+  }
 }
 
-.email:hover {
-  opacity: 1;
-}
-
-.socialWrapper {
+.social {
   margin: auto;
   text-align: center;
 
@@ -31,10 +35,14 @@
   }
   img {
     width: 55px;
+
+    @media all and (min-width: $secondMedia) {
+      width: 65px;
+    }
   }
 }
 
-.socialLink {
+.social-link {
   border: 3px solid #fff;
   border-radius: 100%;
   display: inline-block;
@@ -42,9 +50,9 @@
   opacity: .7;
   padding: 3px;
   transition: 0.3s;
-}
 
-.socialLink:hover {
-  border-color: #4d4d4d;
-  opacity: 1;
+  &:hover {
+    border-color: #4d4d4d;
+    opacity: 1;
+  }
 }
