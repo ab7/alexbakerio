@@ -1,0 +1,42 @@
+// introduction
+.introduction {
+  background-image: linear-gradient(to bottom, #c4c4c4 0%, #fff 100%);
+  margin: 0 auto;
+  padding: 4.5em 0;
+}
+
+.hello {
+  background-color: $mainColor;
+  border-radius: 100% 100% 0 100%;
+  color: #fff;
+  display: inline-block;
+  font: 1.5em $titleFont;
+  height: 5em;
+  line-height: 5em;
+  margin: 0 1em 1em 0;
+  vertical-align: bottom;
+  width: 5em;
+}
+
+.welcome {
+  color: $mainColor;
+  font-size: 1.4em;
+}
+
+.intro {
+  color: $fontColor;
+  display: inline-block;
+  max-width: 510px;
+  text-align: left;
+  vertical-align: bottom;
+  width: 90%;
+
+  a {
+    color: $fontColor;
+    transition: .5s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+}
