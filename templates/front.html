@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 
 {% block main %}
-  <div id="atfWrapper">
+  <div id="top">
     <header>
-      <img class="headshot" src="static/img/alex_baker.png" alt="Alex Baker">
-      <h1 class="name">Alex Baker</h1>
-      <nav class="frontNav">
-        <div class="namePH">
-          <a class="topLink" href="#atfWrapper">
-            Alex<span> Baker</span>
-          </a>
+      <div class="main clearfix">
+        <img class="headshot" src="static/img/alex_baker.png" alt="Alex Baker">
+        <img class="logo-big" src="static/img/alex-baker-logo.png" alt="Alex Baker's logo">
+      </div>
+      <nav class="nav-normal clearfix">
+        <div class="main">
+          <div class="nav-name">
+            <a class="top-link" href="#top">
+              <img class="logo-small" src="static/img/alex-baker-logo-sm.png" alt="Alex Baker's logo">
+            </a>
+          </div>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link-resume" href="/resume">Resume</a>
         </div>
-        <a class="navButton" href="#skillsWrapper">Skills</a>
-        <a class="navButton" href="#projects">Projects</a>
-        <a class="navButton" href="#contactWrapper">Contact</a>
-        <a class="navButton" href="/blog">Blog</a>
       </nav>
     </header>
     <div class="introduction">
@@ -23,11 +27,11 @@
         Hello!
       </div>
       <div class="intro">
-        <div class="welcome">Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href="//www.alexbakersax.com" target="_blank">musician</a>. You can check out my <a href="#projectsWrapper">projects</a> and <a href="#skillsWrapper">skills</a> below. Check out the <a href="/blog">blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href="#contactWrapper">contact</a> me if you want to talk!
+        <div class="welcome">Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href="//www.alexbakersax.com" target="_blank">musician</a>. You can check out my <a href="#projects">projects</a> and <a href="#skillset">skills</a> below. Check out the <a href="/blog">blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href="#contact">contact</a> me if you want to talk!
       </div>
     </div>
   </div>
-  <div id="skillsWrapper">
+  <div id="skillset">
     <h3 class="section-title">Skill Set</h3>
     <h4>Current Production Stack</h4>
     <div class="stackWrapper">

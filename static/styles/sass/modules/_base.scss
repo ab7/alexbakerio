@@ -8,7 +8,7 @@ $borderColor: #606060;
 $fontColor: #505050;
 
 // fonts
-$titleFont: 'Righteous';
+$titleFont: 'Raleway';
 $blogEntryFont: 'Roboto';
 $blogContentFont: 'Open Sans';
 
@@ -26,16 +26,17 @@ $bePosR: .5em;
 $nodeSize: 10em;
 
 // media queriy break points
-$firstMedia: 500px;
+$firstMedia: 640px;
 $secondMedia: 768px;
-$maxWidth: 1290px;
+$maxWidth: 1370px;
 
 // global styles
 .section-title {
-  border-bottom: 3px solid $mainColor;
+  border-bottom: 1px solid $mainColor;
   color: $mainColor;
-  font: 4em 'Oswald';
-  margin: 0 8% .5em;
+  font: 4em $titleFont ;
+  margin: 0 auto .5em;
+  padding: 0 6%;
   max-width: $maxWidth;
 
   @media all and (min-width: $firstMedia) {
@@ -50,4 +51,10 @@ $maxWidth: 1290px;
 h4 {
   color: $fontColor;
   text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: $maxWidth;
+  width: 100%;
 }

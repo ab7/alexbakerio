@@ -2,14 +2,13 @@
 
 $(function () {
   'use strict';
-  var $window, $navBar, $introduction, windowTop, navTop, introTop, $topLink, $linkSpan;
+  var $window, $navBar, $introduction, windowTop, navTop, introTop, $topLink;
 
   // sticky nav on scroll
   $window = $(window);
   $navBar = $('nav');
   $introduction = $('.introduction');
-  $topLink = $('.topLink');
-  $linkSpan = $topLink.children('span');
+  $topLink = $('.top-link');
 
   $window.scroll(function () {
     windowTop = $window.scrollTop();
@@ -17,15 +16,14 @@ $(function () {
     introTop = $introduction.offset().top;
 
     if (windowTop >= navTop) {
-      $navBar.addClass('stickyNav');
+      $navBar.addClass('nav-sticky');
       if ($window.width() >= 440) {
         $topLink.fadeIn();
-        $linkSpan.fadeIn();
       }
     }
 
     if ((introTop - $navBar.height()) >= windowTop) {
-      $navBar.removeClass('stickyNav');
+      $navBar.removeClass('nav-sticky');
       $topLink.hide();
     }
   });
