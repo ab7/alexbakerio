@@ -169,7 +169,7 @@ module.exports = function (grunt) {
   grunt.registerTask('pro', [
     'sass',
     'concat',
-    'uncss',
+    //'uncss',
     'autoprefixer',
     'cssmin',
     'uglify',
