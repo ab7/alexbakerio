@@ -2,3 +2,4 @@ secrets.py
 main.db
 /venv
 main.css
+dist/
