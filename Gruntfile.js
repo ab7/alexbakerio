@@ -15,11 +15,11 @@ module.exports = function (grunt) {
     },
     concat: {
       js: {
-        src: ['static/js/modules/*.js', 'static/js/main.js'],
+        src: ['src/static/js/modules/*.js', 'src/static/js/main.js'],
         dest: 'dist/static/main.min.js'
       },
       css: {
-        src: ['static/styles/normalize.css', 'static/styles/main.css'],
+        src: ['src/static/styles/main.css'],
         dest: 'dist/static/main.min.css'
       }
     },
@@ -29,43 +29,15 @@ module.exports = function (grunt) {
           {
             expand: true,
             flatten: true,
-            src: 'static/img/*',
+            src: 'src/static/img/*',
             dest: 'dist/static/img',
             filter: 'isFile'
           },
           {
             expand: true,
             flatten: true,
-            src: 'static/fonts/*',
+            src: 'src/static/fonts/*',
             dest: 'dist/static/fonts',
-            filter: 'isFile'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: 'lib/*.py',
-            dest: 'dist/lib',
-            filter: 'isFile'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: 'templates/*.html',
-            dest: 'dist/templates',
-            filter: 'isFile'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: ['data/*.py', 'data/*.sql', 'data/*.db'],
-            dest: 'dist/data',
-            filter: 'isFile'
-          },
-          {
-            expand: true,
-            flatten: true,
-            src: ['main.py', 'secrets.py'],
-            dest: 'dist',
             filter: 'isFile'
           }
         ]
@@ -77,16 +49,30 @@ module.exports = function (grunt) {
         dest: 'dist/static/main.min.css'
       }
     },
-    processhtml: {
-      dist: {
-        files: {
-          'dist/templates/base.html': ['templates/base.html']
-        }
+    jinja: {
+      dev: {
+        options: {
+          contextRoot: 'src/templates/context/dev',
+          templateDirs: ['src/templates']
+        },
+        files: [{
+          expand: true,
+          dest: 'src/',
+          cwd: 'src/templates/',
+          src: ['**/!(_)*.html']
+        }]
       },
-      noJS: {
-        files: {
-          'dist/templates/base.html': ['templates/base.html']
-        }
+      pro: {
+        options: {
+          contextRoot: 'src/templates/context/pro',
+          templateDirs: ['src/templates']
+        },
+        files: [{
+          expand: true,
+          dest: 'dist/',
+          cwd: 'src/templates/',
+          src: ['**/!(_)*.html']
+        }]
       }
     },
     sass: {
@@ -95,7 +81,7 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {
-          'static/styles/main.css': 'static/styles/sass/main.scss'
+          'src/static/styles/main.css': 'src/static/styles/sass/main.scss'
         }
       }
     },
@@ -106,33 +92,23 @@ module.exports = function (grunt) {
         }
       }
     },
-    uncss: {
-      dist: {
-        options: {
-          csspath: '../dist/static/',
-          stylesheets: ['main.min.css']
-        },
-        files: {
-          'dist/static/main.min.css': ['templates/*.html']
-        }
-      }
-    },
     watch: {
       css: {
-        files: ['static/styles/sass/main.scss', 'static/styles/sass/**/*.scss'],
+        files: ['src/static/styles/sass/main.scss', 'src/static/styles/sass/**/*.scss'],
         tasks: ['sass'],
         options: {
           livereload: true
         }
       },
       js: {
-        files: ['static/js/main.js', 'static/js/modules/*.js'],
+        files: ['src/static/js/main.js', 'src/static/js/modules/*.js'],
         options: {
           livereload: true
         }
       },
       html: {
-        files: ['templates/*.html'],
+        files: ['src/templates/*.html'],
+        tasks: ['jinja:dev'],
         options: {
           livereload: true
         }
@@ -143,37 +119,33 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-jinja');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // custom tasks
   grunt.registerTask('checkJS', function () {
-    var jsFile;
-    jsFile = grunt.file.read('dist/static/main.min.js');
+    var jsFile = grunt.file.read('dist/static/main.min.js');
     if (jsFile === "") {
       grunt.file.delete('dist/static/main.min.js');
-      grunt.task.run('processhtml:noJS');
-    } else {
-      grunt.task.run('processhtml:dist');
     }
   });
 
   // main tasks
   grunt.registerTask('dev', [
     'sass',
+    'jinja:dev',
     'watch'
   ]);
   grunt.registerTask('pro', [
     'sass',
     'concat',
-    //'uncss',
     'autoprefixer',
     'cssmin',
     'uglify',
     'copy',
-    'checkJS'
+    'checkJS',
+    'jinja:pro'
   ]);
 };
