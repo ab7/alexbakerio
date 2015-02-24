@@ -1,75 +1,30 @@
-// header section
+// general header styles
 #top {
   text-align: center;
   width: 100%;
 }
 
 header {
-  background-color:#d1d1d1;
-  background-image:
-  radial-gradient(circle at 100% 150%, #d1d1d1 24%, #fff 25%, #fff 28%, #d1d1d1 29%, #d1d1d1 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0 150%, #d1d1d1 24%, #fff 25%, #fff 28%, #d1d1d1 29%, #d1d1d1 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50% 100%, #fff 10%, #d1d1d1 11%, #d1d1d1 23%, #fff 24%, #fff 30%, #d1d1d1 31%, #d1d1d1 43%, #fff 44%, #fff 50%, #d1d1d1 51%, #d1d1d1 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, #fff 5%, #d1d1d1 6%, #d1d1d1 15%, #fff 16%, #fff 20%, #d1d1d1 21%, #d1d1d1 30%, #fff 31%, #fff 35%, #d1d1d1 36%, #d1d1d1 45%, #fff 46%, #fff 49%, transparent 50%, transparent),
-  radial-gradient(circle at 0 50%, #fff 5%, #d1d1d1 6%, #d1d1d1 15%, #fff 16%, #fff 20%, #d1d1d1 21%, #d1d1d1 30%, #fff 31%, #fff 35%, #d1d1d1 36%, #d1d1d1 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
   background-size:100px 50px;
   height: 45%;
-  padding-bottom: 15%;
+  padding: 1.5em 0 5.5em;
   position: relative;
+  text-align: center;
 
   @media all and (min-width: $firstMedia) {
-    padding-bottom: 3.5em;
-    text-align: left;
+    // padding-bottom: 3.5em;
+    // text-align: left;
   }
   @media all and (min-width: $secondMedia) {
-    padding-bottom: 1.5em;
+    //padding-bottom: 1.5em;
   }
-}
-
-.headshot {
-  border-radius: 100% 0 100% 100%;
-  box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
-  display: inline-block;
-  margin: 2em 0 1.8em 0;
-  max-width: 180px;
-  width: 40%;
-  vertical-align: bottom;
-
-  @media all and (min-width: $firstMedia) {
-    margin: 2em 0 4em 6%;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    margin-bottom: 5.5em;
-  }
-}
-
-.logo-big {
-  display: inline-block;
-  margin: 0 0 3em 0;
-  vertical-align: bottom;
-  width: 17.3em;
-
-  @media all and (min-width: $firstMedia) {
-    margin: 1em 0 4.1em 1em;
-    width: 20.3em;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    margin-bottom: 5.6em;
-  }
-}
-
-.logo-small {
-  margin-left: 20%;
-  width: 5.6em;
 }
 
 // nav and link buttons
 .nav-normal {
   background-image: linear-gradient(to top, #d1d1d1 0%, #fff 100%);
   bottom: 0;
-  box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
+  //box-shadow: 0px 2px 0px 0px $fontColor;
   position: absolute;
   text-align: center;
   width: 100%;

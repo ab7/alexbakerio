@@ -1,14 +1,35 @@
 {% extends '_base.html' %}
 
 {% block main %}
+  <header>
+    <img class="logo-big" src="static/img/alex-baker-logo.png" alt="Alex Baker's logo">
+    <div class="hello">
+      Hello!
+    </div>
+    <div class="cta">
+      Looking for a web developer?
+    </div>
+    <a class="email" href="mailto:hello@alexbaker.io">Shoot me an email!</a>
+    <nav class="nav-normal">
+      <div class="main">
+        <div class="nav-name">
+          <a class="top-link" href="#top">
+            <img class="logo-small" src="static/img/alex-baker-logo-sm.png" alt="Alex Baker's logo">
+          </a>
+        </div>
+        <a class="nav-link active" href="/About">About</a>
+        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link" href="/blog">Blog</a>
+        <a class="nav-link-resume" href="/static/Alex_Baker_Resume.pdf" target="_blank">Resume</a>
+      </div>
+    </nav>
+  </header>
   <div id="top">
     <div class="introduction">
       <div class="introBK"></div>
-      <div class="hello">
-        Hello!
-      </div>
+      <img class="headshot" src="static/img/alex_baker.png" alt="Alex Baker">
       <div class="intro">
-        <div class="welcome">Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href="http://www.alexbakersax.com" target="_blank">musician</a>. You can check out some of my side <a href="#projects">projects</a>  below. Check out the <a href="/blog">blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href="#contact">contact</a> me if you want to talk!
+        <div class="welcome">Welcome to my portfolio site!</div> I’m a <strong>full stack web developer</strong> and <a href="http://www.alexbakersax.com" target="_blank">musician</a>. You can see some <a href="#projects">projects</a> I've worked on or check out the <a href="/blog">blog</a> for my latest thoughts on tech. I’m always interested in working on exciting projects, so feel free to <a href="#contact">contact</a> me if you want to talk!
       </div>
     </div>
   </div>
@@ -29,9 +50,5 @@
         <img class="social-link" src="static/img/linkedin-logo.png" alt="linkedin" logo>
       </a>
     </div>
-    <footer class="clearfix">
-      <p class="footer-content float-left">Copyright © 2015 Alex Baker</p>
-      <p class="footer-content float-right">Site source <a href="//github.com/ab7/alexbakerio" target="_blank">here</a>.</p>
-    </footer>
   </div>
 {% endblock %}

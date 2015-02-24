@@ -3,29 +3,6 @@
   padding: 5em 0 0 0;
 }
 
-.email {
-  border: 2px solid #4d4d4d;
-  color: #4d4d4d;
-  display: block;
-  font-size: 1.2em;
-  margin: 2em auto 1em;
-  max-width: 450px;
-  opacity: .7;
-  padding: 15px 8px;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.3s;
-  width: 85%;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    font-size: 2em;
-  }
-}
-
 .social {
   margin: auto;
   text-align: center;
