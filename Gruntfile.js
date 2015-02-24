@@ -52,7 +52,7 @@ module.exports = function (grunt) {
     jinja: {
       dev: {
         options: {
-          contextRoot: 'src/templates/context/dev',
+          contextRoot: 'src/templates/context',
           templateDirs: ['src/templates']
         },
         files: [{
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
       },
       pro: {
         options: {
-          contextRoot: 'src/templates/context/pro',
+          contextRoot: 'src/templates/context',
           templateDirs: ['src/templates']
         },
         files: [{
@@ -101,7 +101,8 @@ module.exports = function (grunt) {
         }
       },
       js: {
-        files: ['src/static/js/main.js', 'src/static/js/modules/*.js'],
+        files: ['src/static/js/main.js', 'src/static/js/modules/*.js', 'templates/context/*.json'],
+        tasks: ['jinja:dev'],
         options: {
           livereload: true
         }
