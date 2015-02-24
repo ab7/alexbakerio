@@ -1,5 +1,5 @@
-secrets.py
-main.db
-/venv
 main.css
 dist/
+src/blog.html
+src/index.html
+src/projects.html
