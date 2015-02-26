@@ -9,30 +9,37 @@ $fontColor: #505050;
 
 // fonts
 $titleFont: 'Raleway';
-$blogEntryFont: 'Roboto';
-$blogContentFont: 'Open Sans';
+$contentFont: 'Source Sans Pro';
 
 // header
 $navButtonSize: 5em;
 
-// skills
-$blockSize: 5.5em;
-$fePosT: 3em;
-$fePosL: 1.7em;
-$bePosT: 5.1em;
-$bePosR: .5em;
-
-// projects
-$nodeSize: 10em;
-
 // media queriy break points
 $firstMedia: 640px;
 $secondMedia: 768px;
-$maxWidth: 1370px;
+$maxWidth: 1170px;
 
 // global styles
 body {
-  transition: .5;
+  display: flex;
+  font-family: $contentFont;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: $maxWidth;
+  padding: 0 3%;
+  width: 100%;
+
+  @media all and (min-width: $firstMedia) {
+    padding: 0 6%;
+  }
 }
 
 .section-title {
@@ -54,10 +61,4 @@ body {
 h4 {
   color: $fontColor;
   text-align: center;
-}
-
-.main {
-  margin: 0 auto;
-  max-width: $maxWidth;
-  width: 100%;
 }

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="{{description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='//fonts.googleapis.com/css?family=Ubuntu:700%7COpen+Sans%7CRaleway' rel='stylesheet'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:700%7CSource+Sans+Pro:400,700%7CRaleway' rel='stylesheet'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     {% if dev %}
       <link rel="stylesheet" href="static/styles/main.css">
@@ -17,10 +17,59 @@
     {% endif %}
   </head>
   <body>
-    {% block main %}{% endblock %}
+    <div class="content">
+      <div id="top"></div>
+      <header>
+        <div class="main clearfix">
+        <div class="logo-container">
+          <div class="hello">
+          Hello!
+          </div>
+          <img class="logo-big" src="static/img/alex-baker-logo.png" alt="Alex Baker's logo">
+        </div>
+        <div class="cta-container">
+          <div class="cta">
+            I'm currently looking for full-time <strong class="strong-text">web development</strong> opportunities!
+          </div>
+          <a class="email hvr-wobble-vertical" href="mailto:hello@alexbaker.io">Shoot me an email!</a>
+        </div>
+        </div>
+        <nav class="nav-normal">
+          <div class="main">
+            <div class="nav-name">
+              <a class="nav-top-link" href="#top">
+                <img class="logo-small" src="static/img/alex-baker-logo-sm.png" alt="Alex Baker's logo">
+              </a>
+            </div>
+            <a class="nav-link" href="/">About</a>
+            <a class="nav-link" href="/projects.html">Projects</a>
+            <a class="nav-link" href="/blog.html">Blog</a>
+            <a class="nav-link-resume" href="/static/Alex_Baker_Resume.pdf" target="_blank">Resume</a>
+          </div>
+        </nav>
+      </header>
+      <div class="stick"></div>
+      {% block main %}{% endblock %}
+    </div>
     <footer class="clearfix">
-      <p class="footer-content float-left">Copyright © 2015 Alex Baker</p>
-      <p class="footer-content float-right">Site source <a href="//github.com/ab7/alexbakerio" target="_blank">here</a>.</p>
+      <div class="main clearfix">
+        <div class="social">
+          <a href="//github.com/ab7" target="_blank">
+            <img class="social-link" src=static/img/github-logo.png alt=github logo>
+          </a>
+          <a href="//plus.google.com/u/0/116483157797299917604/posts" target="_blank">
+            <img class="social-link" src="static/img/google-plus-logo.png" alt="google" plus logo>
+          </a>
+          <a href="//twitter.com/alexbakerio" target="_blank">
+            <img class="social-link" src="static/img/twitter-logo.png" alt="twitter" logo>
+          </a>
+          <a  href="//www.linkedin.com/in/alexbakerio" target="_blank">
+            <img class="social-link" src="static/img/linkedin-logo.png" alt="linkedin" logo>
+          </a>
+        </div>
+        <p class="footer-content float-left">Copyright © 2015 Alex Baker</p>
+       <p class="footer-content float-right">Site source <a href="//github.com/ab7/alexbakerio" target="_blank">here</a>.</p>
+      </div>
     </footer>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-52532798-1');ga('send','pageview');

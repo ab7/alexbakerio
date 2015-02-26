@@ -2,18 +2,18 @@
 
 $(function () {
   'use strict';
-  var $window, $navBar, $introduction, windowTop, navTop, introTop, $topLink;
+  var $window, $navBar, $stick, windowTop, navTop, introTop, $topLink;
 
   // sticky nav on scroll
   $window = $(window);
   $navBar = $('nav');
-  $introduction = $('.introduction');
-  $topLink = $('.top-link');
+  $stick = $('.stick');
+  $topLink = $('.nav-top-link');
 
   $window.scroll(function () {
     windowTop = $window.scrollTop();
     navTop = $navBar.offset().top;
-    introTop = $introduction.offset().top;
+    introTop = $stick.offset().top;
 
     if (windowTop >= navTop) {
       $navBar.addClass('nav-sticky');
