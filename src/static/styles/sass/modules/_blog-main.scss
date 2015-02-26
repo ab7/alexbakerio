@@ -1,0 +1,12 @@
+// blog splash page
+.blog-main {
+  background-image: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
+  color: $fontColor;
+  text-align: center;
+
+  img {
+    opacity: .6;
+    padding: 3em 0 1em;
+    width: 15%;
+  }
+}
