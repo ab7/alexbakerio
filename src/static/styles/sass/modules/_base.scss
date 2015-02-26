@@ -8,7 +8,7 @@ $borderColor: #606060;
 $fontColor: #505050;
 
 // fonts
-$titleFont: 'Raleway';
+$titleFont: 'Ubuntu';
 $contentFont: 'Source Sans Pro';
 
 // header
@@ -42,23 +42,25 @@ body {
   }
 }
 
+// global fonts
 .section-title {
   color: $mainColor;
-  font: 4em $titleFont ;
-  margin: 0 auto .5em;
+  font: 2.5em $titleFont;
+  margin: 0 auto;
   padding: 0 6%;
   max-width: $maxWidth;
 
   @media all and (min-width: $firstMedia) {
-    font-size: 5em;
-  }
-
-  @media all and (min-width: $maxWidth) {
-    margin: 0 auto .5em;
+    font-size: 3.5em;
   }
 }
 
 h4 {
   color: $fontColor;
-  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 2em;
+  }
 }

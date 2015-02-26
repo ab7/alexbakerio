@@ -1,4 +1,8 @@
 // project nodes
+.projects {
+  background-image: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
+}
+
 .project-nodes {
   padding: 20px 20px 0 20px;
   margin: 0 auto;
@@ -8,7 +12,6 @@
 
   li {
     display: inline-block;
-
     margin: 0;
     padding: 20px;
     text-align: left;
@@ -100,4 +103,9 @@
       min-width: 300px;
     }
   }
+}
+
+.techs {
+  color: $fontColor;
+  margin-top: .3em;
 }
