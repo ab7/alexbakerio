@@ -31,6 +31,10 @@ $secondMedia: 768px;
 $maxWidth: 1370px;
 
 // global styles
+body {
+  transition: .5;
+}
+
 .section-title {
   color: $mainColor;
   font: 4em $titleFont ;
