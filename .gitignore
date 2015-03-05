@@ -3,3 +3,4 @@ dist/
 src/blog.html
 src/index.html
 src/projects.html
+nginx_conf
