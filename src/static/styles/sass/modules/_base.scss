@@ -20,15 +20,18 @@ $secondMedia: 768px;
 $maxWidth: 1170px;
 
 // global styles
+html {
+  height: 100%;
+}
+
 body {
-  display: flex;
   font-family: $contentFont;
-  min-height: 100vh;
-  flex-direction: column;
+  min-height: 100%;
+  position: relative;
 }
 
 .content {
-  flex: 1;
+  padding-bottom: 13em;
 }
 
 .main {
