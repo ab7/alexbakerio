@@ -11,3 +11,31 @@
     width: 15%;
   }
 }
+
+.post {
+  text-align: left;
+  margin: auto;
+  max-width: $maxWidth - 244px;
+  padding: 1em;
+
+  h1 {
+    color: $mainColor;
+  }
+
+  a {
+    color: $fontColor;
+    transition: .5s;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+
+  @media all and (min-width: $firstMedia) {
+    font-size: 150%;
+  }
+}
+
+.date {
+  opacity: .7;
+}
