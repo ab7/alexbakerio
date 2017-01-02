@@ -1,46 +1,103 @@
 // general header styles
 header {
+  display: none;
   padding: 2.5em 0 5.5em;
   position: relative;
-}
 
-// nav and link buttons
-.nav-normal {
-  background-color: #fff;
-  bottom: 0;
-  padding: 10px;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
+  // Destop menu
+  .nav-normal {
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    z-index: 1;
 
-  .nav-link {
-    color: $mainColor;
-    display: inline-block;
-    font: 19px $titleFont;
-    margin: .6em 10% .6em 0;
-    text-align: center;
-    text-decoration: none;
-    transition: .5s;
-    vertical-align: bottom;
-  }
+    .nav-link {
+      display: inline-block;
+      font: 19px $titleFont;
+      margin: .6em 10% .6em 0;
+      text-align: center;
+      transition: .5s;
+      vertical-align: bottom;
 
-  .active-link {
-    @extend .nav-link;
+      a {
+        color: $mainColor;
+        text-decoration: none;
+      }
+    }
 
-    text-decoration: underline;
-  }
+    .active-link {
+      @extend .nav-link;
 
-  .logo-link{
-    .logo {
-      width: 6em;
+      text-decoration: underline;
+    }
+
+    .logo-link{
+      .logo {
+        width: 6em;
+      }
     }
   }
+
+  .nav-sticky {
+    bottom: auto;
+    position: fixed;
+    top: 0;
+  }
+
+  @media all and (min-width: $secondMedia) {
+    display: block;
+  }
 }
 
-.nav-sticky {
-  bottom: auto;
-  position: fixed;
-  top: 0;
+// Mobile menu
+.slicknav_menu {
+  background: #fff;
+
+  .slicknav_brand {
+    padding: 15px 20px;
+
+    .mobile-logo {
+      width: 65px;
+    }
+  }
+
+  .slicknav_btn {
+    background: #fff;
+    border-radius: 0;
+    margin: 20px 22px 6px;
+  }
+
+  .slicknav_icon-bar {
+    background: $mainColor;
+    width: 23px;
+    height: 4px;
+  }
+
+  .slicknav_icon {
+    width: initial;
+    height: initial;
+  }
+
+  .slicknav_nav {
+    padding-top: 25px;
+
+    .logo-link {
+      display: none;
+    }
+
+    .nav-link {
+      border-bottom: 1px solid $borderColor;
+
+      a {
+        border-radius: 0;
+        color: $mainColor;
+        font: 19px $titleFont;
+        padding: 15px;
+      }
+    }
+  }
+
+  @media all and (min-width: $secondMedia) {
+    display: none;
+  }
 }
-
-

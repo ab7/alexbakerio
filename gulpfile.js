@@ -20,7 +20,7 @@ const gulp = require('gulp'),
         'postsDir': 'src/posts/',
         'assets': 'src/assets/',
         'sass': 'src/assets/scss/**/*.scss',
-        'js': 'src/assets/js/**/*.js',
+        'js': 'src/assets/js/',
         'images': 'src/assets/images/',
         'fonts': 'src/assets/fonts/'
       },
@@ -159,7 +159,7 @@ gulp.task('build-sass', ['build-clean'], function () {
 });
 
 gulp.task('build-js', ['build-clean'], function () {
-  return gulp.src(srcPaths.js)
+  return gulp.src([srcPaths.js + 'vendor/**/*.js', srcPaths.js + 'main.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write('.', {includeContent: true}))

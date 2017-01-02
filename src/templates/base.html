@@ -15,12 +15,17 @@
       <header>
         <nav class="nav-normal">
           <div class="main">
-            <a class="nav-link logo-link" href="/">
-              <img class="logo" src="assets/images/alex-baker-logo.png" alt="Alex Baker's logo">
-            </a>
+            <ul id="main-nav">
+              <li class="nav-link logo-link">
+                <a href="/">
+                  <img class="logo" src="assets/images/alex-baker-logo.png" alt="Alex Baker's logo">
+                </a>
+              </li>
             {% for navLink in navLinks %}
-              <a class="nav-link" href="{{navLink.link}}">{{navLink.title}}</a>
+              <li class="nav-link"><a href="{{navLink.link}}">{{navLink.title}}</a></li>
             {% endfor %}
+            </ul>
+
           </div>
         </nav>
       </header>

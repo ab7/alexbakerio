@@ -1,12 +1,19 @@
-// modules
+// Vendor
 @import 'vendor/normalize';
 @import 'vendor/animations';
 @import 'vendor/github-markdown';
+@import 'vendor/slicknav/slicknav';
+
+// Global
 @import 'modules/helpers';
 @import 'modules/base';
 @import 'modules/fonts';
+
+// Page
 @import 'modules/index';
-@import 'modules/header';
 @import 'modules/projects';
 @import 'modules/blog-main';
+
+// Partials
+@import 'modules/header';
 @import 'modules/footer';
