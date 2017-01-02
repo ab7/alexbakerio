@@ -88,14 +88,17 @@ function getPostData(cb) {
         cb(postData);
       });
     });
-
-
   });
-
 }
 
 function getNavLinks() {
-  var navLinks = [];
+  var navLinks = [],
+      sortOrder = {
+    'blog': 0,
+    'portfolio': 1,
+    'about': 2,
+    'contact': 3
+  }
 
   fs.readdir(srcPaths.pagesDir , function(err, files) {
     if (err) {
@@ -111,14 +114,14 @@ function getNavLinks() {
           navObj = {};
 
           if (file === 'index.html') {
-            navLinks.splice(0, 0, {title: 'Home', link: file});
+            navLinks.splice(sortOrder.blog, 0, {title: 'Blog', link: '/'});
             return;
           }
 
           navObj.title = toTitleCase(file.split('.')[0]);
           navObj.link = file;
 
-          navLinks.push(navObj);
+          navLinks.splice(sortOrder[fileParts[0]], 0, navObj);
         }
       }
     });
