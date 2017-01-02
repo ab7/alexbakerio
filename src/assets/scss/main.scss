@@ -1,9 +1,10 @@
 // modules
-@import 'modules/normalize';
+@import 'vendor/normalize';
+@import 'vendor/animations';
+@import 'vendor/github-markdown';
 @import 'modules/helpers';
 @import 'modules/base';
 @import 'modules/fonts';
-@import 'modules/vendor';
 @import 'modules/index';
 @import 'modules/header';
 @import 'modules/projects';
