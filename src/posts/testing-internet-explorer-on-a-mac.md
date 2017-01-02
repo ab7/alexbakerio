@@ -39,15 +39,15 @@ This section assumes you will be installing Windows 7 via ISO.
 
 The solution for this part was found via [Stack Overflow](http://stackoverflow.com/questions/1261975/addressing-localhost-from-a-virtualbox-virtual-machine).
 
-You will need to edit the hosts file in the Windows 7 VM which can be found at:
+If you want to route custom localhost domain names to the VM, edit the hosts file in the Windows 7 VM which can be found at:
 
     C:\Windows\System32\drivers\etc\hosts
 
 In order to save the changes you make to the hosts file you will need to open Notepad in admin mode which can be done by right clicking Notepad and selecting 'Run As Administrator'.
 
-Copy this line to the hosts file (in VirtualBox, make sure to enable 'Host to Guest' option under 'Devices/Shared Clipboard' in the application menu):
+Add the following IP along with your custom domain names (the ones listed below are examples):
 
-    10.0.2.2 currencyofgiving.local.kula.com milepoint.local.kula.com jetblue.local.kula.com mycokerewards.local.kula.com kfrgiving.local.kula.com kfrgiving.local.kula.com redrobin.local.kula.com
+    10.0.2.2 my-site.local.dev my-site-2.local.dev
 
 You should be all set to navigate to these sites. Test by changing something in the code on the host machine and reloading the page in Internet Explorer on your VM.
 
