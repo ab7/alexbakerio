@@ -3,7 +3,7 @@
 title: How to set up a home server using a Raspberry Pi
 date: 2014-10-28
 image: placeholder.png
-live: true
+live: false
 
 //-->
 

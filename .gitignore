@@ -1,5 +1,6 @@
 main.css
 dist/
+build/
 src/blog.html
 src/index.html
 src/projects.html

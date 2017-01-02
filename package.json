@@ -1,18 +1,7 @@
 {
   "name": "alexbakerio",
   "version": "1.0.0",
-  "devDependencies": {
-    "grunt": ">=0.4.5",
-    "grunt-autoprefixer": ">=1.0.0",
-    "grunt-contrib-concat": ">=0.5.0",
-    "grunt-contrib-copy": ">=0.7.0",
-    "grunt-contrib-cssmin": ">=0.10.0",
-    "grunt-contrib-sass": ">=0.7.4",
-    "grunt-contrib-uglify": ">=0.5.0",
-    "grunt-contrib-watch": ">=0.6.1",
-    "grunt-jinja": "^0.3.0"
-  },
-  "description": "Alex Baker - Developer",
+   "description": "Alex Baker - Software Developer",
   "repository": {
     "type": "git",
     "url": "https://github.com/ab7/alexbakerio.git"
@@ -26,5 +15,20 @@
   "bugs": {
     "url": "https://github.com/ab7/alexbakerio/issues"
   },
-  "homepage": "https://alexbaker.io"
+  "homepage": "https://alexbaker.io",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-append-prepend": "^1.0.3",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-markdown": "^1.2.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev": "^7.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0"
+  }
 }
