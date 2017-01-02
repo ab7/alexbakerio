@@ -1,23 +1,39 @@
 // general header styles
 header {
-  background-size:100px 50px;
-  height: 45%;
   padding: 2.5em 0 5.5em;
   position: relative;
-  text-align: center;
 }
 
 // nav and link buttons
 .nav-normal {
-  background-image: linear-gradient(to top, #d1d1d1 0%, #fff 100%);
+  background-color: #fff;
   bottom: 0;
+  padding: 10px;
   position: absolute;
-  text-align: center;
   width: 100%;
   z-index: 1;
 
-  @media all and (max-height: 250px) {
-    display: none;
+  .nav-link {
+    color: $mainColor;
+    display: inline-block;
+    font: 19px $titleFont;
+    margin: .6em 10% .6em 0;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s;
+    vertical-align: bottom;
+  }
+
+  .active-link {
+    @extend .nav-link;
+
+    text-decoration: underline;
+  }
+
+  .logo-link{
+    .logo {
+      width: 6em;
+    }
   }
 }
 
@@ -27,70 +43,4 @@ header {
   top: 0;
 }
 
-.nav-link {
-  border: 4px solid rgba(255, 255, 255, 0);
-  border-radius: 100%;
-  color: $mainColor;
-  display: inline-block;
-  font: .8em $titleFont;
-  float: left;
-  height: $navButtonSize;
-  margin: .6em 1%;
-  outline: none;
-  padding-top: 1.6em;
-  text-align: center;
-  text-decoration: none;
-  transition: .5s;
-  width: $navButtonSize;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
-  @media all and (min-width: $firstMedia) {
-    margin: .6em 2%;
-  }
-}
-
-.active-link {
-  @extend .nav-link;
-
-  text-decoration: underline;
-}
-
-.nav-name {
-  float: left;
-  padding-top: .7em;
-
-  @media all and (min-width: 440px) {
-    width: 7em;
-  }
-
-  @media all and (min-width: 560px) {
-    width: 11em;
-  }
-}
-
-.nav-top-link {
-  color: $mainColor;
-  display: none;
-  text-decoration: none;
-}
-
-.logo-small {
-  margin-left: 20%;
-  width: 5.6em;
-}
-
-.nav-link-resume {
-  @extend .nav-link;
-
-  background-color: $mainColor;
-  color: #fff;
-  float: right;
-
-  &:hover {
-    border-color: #fff;
-    text-decoration: none;
-  }
-}
