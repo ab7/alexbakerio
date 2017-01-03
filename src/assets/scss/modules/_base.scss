@@ -34,8 +34,6 @@ body {
 .main {
   margin: 0 auto;
   max-width: $maxWidth;
-  padding: 0 3%;
-  width: 100%;
 
   @media all and (min-width: $firstMedia) {
     padding: 0 6%;

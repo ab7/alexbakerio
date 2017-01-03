@@ -1,7 +1,6 @@
 // general header styles
 header {
   display: none;
-  padding: 2.5em 0 5.5em;
   position: relative;
 
   // Destop menu
@@ -11,29 +10,27 @@ header {
     width: 100%;
     z-index: 1;
 
-    .nav-link {
-      display: inline-block;
-      font: 19px $titleFont;
-      margin: .6em 10% .6em 0;
-      text-align: center;
-      transition: .5s;
-      vertical-align: bottom;
+    #main-nav {
+      padding: 0;
 
-      a {
-        color: $mainColor;
-        text-decoration: none;
+      .nav-link {
+        display: inline-block;
+        font: 19px $titleFont;
+        margin: .6em 10% .6em 0;
+        text-align: center;
+        transition: .5s;
+        vertical-align: bottom;
+
+        a {
+          color: $mainColor;
+          text-decoration: none;
+        }
       }
-    }
 
-    .active-link {
-      @extend .nav-link;
-
-      text-decoration: underline;
-    }
-
-    .logo-link{
-      .logo {
-        width: 6em;
+      .logo-link{
+        .logo {
+          width: 6em;
+        }
       }
     }
   }
@@ -52,10 +49,9 @@ header {
 // Mobile menu
 .slicknav_menu {
   background: #fff;
+  padding: 20px 15px 30px;
 
   .slicknav_brand {
-    padding: 15px 20px;
-
     .mobile-logo {
       width: 65px;
     }
@@ -64,7 +60,7 @@ header {
   .slicknav_btn {
     background: #fff;
     border-radius: 0;
-    margin: 20px 22px 6px;
+    margin: 10px 20px 0 10px;
   }
 
   .slicknav_icon-bar {
