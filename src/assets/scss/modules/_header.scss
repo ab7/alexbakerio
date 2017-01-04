@@ -49,9 +49,13 @@ header {
 // Mobile menu
 .slicknav_menu {
   background: #fff;
-  padding: 20px 15px 30px;
+  margin: auto;
+  padding: 20px 0 30px;
+  width: 90%;
 
   .slicknav_brand {
+    padding: 7px 0;
+
     .mobile-logo {
       width: 65px;
     }
@@ -60,7 +64,7 @@ header {
   .slicknav_btn {
     background: #fff;
     border-radius: 0;
-    margin: 10px 20px 0 10px;
+    margin: 10px 0 0 10px;
   }
 
   .slicknav_icon-bar {

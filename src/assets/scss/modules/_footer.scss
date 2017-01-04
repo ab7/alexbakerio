@@ -1,68 +1,59 @@
 // footer
 footer {
-  background-color: #d1d1d1;
+  background: rgba(113,88,189,1);
+  background: -moz-linear-gradient(left, rgba(113,88,189,1) 0%, rgba(174,52,162,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(113,88,189,1)), color-stop(100%, rgba(174,52,162,1)));
+  background: -webkit-linear-gradient(left, rgba(113,88,189,1) 0%, rgba(174,52,162,1) 100%);
+  background: -o-linear-gradient(left, rgba(113,88,189,1) 0%, rgba(174,52,162,1) 100%);
+  background: -ms-linear-gradient(left, rgba(113,88,189,1) 0%, rgba(174,52,162,1) 100%);
+  background: linear-gradient(to right, rgba(113,88,189,1) 0%, rgba(174,52,162,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7158bd', endColorstr='#ae34a2', GradientType=1 );
   margin-top: 5em;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-}
 
-.footer-content {
-  color: $fontColor;
-  font-size: .6em;
+  .footer-content {
+    color: #fff;
+    font-size: .6em;
 
-  a {
-    color: $fontColor;
-    transition: .5s;
+    a {
+      color: #fff;
+      transition: .5s;
+    }
 
-    &:hover {
-      color: $mainColor;
+    @media all and (min-width: $firstMedia) {
+      font-size: 100%;
+    }
+  }
+
+  // social links
+  .social {
+    margin: 2em auto 1em;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+
+      i {
+        color: #fff;
+        font-size: 32px;
+        margin: 0 15px;
+      }
     }
   }
 
   @media all and (min-width: $firstMedia) {
-    font-size: 100%;
-  }
-}
+    .social {
+      margin-bottom: 0;
 
-// social links
-.social {
-  margin: 2em auto 0;
-  text-align: center;
-
-  a {
-    text-decoration: none;
-  }
-  img {
-    width: 55px;
-
-    @media all and (min-width: $secondMedia) {
-      width: 65px;
+      a {
+        i {
+          font-size: 50px;
+        }
+      }
     }
-  }
-}
-
-.social-link {
-  border: 3px solid #d1d1d1;
-  border-radius: 100%;
-  display: inline-block;
-  margin: 0 .3em;
-  opacity: .7;
-  padding: 3px;
-  transition: 0.3s;
-
-  &:hover {
-    border-color: #4d4d4d;
-    opacity: 1;
-  }
-
-  @media all and (min-width: $firstMedia) {
-    margin: 0 .6em;
-  }
-
-  @media all and (min-width: $secondMedia) {
-    margin: 0 1.2em;
   }
 }

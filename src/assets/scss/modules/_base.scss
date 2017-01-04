@@ -14,7 +14,7 @@ $contentFont: 'Source Sans Pro';
 // media queriy break points
 $firstMedia: 640px;
 $secondMedia: 768px;
-$maxWidth: 1170px;
+$maxWidth: 1100px;
 
 // global styles
 html {
@@ -34,10 +34,7 @@ body {
 .main {
   margin: 0 auto;
   max-width: $maxWidth;
-
-  @media all and (min-width: $firstMedia) {
-    padding: 0 6%;
-  }
+  width: 90%;
 }
 
 // global fonts
