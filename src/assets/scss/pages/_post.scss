@@ -1,0 +1,29 @@
+.main {
+  .back-link {
+    margin-bottom: 1.5em;
+
+    a {
+      text-decoration: none;
+
+      i {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .post {
+    h1 {
+      color: $mainColor;
+    }
+
+    a {
+      color: $fontColor;
+      transition: .5s;
+    }
+
+    @media all and (min-width: $firstMedia) {
+      font-size: 150%;
+    }
+  }
+}
+
