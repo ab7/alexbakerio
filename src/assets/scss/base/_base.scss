@@ -14,7 +14,7 @@ $contentFont: 'Source Sans Pro';
 // media queriy break points
 $firstMedia: 640px;
 $secondMedia: 768px;
-$maxWidth: 1100px;
+$maxWidth: 900px;
 
 // global styles
 html {
@@ -48,6 +48,17 @@ body {
   @media all and (min-width: $firstMedia) {
     font-size: 3.5em;
   }
+}
+
+h1 {
+  color: $mainColor;
+  font-family: $titleFont;
+  font-size: 3em;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 5px
 }
 
 h4 {

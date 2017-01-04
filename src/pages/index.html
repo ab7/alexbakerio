@@ -2,15 +2,31 @@
 
 {% block content %}
 
-<div class="main">
-  <h1>Posts</h1>
-  <ul>
-    {% for post in posts %}
-      <li>
-        <a href="{{post.slug}}">{{post.title}} | {{post.date}} | {{post.image}}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="index-content">
+  <div class="main">
+    <h1>Latest Posts</h1>
+    <ul class="posts">
+      {% for post in posts %}
+        <li class="post-item">
+          <div class="post-item__left">
+            <a href="{{post.slug}}">
+              <img src="assets/images/{{post.image}}" alt="Post image">
+            </a>
+          </div>
+          <div class="post-item__right">
+            <div class="post-item__right-title">
+              <a href="{{post.slug}}">
+                <h2>{{post.title}}</h2>
+              </a>
+            </div>
+            <div class="post-item__right-snippet">
+              Donec iaculis ornare lacinia. Suspendisse semper et massa quis rhoncus. Nulla imperdiet libero et feugiat hendrerit. Pellentesque sollicitudin neque aliquam justo varius, in faucibus mauris scelerisque.
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% endblock %}

@@ -5,15 +5,16 @@
 @import 'vendor/slicknav/slicknav';
 
 // Global
-@import 'modules/helpers';
-@import 'modules/base';
-@import 'modules/fonts';
+@import 'base/helpers';
+@import 'base/base';
+@import 'base/fonts';
 
 // Page
-@import 'modules/index';
-@import 'modules/projects';
-@import 'modules/blog-main';
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/projects';
+@import 'pages/blog-main';
 
 // Partials
-@import 'modules/header';
-@import 'modules/footer';
+@import 'partials/header';
+@import 'partials/footer';
