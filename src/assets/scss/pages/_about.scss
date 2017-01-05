@@ -1,135 +1,76 @@
-// header logo
-.logo-container {
-  display: inline-block;
-
-  @media all and (min-width: $firstMedia) {
-    float: left;
-    margin-bottom: 2em;
-  }
-}
-
-.logo-big {
-  display: inline-block;
-  width: 11em;
-}
-
-.hello {
-  background-color: $mainColor;
-  border-radius: 100% 100% 0 100%;
-  color: #fff;
-  display: inline-block;
-  font: 1.2em $titleFont;
-  height: 4.5em;
-  margin-right: .5em;
-  padding-top: 1.7em;
-  vertical-align: bottom;
-  width: 4.5em;
-}
-
-// call to action
-.cta-container {
-  display: inline-block;
-  margin: 2em 0 1em;
-  width: 300px;
-
-  @media all and (min-width: $firstMedia) {
-    float: right;
-    margin-top: 0;
-  }
-}
-
-.cta {
-  color: $fontColor;
-  font-size: 1.26em;
-  text-align: left;
-}
-
-.email {
-  border: 2px solid $mainColor;
-  border-radius: .5em;
-  color: $mainColor;
-  display: block;
-  margin-top: 1em;
-  padding: 15px 8px;
-  text-align: center;
-  text-decoration: none;
-}
-
 // introduction
 .introduction {
-  background-image: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
-}
+  .main {
+    .headshot {
+      border-radius: 100% 0 100% 100%;
+      box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
+      float: left;
+      max-width: 180px;
+      margin-right: 1em;
+      width: 40%;
+      vertical-align: bottom;
+    }
 
-.headshot {
-  border-radius: 100% 0 100% 100%;
-  box-shadow: 0px 2px 15px 0px rgba(50, 50, 50, 0.75);
-  float: left;
-  max-width: 180px;
-  margin-right: 1em;
-  width: 40%;
-  vertical-align: bottom;
-}
+    .about-section {
+      color: $fontColor;
+      margin-bottom: 4em;
+      text-align: left;
 
-.about-section {
-  color: $fontColor;
-  margin-top: 2em;
-  text-align: left;
+      .about-content {
+        margin-top: 0;
+      }
 
-  a {
-    color: $fontColor;
-    transition: .5s;
+      a {
+        color: $fontColor;
+        transition: .5s;
 
-    &:hover {
-      color: $mainColor;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+
+      @media all and (min-width: $firstMedia) {
+        font-size: 1.3em;
+      }
+    }
+
+    // technologies
+    .tech-container {
+      color: $fontColor;
+      font-size: .7em;
+      width: 100%;
+      border-collapse:
+      collapse; border-spacing: 0;
+
+      td, th {
+        border: 1px solid transparent;
+        cursor: auto;
+        height: 30px;
+        transition: all 0.3s;
+      }
+
+      th {
+        background: #dfdfdf;
+        font-weight: bold;
+      }
+
+      td {
+        background: #FAFAFA;
+        text-align: center;
+      }
+
+      tr {
+        &:nth-child(even) td {
+          background: #f1f1f1;
+        }
+        &:nth-child(odd) td {
+          background: #fefefe;
+        }
+      }
+
+      @media all and (min-width: $firstMedia) {
+        font-size: 1.3em;
+      }
     }
   }
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 1.3em;
-  }
 }
-
-.about-title {
-  color: $mainColor;
-  font-size: 1.4em;
-}
-
-// technologies
-.tech-container {
-  color: $fontColor;
-  font-size: .7em;
-  margin-top: 2em;
-  width: 100%;
-  border-collapse:
-  collapse; border-spacing: 0;
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 1.3em;
-  }
-}
-
-td, th {
-  border: 1px solid transparent;
-  cursor: auto;
-  height: 30px;
-  transition: all 0.3s;
-}
-
-th {
-  background: #dfdfdf;
-  font-weight: bold;
-}
-
-td {
-  background: #FAFAFA;
-  text-align: center;
-}
-
-tr:nth-child(even) td {
-  background: #f1f1f1;
-}
-
-tr:nth-child(odd) td {
-  background: #fefefe;
-}
-
