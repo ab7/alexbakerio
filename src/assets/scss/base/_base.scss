@@ -37,19 +37,6 @@ body {
   width: 90%;
 }
 
-// global fonts
-.section-title {
-  color: $mainColor;
-  font: 2.5em $titleFont;
-  margin: 0 auto;
-  padding: 0 6%;
-  max-width: $maxWidth;
-
-  @media all and (min-width: $firstMedia) {
-    font-size: 3.5em;
-  }
-}
-
 h1 {
   color: $mainColor;
   font-family: $titleFont;
