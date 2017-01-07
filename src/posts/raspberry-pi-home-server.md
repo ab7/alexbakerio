@@ -18,7 +18,7 @@ Disclaimer
 If you're not comfortable with the command line, I recommend checking out this tutorial instead.
 
 ??? Disable and router port forwarding
-??? I personnaly have been using my pi to experiment with other things, so I question the security of its current state. I think wiping the SD for the purpose of making a server is an excellent idea!
+<!-- snippet -->??? I personnaly have been using my pi to experiment with other things, so I question the security of its current state. I think wiping the SD for the purpose of making a server is an excellent idea!
 
 ## Items needed:
 

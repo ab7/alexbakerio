@@ -9,7 +9,7 @@ live: true
 
 # How to backup your MySQL database(s) to S3 using the AWS CLI
 
-In order to keep the server stateless it's a good idea to store your backups in a separate location. This can be setup effortlessly with a cron job and the AWS CLI.
+<!-- snippet -->In order to keep the server stateless it's a good idea to store your backups in a separate location. This can be setup effortlessly with a cron job and the AWS CLI.
 
 Let's start with the command that backs up all of your MySQL databases:
 

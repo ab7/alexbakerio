@@ -9,7 +9,7 @@ live: true
 
 # Testing Internet Explorer on a Mac
 
-Testing Internet Explorer on a Mac can be tricky. Whats even more tricky is testing code from your local environment in IE on a Mac. Luckily we can do this by using a virtual machine and routing our localhost to the VM.
+<!-- snippet -->Testing Internet Explorer on a Mac can be tricky. Whats even more tricky is testing code from your local environment in IE on a Mac. Luckily we can do this by using a virtual machine and routing our localhost to the VM.
 
 ## Requirements
 
