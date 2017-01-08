@@ -12,6 +12,7 @@ const gulp = require('gulp'),
       htmlmin = require('gulp-htmlmin'),
       cleanCSS = require('gulp-clean-css'),
       replace = require('gulp-replace'),
+      shell = require('gulp-shell'),
       srcPaths  = {
         'root': 'src/',
         'templates': 'src/templates/**/*.html',
@@ -35,7 +36,6 @@ const gulp = require('gulp'),
         'assets': 'dist/assets/',
         'images': 'dist/assets/images',
         'fonts': 'dist/assets/fonts/'
-
       };
 
 //
@@ -267,6 +267,10 @@ gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], function() {
     .pipe(gulp.dest(distPaths.root));
 });
 
+gulp.task('dist-deploy', shell.task([
+  'aws s3 sync dist/ s3://alexbaker.io --exclude \'.*\' --delete'
+]));
+
 //
 // Main tasks
 // -------------------------------------------------------------
@@ -289,5 +293,6 @@ gulp.task('dist', [
   'dist-html',
   'dist-favicon',
   'dist-images',
-  'dist-fonts'
+  'dist-fonts',
+  'dist-deploy'
 ]);
