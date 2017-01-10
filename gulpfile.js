@@ -13,6 +13,7 @@ const gulp = require('gulp'),
       cleanCSS = require('gulp-clean-css'),
       replace = require('gulp-replace'),
       shell = require('gulp-shell'),
+      sitemap = require('gulp-sitemap'),
       srcPaths  = {
         'root': 'src/',
         'templates': 'src/templates/**/*.html',
@@ -264,6 +265,10 @@ gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], function() {
     .pipe(replace('main.js', assets.jsFile))
     .pipe(replace('main.css', assets.cssFile))
     .pipe(htmlmin(options))
+    .pipe(gulp.dest(distPaths.root))
+    .pipe(sitemap({
+      siteUrl: 'https://alexbaker.io'
+    }))
     .pipe(gulp.dest(distPaths.root));
 });
 
@@ -293,6 +298,5 @@ gulp.task('dist', [
   'dist-html',
   'dist-favicon',
   'dist-images',
-  'dist-fonts',
-  'dist-deploy'
+  'dist-fonts'
 ]);
