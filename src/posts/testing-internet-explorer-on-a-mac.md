@@ -2,7 +2,7 @@
 
 title: Testing Internet Explorer on a Mac
 date: 2015-08-04
-image: placeholder.png
+image: ie-testing-mac.png
 live: true
 
 //-->
@@ -32,7 +32,7 @@ This section assumes you will be installing Windows 7 via ISO.
 1. Start the new virtual machine.
 1. Click the folder icon to the right of the drop down and select your Windows 7 ISO.
 1. Follow the instructions for installing Windows 7.
-1. Once installed you will need to run the Guest Additions software included with VirtualBox. In the VirtualBox application menu select 'Devices/Insert Guest Additions CD Image...'. If it does not autorun, run the 64-bit installer from the mounted CD image. Guest Editions includes drivers to make Windows a bit more compatible with your Mac.
+1. Once installed you will need to run the Guest Additions software included with VirtualBox. In the VirtualBox application menu select 'Devices/Insert Guest Additions CD Image...'. If it does not auto-run, run the 64-bit installer from the mounted CD image. Guest Editions includes drivers to make Windows a bit more compatible with your Mac.
 1. Update Windows and set up to your liking.
 
 ## Routing your host machines localhost to the virtual machine
@@ -53,7 +53,7 @@ You should be all set to navigate to these sites. Test by changing something in 
 
 ## Other things to note
 
-* In VirtualBox control click the VM and select settings, up the video memory to 128MB in Display/Video and uncheck "Floppy" and "CD/DVD" boot options in System/Motherboard settings.
+* In VirtualBox control click the VM and select settings, up the video memory to 128MB in Display/Video and un-check "Floppy" and "CD/DVD" boot options in System/Motherboard settings.
 * Internet Explorer Edge has a backwards compatibility mode in the developer tools that you can use to test IE9+ (make sure the copy of Windows you install is updated so you have the latest version of IE).
 * If you save the state of the machine after each use instead of shutting down you will probably never need to activate the copy of Windows.
 

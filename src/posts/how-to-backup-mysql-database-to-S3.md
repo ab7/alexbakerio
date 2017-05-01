@@ -2,7 +2,7 @@
 
 title: How to backup your MySQL database(s) to S3 using the AWS CLI
 date: 2016-11-22
-image: placeholder.png
+image: mysql-s3-hero.png
 live: true
 
 //-->

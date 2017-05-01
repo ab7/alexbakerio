@@ -2,7 +2,7 @@
 
 title: Full Stack Web Development - Python Resources
 date: 2015-04-06
-image: placeholder.png
+image: python-resources-hero.png
 live: true
 
 //-->
