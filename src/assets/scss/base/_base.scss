@@ -9,7 +9,7 @@ $fontColor: #505050;
 
 // fonts
 $titleFont: 'bebas_neueregular';
-$contentFont: 'Source Sans Pro';
+$contentFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
 
 // media queriy break points
 $firstMedia: 640px;
@@ -18,10 +18,16 @@ $maxWidth: 900px;
 
 // global styles
 html {
+  box-sizing: border-box;
   height: 100%;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
+  color: $fontColor;
   font-family: $contentFont;
   min-height: 100%;
   position: relative;
@@ -34,14 +40,12 @@ body {
 .main {
   margin: 0 auto;
   max-width: $maxWidth;
-  overflow: hidden;
   width: 90%;
 }
 
 h1 {
   color: $mainColor;
   font-family: $titleFont;
-  font-size: 3em;
 }
 
 h2 {

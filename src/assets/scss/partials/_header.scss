@@ -6,7 +6,7 @@ header {
   // Destop menu
   .nav-normal {
     background-color: #fff;
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
     z-index: 1;
 
@@ -15,7 +15,7 @@ header {
 
       .nav-link {
         display: inline-block;
-        font: 19px $titleFont;
+        font: 28px $titleFont;
         margin: .6em 10% .6em 0;
         text-align: center;
         transition: .5s;
@@ -30,7 +30,7 @@ header {
       .logo-link {
         .logo {
           margin-bottom: -3px;
-          width: 5em;
+          width: 4em;
         }
       }
     }
