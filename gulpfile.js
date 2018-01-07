@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+      server = require('gulp-server-livereload'),
       clean = require('gulp-clean'),
       sass = require('gulp-sass'),
       rev = require('gulp-rev'),
@@ -157,7 +158,7 @@ function toTitleCase(str) {
 // -------------------------------------------------------------
 
 gulp.task('build-clean', function () {
-  return gulp.src(buildPaths.root + '*', {read: false})
+  return gulp.src(buildPaths.root + '*')
     .pipe(clean());
 });
 
@@ -279,9 +280,10 @@ gulp.task('dist-deploy', shell.task([
 //
 // Main tasks
 // -------------------------------------------------------------
-
-gulp.task('watch', function() {
+gulp.task('develop', function() {
   gulp.watch(srcPaths.root + '**/*', ['build']);
+  gulp.src('build')
+    .pipe(server());
 });
 
 gulp.task('build', [

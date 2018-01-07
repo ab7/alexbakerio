@@ -1,4 +1,25 @@
-# Blog/Portfolio Site
+# alexbaker.io
 
-### WIP
-Made using this frontend [boilerplate](https://github.com/ab7/grunt-web-boiler). Currently hosted from my house using [Nginx](http://nginx.org/en/) and a [Raspberry Pi](http://www.raspberrypi.org/).
+## Install
+
+    yarn install
+
+## Development
+
+Run development server and watch files:
+
+    gulp develop
+
+Site will be available at `http://localhost:8000`.
+
+## Production
+
+Optimize files for production:
+
+    gulp dist
+
+## Deploy
+
+Deploy to S3 bucket (requires AWS API key already set up):
+
+    gulp dist-deploy
