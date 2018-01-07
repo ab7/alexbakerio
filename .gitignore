@@ -6,3 +6,5 @@ src/index.html
 src/projects.html
 nginx_conf
 config.json
+node_modules
+.DS_Store
