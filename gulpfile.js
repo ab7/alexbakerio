@@ -101,6 +101,13 @@ function getPostData(cb) {
           postData.posts.push(postObj);
         }
 
+        postData.posts.sort(function(a, b){
+          // Turn your strings into dates, and then subtract them
+          // to get a value that is either negative, positive, or zero.
+          // https://stackoverflow.com/a/10124053
+          return new Date(b.date) - new Date(a.date);
+        });
+
         cb(postData);
       });
     });
