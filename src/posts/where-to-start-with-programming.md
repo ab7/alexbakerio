@@ -42,6 +42,24 @@ You should stick with one language at first. The underlying concepts are the sam
 
 One common misunderstanding, specifically with web development, is the idea of learning HTML and CSS as your first "programming" languages. _HTML and CSS are not programming languages._ HTML and CSS describe presentation, whereas programming languages describe function.
 
+## Types of developers/engineers
+
+There are many different adventures you can take in software development. Some popular high level types include:
+
+* Web development
+* Database development
+* Desktop development
+* Game development
+* Mobile development
+* Infrastructure
+* Data science
+* Security
+
+You don't necessarily need to decide what path you'd like to take to get started, but eventually, once you understand the basics you'll probably want to pick one of these high level paths to focus on. I look again to Stack Overflow for useful information about what new devs are pursuing:
+
+https://stackoverflow.blog/2017/06/12/new-kids-block-understanding-developers-entering-workforce-today/
+
+
 ## So, where do I start
 
 Below I outline some pros and cons of three popular paths you can start with.
