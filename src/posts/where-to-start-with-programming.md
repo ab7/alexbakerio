@@ -2,7 +2,7 @@
 
 title: Where to start with programming
 date: 2018-01-07
-image: placeholder.png
+image: where-to-start-with-programming.png
 live: true
 
 //-->
