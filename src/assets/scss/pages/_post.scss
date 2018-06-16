@@ -20,6 +20,11 @@
       transition: .5s;
     }
 
+    pre {
+      color: $preColor;
+      background-color: $preBackgroundColor;
+    }
+
     @media all and (min-width: $firstMedia) {
       font-size: 140%;
     }
