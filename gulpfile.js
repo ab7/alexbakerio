@@ -295,7 +295,8 @@ gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], function() {
 });
 
 gulp.task('dist-deploy', shell.task([
-  'aws s3 sync dist/ s3://alexbaker.io --exclude \'.*\' --delete'
+  'aws s3 sync dist/ s3://alexbaker.io --exclude \'.*\' --exclude \'assets/main*.js\' --exclude \'assets/main*.css\' --exclude \'assets/images/*\' --delete',
+  'aws s3 sync dist/ s3://alexbaker.io --exclude \'*\' --include \'assets/main*.js\' --include \'assets/main*.css\' --include \'assets/images/*\' --cache-control max-age=31536000,public --delete',
 ]));
 
 //
