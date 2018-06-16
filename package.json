@@ -33,5 +33,8 @@
     "gulp-sitemap": "^4.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0"
   }
 }

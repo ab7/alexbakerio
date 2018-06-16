@@ -15,6 +15,7 @@ const gulp = require('gulp'),
       replace = require('gulp-replace'),
       shell = require('gulp-shell'),
       sitemap = require('gulp-sitemap'),
+      imagemin = require('gulp-imagemin'),
       srcPaths  = {
         'root': 'src/',
         'templates': 'src/templates/**/*.html',
@@ -250,6 +251,19 @@ gulp.task('dist-js', ['dist-clean'], function() {
 
 gulp.task('dist-images', ['dist-clean', 'dist-js'], function () {
   return gulp.src(buildPaths.images +'*.{png,gif,jpg,svg}')
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false}
+        ]
+      })
+    ], {
+      verbose: true
+    }))
     .pipe(gulp.dest(distPaths.images));
 });
 
