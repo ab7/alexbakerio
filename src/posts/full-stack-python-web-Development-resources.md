@@ -9,6 +9,8 @@ live: true
 
 # Full Stack Web Development - Python Resources
 
+![Full Stack Web Development with Python](assets/images/python-resources-hero.png)
+
 <!-- snippet -->Web development is an exciting space to be in right now. Creating high quality, fully featured web applications is becoming more and more accessible. Understanding how everything works in a web stack is essential for fast and enjoyable development. Even if you decide you want to specialize in a specific aspect of the stack (design, front end, UI, UX, back end, DevOps, etc) a basic understanding of the stack in its entirety will benefit you greatly.
 
 ## What does full stack web development mean?
