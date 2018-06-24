@@ -2,12 +2,14 @@
 
 title: Setting up a Raspberry Pi Kubernetes Cluster
 date: 2018-06-10
-image: pi-k8.png
+image: raspberry-pi-kubernetes-cluster-hero.jpg
 live: true
 
 //-->
 
 # Setting up a Raspberry Pi Kubernetes Cluster
+
+![Raspberry Pi Kubernetes cluster close up](assets/images/raspberry-pi-kubernetes-cluster-hero.jpg)
 
 <!-- snippet -->I've been interested in learning more about Kubernetes and what better way than to build my own cluster! I think using Raspberry Pis to experiment with hardware is a great way to go. They are cheap and fun to work with.
 
@@ -204,6 +206,8 @@ This guide is a combination of resources I found while creating the cluster with
 ## Conclusion
 
 At this point you have a working cluster at your disposal. Next steps include running a test deployment and setting up the Kubernetes dashboard. Have fun!
+
+![Raspberry Pi Kubernetes cluster](assets/images/raspberry-pi-kubernetes-cluster.jpg)
 
 ## References
 
