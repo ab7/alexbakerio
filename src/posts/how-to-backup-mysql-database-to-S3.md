@@ -2,12 +2,14 @@
 
 title: How to backup your MySQL database(s) to S3 using the AWS CLI
 date: 2016-11-22
-image: mysql-s3-hero.png
+image: backup-mysql-to-aws-hero.jpg
 live: true
 
 //-->
 
 # How to Backup Your MySQL Database(s) to S3 Using the AWS CLI
+
+![MySql and AWS backup](assets/images/backup-mysql-to-aws-hero.jpg)
 
 <!-- snippet -->It is good practice to create systematic backups of your databases and store them in a location separate from your server. Using MySQL and Amazon S3 we can set this up effortlessly. We will be preparing the commands needed to create the backup, send it to your S3 bucket using the AWS CLI, and finally setting up a cron job to do a daily backup.
 
