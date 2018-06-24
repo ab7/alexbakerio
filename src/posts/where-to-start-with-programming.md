@@ -2,12 +2,14 @@
 
 title: Where to start with programming
 date: 2018-01-07
-image: where-to-start-with-programming.png
+image: where-to-start-with-programming-hero.jpg
 live: true
 
 //-->
 
 # Where to start with programming
+
+![Where to start with programming computer questions](assets/images/where-to-start-with-programming-hero.jpg)
 
 In running a weekly social get together over the last year at the Denver Central library I usually get asked some recurring questions. I'll attempt to answer some of those questions in this post along with some resource suggestions for those of you wanting to self-learn.
 
