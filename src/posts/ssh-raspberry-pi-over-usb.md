@@ -2,14 +2,14 @@
 
 title: SSH to a Raspberry Pi Zero over USB
 date: 2018-06-18
-image: raspberry-pi-zero-ssh-usb.jpg
+image: raspberry-pi-zero-ssh-usb-hero.jpg
 live: true
 
 //-->
 
 # SSH to a Raspberry Pi Zero over USB
 
-![Raspberry Pi Zero connected to mac](assets/images/raspberry-pi-zero-ssh-usb.jpg)
+![Raspberry Pi Zero connected to mac](assets/images/raspberry-pi-zero-ssh-usb-hero.jpg)
 
 <!-- snippet -->This guide will enable you to SSH to a Raspberry Pi over USB. This is useful for Pi Zeros or when you you don't have access to the network router to grab the pi IP address.
 
