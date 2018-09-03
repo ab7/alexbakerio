@@ -161,15 +161,14 @@ gulp.task('dist-fonts', ['dist-clean'], () => {
 });
 
 gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], () => {
-  let options = {
-    collapseWhitespace: true,
-    removeComments: true
-  },
-      assets = getAssetFileNames(distPaths.assets);
+  let assets = getAssetFileNames(distPaths.assets);
   return gulp.src(buildPaths.root + '*.html')
     .pipe(replace('main.js', assets.jsFile))
     .pipe(replace('main.css', assets.cssFile))
-    .pipe(htmlmin(options))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest(distPaths.root))
     .pipe(sitemap({
       siteUrl: 'https://alexbaker.io'
@@ -185,7 +184,7 @@ gulp.task('dist-deploy', shell.task([
 //
 // Main tasks
 // -------------------------------------------------------------
-gulp.task('develop', () => {
+gulp.task('dev', ['build'], () => {
   gulp.watch(srcPaths.root + '**/*', ['build']);
   gulp.src('build')
     .pipe(server());
