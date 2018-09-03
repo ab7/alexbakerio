@@ -1,5 +1,3 @@
-'use strict';
-
 import gulp from 'gulp';
 import server from 'gulp-server-livereload';
 import clean from 'gulp-clean';
@@ -17,8 +15,11 @@ import replace from 'gulp-replace';
 import shell from 'gulp-shell';
 import sitemap from 'gulp-sitemap';
 import imagemin from 'gulp-imagemin';
+import ext_replace from 'gulp-ext-replace';
 
-import {getAssetFileNames, getPostData, getNavLinks} from './lib/main.js';
+import {deployCommands} from './lib/deploy';
+import {devPageFallback} from './lib/helpers';
+import {getAssetFileNames, getPostData, getNavLinks} from './lib/main';
 
 
 const srcPaths  = {
@@ -165,6 +166,7 @@ gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], () => {
   return gulp.src(buildPaths.root + '*.html')
     .pipe(replace('main.js', assets.jsFile))
     .pipe(replace('main.css', assets.cssFile))
+    .pipe(ext_replace(''))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -176,10 +178,7 @@ gulp.task('dist-html', ['dist-clean', 'dist-css', 'dist-js'], () => {
     .pipe(gulp.dest(distPaths.root));
 });
 
-gulp.task('dist-deploy', shell.task([
-  'aws s3 sync dist/ s3://alexbaker.io --exclude \'.*\' --exclude \'assets/main*.js\' --exclude \'assets/main*.css\' --exclude \'assets/images/*\' --delete',
-  'aws s3 sync dist/ s3://alexbaker.io --exclude \'*\' --include \'assets/main*.js\' --include \'assets/main*.css\' --include \'assets/images/*\' --cache-control max-age=31536000,public --delete',
-]));
+gulp.task('dist-deploy', shell.task(deployCommands()));
 
 //
 // Main tasks
@@ -187,7 +186,10 @@ gulp.task('dist-deploy', shell.task([
 gulp.task('dev', ['build'], () => {
   gulp.watch(srcPaths.root + '**/*', ['build']);
   gulp.src('build')
-    .pipe(server());
+    .pipe(server({
+      'fallback': 'index.html',
+      'fallbackLogic': devPageFallback,
+    }));
 });
 
 gulp.task('build', [
