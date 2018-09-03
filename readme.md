@@ -12,6 +12,10 @@ Run development server and watch files:
 
 Site will be available at `http://localhost:8000`.
 
+Lint:
+
+    yarn lint
+
 ## Production
 
 Optimize files for production:

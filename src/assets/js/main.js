@@ -1,4 +1,4 @@
-/*global $, alert, console*/
+/*global $*/
 
 $(function () {
   'use strict';
