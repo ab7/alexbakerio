@@ -16,9 +16,10 @@ import shell from 'gulp-shell';
 import sitemap from 'gulp-sitemap';
 import imagemin from 'gulp-imagemin';
 import ext_replace from 'gulp-ext-replace';
+import foreach from 'gulp-foreach';
 
 import {deployCommands} from './lib/deploy';
-import {devPageFallback} from './lib/helpers';
+import {devPageFallback, disqusIdentifiers} from './lib/helpers';
 import {getAssetFileNames, getPostData, getNavLinks} from './lib/main';
 
 
@@ -103,6 +104,7 @@ gulp.task('build-posts', ['build-clean'], () => {
       .pipe(gap.prependText('{% extends "src/templates/post.html" %}{% block post %}'))
       .pipe(gap.appendText('{% endblock %}'))
       .pipe(nunjucksRender({data: data}))
+      .pipe(foreach(disqusIdentifiers))
       .pipe(gulp.dest(buildPaths.root));
   });
 });

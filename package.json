@@ -42,6 +42,7 @@
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.5.0",
     "gulp-ext-replace": "^0.3.0",
+    "gulp-foreach": "^0.1.0",
     "gulp-imagemin": "^4.1.0",
     "junk": "^2.1.0"
   }
