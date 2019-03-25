@@ -1,0 +1,25 @@
+{% extends "src/templates/base.html" %}
+
+{% block content %}
+
+<div class="main contact">
+  <h1>Contact</h1>
+  <form action="https://formspree.io/hello@alexbaker.io" method="POST">
+    <ul class="contact__content">
+      <li>
+        <label for="text">Email:</label>
+        <input class="contact__email" type="email" name="_replyto">
+      </li>
+      <li>
+        <label for="text">Message:</label>
+        <textarea class="contact__message" class="message" name="message"></textarea>
+      </li>
+      <li>
+        <label for="submit"></label>
+        <input class="contact__submit" type="submit" name="submit" value="Send">
+      </li>
+    </ul>
+  </form>
+</div>
+
+{% endblock %}
