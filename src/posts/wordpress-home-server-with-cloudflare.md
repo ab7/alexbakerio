@@ -2,14 +2,14 @@
 
 title: Setting up a home server for Wordpress + Cloudflare
 date: 2021-02-27
-image: wordpress-cloudflare-pi-server-hero.png
+image: wordpress-cloudflare-pi-server-hero.webp
 live: true
 
 //-->
 
 # Setting up Wordpress + Cloudflare on a home server
 
-![Setting up Wordpress + Cloudflare on a home server](assets/images/wordpress-cloudflare-pi-server-hero.png)
+![Setting up Wordpress + Cloudflare on a home server](assets/images/wordpress-cloudflare-pi-server-hero.webp)
 
 <!-- snippet -->I always like to see if I can stand up free hosting using various services and/or hardware I have laying around. My wife has taken a recent interest in baking bread and has been diligently documenting her progress. I suggested she blog about it and here we are. Wordpress was an obvious choice and I have few (dozen) Raspberry Pis laying around. Seemed like a fun project.
 
@@ -131,7 +131,7 @@ I wanted to try out using docker-compose to run the wordpress/database container
 
 Cloudflare has some [good docs](https://support.cloudflare.com/hc/en-us/articles/360027989951-Getting-Started-with-Cloudflare) to follow for setting up your domain with them. The only extra piece I did was enable strict end-to-end encryption under the SSL/TLS settings:
 
-![Screenshot of Cloudflare SSL settings](assets/images/screenshot-of-cloudflare-ssl-settings.png)
+![Screenshot of Cloudflare SSL settings](assets/images/screenshot-of-cloudflare-ssl-settings.webp)
 
 ### Setup iptables to only allow Cloudflare TCP access
 

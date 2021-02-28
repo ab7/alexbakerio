@@ -2,14 +2,14 @@
 
 title: Where to start with programming
 date: 2018-01-07
-image: where-to-start-with-programming-hero.jpg
+image: where-to-start-with-programming-hero.webp
 live: true
 
 //-->
 
 # Where to start with programming
 
-![Where to start with programming computer questions](assets/images/where-to-start-with-programming-hero.jpg)
+![Where to start with programming computer questions](assets/images/where-to-start-with-programming-hero.webp)
 
 In running a weekly social get together over the last year at the Denver Central library I usually get asked some recurring questions. I'll attempt to answer some of those questions in this post along with some resource suggestions for those of you wanting to self-learn.
 
@@ -19,7 +19,7 @@ In running a weekly social get together over the last year at the Denver Central
 
 Stack Overflow conducted a [survey](https://insights.stackoverflow.com/survey/2016) a while back in an effort to gain insight into the educational backgrounds of working programmers. A large portion of the participants claimed to be at least partially self-taught.
 
-![Stack Overflow education survey results](assets/images/so-education-survey.png)
+![Stack Overflow education survey results](assets/images/so-education-survey.webp)
 
 https://stackoverflow.blog/2016/10/07/do-developers-need-college-degrees/
 

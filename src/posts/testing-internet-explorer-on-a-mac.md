@@ -2,14 +2,14 @@
 
 title: Testing Internet Explorer on a Mac
 date: 2015-08-04
-image: internet-explorer-mac-hero.jpg
+image: internet-explorer-mac-hero.webp
 live: true
 
 //-->
 
 # Testing Internet Explorer on a Mac
 
-![Internet Explorer testing on a Mac](assets/images/internet-explorer-mac-hero.jpg)
+![Internet Explorer testing on a Mac](assets/images/internet-explorer-mac-hero.webp)
 
 <!-- snippet -->Testing Internet Explorer on a Mac can be tricky. Whats even more tricky is testing code from your local environment in IE on a Mac. Luckily we can do this by using a virtual machine and routing our localhost to the VM.
 

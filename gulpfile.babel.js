@@ -17,6 +17,7 @@ import sitemap from 'gulp-sitemap';
 import imagemin from 'gulp-imagemin';
 import ext_replace from 'gulp-ext-replace';
 import foreach from 'gulp-foreach';
+import webp from 'gulp-webp';
 
 import {deployCommands} from './lib/deploy';
 import {devPageFallback, disqusIdentifiers} from './lib/helpers';
@@ -150,6 +151,7 @@ gulp.task('dist-images', ['dist-clean', 'dist-js'], () => {
     ], {
       verbose: true
     }))
+    .pipe(webp())
     .pipe(gulp.dest(distPaths.images));
 });
 

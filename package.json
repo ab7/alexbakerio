@@ -35,7 +35,8 @@
     "gulp-shell": "^0.5.2",
     "gulp-sitemap": "^4.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "gulp-webp": "3.0.0"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
